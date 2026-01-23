@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FDownTimeReason
-    Inherits sygma_solution_system.FCodeMstr2
+Partial Class FDownTimeCategory
+    Inherits sygma_solution_system.FCodeMstr
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -39,6 +39,8 @@ Partial Class FDownTimeReason
         '
         'xtp_data
         '
+        Me.xtp_data.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Window
+        Me.xtp_data.Appearance.PageClient.Options.UseBackColor = True
         Me.xtp_data.Size = New System.Drawing.Size(553, 412)
         '
         'xtp_edit
@@ -49,16 +51,12 @@ Partial Class FDownTimeReason
         '
         Me.Panel1.Size = New System.Drawing.Size(543, 367)
         '
-        'xtc_master
-        '
-        Me.xtc_master.Size = New System.Drawing.Size(555, 433)
-        '
-        'FDownTimeReason
+        'FDownTimeCategory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(555, 433)
-        Me.Name = "FDownTimeReason"
-        Me.Text = "Down Time Reason"
+        Me.Name = "FDownTimeCategory"
+        Me.Text = "Downtime Category"
         CType(Me.lci_master, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lci_code_usr_1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).EndInit()

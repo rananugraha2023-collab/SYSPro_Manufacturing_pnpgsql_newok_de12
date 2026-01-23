@@ -242,7 +242,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>..\..\..\..\Visual Studio 2022\SYSPro_Manufacturing_WebAPI_de24_20250709_fix\sygma solution system\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>.\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
@@ -804,6 +804,12 @@
     <Compile Include="manufacture\Routing\FListRoutingPrint.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="manufacture\shopfloor\FDownTimeCategory.designer.vb">
+      <DependentUpon>FDownTimeCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manufacture\shopfloor\FDownTimeCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="manufacture\WO\FWorkOrderReportEntityPivot.Designer.vb">
       <DependentUpon>FWorkOrderReportEntityPivot.vb</DependentUpon>
     </Compile>
@@ -1051,6 +1057,12 @@
     </Compile>
     <Compile Include="sales order\se_sdi_generate\DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zpendukung\FCodeMstr2.Designer.vb">
+      <DependentUpon>FCodeMstr2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zpendukung\FCodeMstr2.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="zpendukung\frmPrintDialogReportNew.Designer.vb">
       <DependentUpon>frmPrintDialogReportNew.vb</DependentUpon>
@@ -5662,6 +5674,10 @@
       <DependentUpon>FListRoutingPrint.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="manufacture\shopfloor\FDownTimeCategory.resx">
+      <DependentUpon>FDownTimeCategory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="manufacture\WO\FWorkOrderReportEntityPivot.resx">
       <DependentUpon>FWorkOrderReportEntityPivot.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -5818,6 +5834,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sales order\sales plan\sale plan bck\FSalesPlanImportTarget20250219.resx">
       <DependentUpon>FSalesPlanImportTarget20250219.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zpendukung\FCodeMstr2.resx">
+      <DependentUpon>FCodeMstr2.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="zpendukung\FLaborFeedbackUser.resx">

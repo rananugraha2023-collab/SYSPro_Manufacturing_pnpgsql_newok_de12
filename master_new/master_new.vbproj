@@ -141,7 +141,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>..\..\..\..\Visual Studio 2022\SYSPro_Manufacturing_WebAPI_de24_20250709_fix\sygma solution system\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>.\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />

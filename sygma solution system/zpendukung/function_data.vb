@@ -3212,6 +3212,24 @@ Public Class function_data
                 MessageBox.Show(ex.Message)
             End Try
 
+        ElseIf par_type = "down_time_cat_mstr" Then
+            Try
+                Using objcb As New master_new.WDABasepgsql("", "")
+                    With objcb
+                        .SQL = "select code_id, code_name as code_desc from code_mstr where code_field ~~* 'down_time_cat_mstr' and code_active ~~* 'Y'" _
+                             & " " _
+                             & " AND code_dom_id = " & master_new.ClsVar.sdom_id _
+                             & " order by code_default desc, code_desc"
+
+                        .InitializeCommand()
+                        .FillDataSet(ds_bantu, "ptnr_mstr")
+                        dt_bantu = ds_bantu.Tables(0)
+                    End With
+                End Using
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
         ElseIf par_type = "ptnr_mstr_sal" Then
             Try
                 Using objcb As New master_new.WDABasepgsql("", "")
