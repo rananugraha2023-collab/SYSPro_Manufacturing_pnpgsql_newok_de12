@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsPerformaAgen" targetNamespace="http://tempuri.org/DsPerformaAgen.xsd" xmlns:mstns="http://tempuri.org/DsPerformaAgen.xsd" xmlns="http://tempuri.org/DsPerformaAgen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsPerformaAgen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsPerformaAgen" msprop:Generator_DataSetName="DsPerformaAgen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="en_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="en_desc" msprop:Generator_ColumnVarNameInTable="columnen_desc" msprop:Generator_ColumnPropNameInRow="en_desc" msprop:Generator_ColumnPropNameInTable="en_descColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_code" msprop:Generator_ColumnVarNameInTable="columnptnr_code" msprop:Generator_ColumnPropNameInRow="ptnr_code" msprop:Generator_ColumnPropNameInTable="ptnr_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnrg_name" msdata:ReadOnly="true" msdata:Caption="ptnr_name" msprop:Generator_UserColumnName="ptnrg_name" msprop:Generator_ColumnPropNameInRow="ptnrg_name" msprop:Generator_ColumnVarNameInTable="columnptnrg_name" msprop:Generator_ColumnPropNameInTable="ptnrg_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_name" msprop:Generator_ColumnVarNameInTable="columnptnr_name" msprop:Generator_ColumnPropNameInRow="ptnr_name" msprop:Generator_ColumnPropNameInTable="ptnr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dpp_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="dpp_1" msprop:Generator_ColumnVarNameInTable="columndpp_1" msprop:Generator_ColumnPropNameInRow="dpp_1" msprop:Generator_ColumnPropNameInTable="dpp_1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="dpp_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="dpp_2" msprop:Generator_ColumnVarNameInTable="columndpp_2" msprop:Generator_ColumnPropNameInRow="dpp_2" msprop:Generator_ColumnPropNameInTable="dpp_2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="dpp_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="dpp_3" msprop:Generator_ColumnVarNameInTable="columndpp_3" msprop:Generator_ColumnPropNameInRow="dpp_3" msprop:Generator_ColumnPropNameInTable="dpp_3Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="persen_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="persen_1" msprop:Generator_ColumnVarNameInTable="columnpersen_1" msprop:Generator_ColumnPropNameInRow="persen_1" msprop:Generator_ColumnPropNameInTable="persen_1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="persen_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="persen_2" msprop:Generator_ColumnVarNameInTable="columnpersen_2" msprop:Generator_ColumnPropNameInRow="persen_2" msprop:Generator_ColumnPropNameInTable="persen_2Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsBalanceSheet" targetNamespace="http://tempuri.org/DsBalanceSheet.xsd" xmlns:mstns="http://tempuri.org/DsBalanceSheet.xsd" xmlns="http://tempuri.org/DsBalanceSheet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsBalanceSheet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsBalanceSheet" msprop:Generator_DataSetName="DsBalanceSheet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bs_number" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bs_number" msprop:Generator_ColumnPropNameInRow="bs_number" msprop:Generator_ColumnVarNameInTable="columnbs_number" msprop:Generator_ColumnPropNameInTable="bs_numberColumn" type="xs:int" />
+              <xs:element name="bs_caption" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bs_caption" msprop:Generator_ColumnPropNameInRow="bs_caption" msprop:Generator_ColumnVarNameInTable="columnbs_caption" msprop:Generator_ColumnPropNameInTable="bs_captionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bs_group" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bs_group" msprop:Generator_ColumnPropNameInRow="bs_group" msprop:Generator_ColumnVarNameInTable="columnbs_group" msprop:Generator_ColumnPropNameInTable="bs_groupColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bs_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bs_remarks" msprop:Generator_ColumnPropNameInRow="bs_remarks" msprop:Generator_ColumnVarNameInTable="columnbs_remarks" msprop:Generator_ColumnPropNameInTable="bs_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bsd_number" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsd_number" msprop:Generator_ColumnPropNameInRow="bsd_number" msprop:Generator_ColumnVarNameInTable="columnbsd_number" msprop:Generator_ColumnPropNameInTable="bsd_numberColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="bsd_caption" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsd_caption" msprop:Generator_ColumnPropNameInRow="bsd_caption" msprop:Generator_ColumnVarNameInTable="columnbsd_caption" msprop:Generator_ColumnPropNameInTable="bsd_captionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bsd_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsd_remarks" msprop:Generator_ColumnPropNameInRow="bsd_remarks" msprop:Generator_ColumnVarNameInTable="columnbsd_remarks" msprop:Generator_ColumnPropNameInTable="bsd_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bsdi_number" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsdi_number" msprop:Generator_ColumnPropNameInRow="bsdi_number" msprop:Generator_ColumnVarNameInTable="columnbsdi_number" msprop:Generator_ColumnPropNameInTable="bsdi_numberColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="bsdi_caption" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsdi_caption" msprop:Generator_ColumnPropNameInRow="bsdi_caption" msprop:Generator_ColumnVarNameInTable="columnbsdi_caption" msprop:Generator_ColumnPropNameInTable="bsdi_captionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bsda_ac_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsda_ac_id" msprop:Generator_ColumnPropNameInRow="bsda_ac_id" msprop:Generator_ColumnVarNameInTable="columnbsda_ac_id" msprop:Generator_ColumnPropNameInTable="bsda_ac_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="bsda_ac_hirarki" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsda_ac_hirarki" msprop:Generator_ColumnPropNameInRow="bsda_ac_hirarki" msprop:Generator_ColumnVarNameInTable="columnbsda_ac_hirarki" msprop:Generator_ColumnPropNameInTable="bsda_ac_hirarkiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_code" msprop:Generator_ColumnPropNameInRow="ac_code" msprop:Generator_ColumnVarNameInTable="columnac_code" msprop:Generator_ColumnPropNameInTable="ac_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_name" msprop:Generator_ColumnPropNameInRow="ac_name" msprop:Generator_ColumnVarNameInTable="columnac_name" msprop:Generator_ColumnPropNameInTable="ac_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bsdi_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bsdi_oid" msprop:Generator_ColumnPropNameInRow="bsdi_oid" msprop:Generator_ColumnVarNameInTable="columnbsdi_oid" msprop:Generator_ColumnPropNameInTable="bsdi_oidColumn" type="xs:string" />
+              <xs:element name="z_nilai" msprop:Generator_UserColumnName="z_nilai" msprop:Generator_ColumnVarNameInTable="columnz_nilai" msprop:Generator_ColumnPropNameInRow="z_nilai" msprop:Generator_ColumnPropNameInTable="z_nilaiColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:bs_number" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:bsdi_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:ac_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

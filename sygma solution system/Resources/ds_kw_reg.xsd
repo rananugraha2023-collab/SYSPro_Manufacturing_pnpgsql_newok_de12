@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_kw_reg" targetNamespace="http://tempuri.org/ds_kw_reg.xsd" xmlns:mstns="http://tempuri.org/ds_kw_reg.xsd" xmlns="http://tempuri.org/ds_kw_reg.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_kw_reg" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ds_kw_reg" msprop:Generator_DataSetName="ds_kw_reg">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="arpay_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_code" msprop:Generator_ColumnVarNameInTable="columnarpay_code" msprop:Generator_ColumnPropNameInRow="arpay_code" msprop:Generator_ColumnPropNameInTable="arpay_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="arpay_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_date" msprop:Generator_ColumnVarNameInTable="columnarpay_date" msprop:Generator_ColumnPropNameInRow="arpay_date" msprop:Generator_ColumnPropNameInTable="arpay_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="arpay_eff_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_eff_date" msprop:Generator_ColumnVarNameInTable="columnarpay_eff_date" msprop:Generator_ColumnPropNameInRow="arpay_eff_date" msprop:Generator_ColumnPropNameInTable="arpay_eff_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="en_city" msdata:ReadOnly="true" msdata:Caption="ptnr_name" msprop:Generator_UserColumnName="en_city" msprop:Generator_ColumnPropNameInRow="en_city" msprop:Generator_ColumnVarNameInTable="columnen_city" msprop:Generator_ColumnPropNameInTable="en_cityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_name" msprop:Generator_ColumnVarNameInTable="columnptnr_name" msprop:Generator_ColumnPropNameInRow="ptnr_name" msprop:Generator_ColumnPropNameInTable="ptnr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnra_line_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnra_line_1" msprop:Generator_ColumnVarNameInTable="columnptnra_line_1" msprop:Generator_ColumnPropNameInRow="ptnra_line_1" msprop:Generator_ColumnPropNameInTable="ptnra_line_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnra_line_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnra_line_2" msprop:Generator_ColumnVarNameInTable="columnptnra_line_2" msprop:Generator_ColumnPropNameInRow="ptnra_line_2" msprop:Generator_ColumnPropNameInTable="ptnra_line_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnra_line_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnra_line_3" msprop:Generator_ColumnVarNameInTable="columnptnra_line_3" msprop:Generator_ColumnPropNameInRow="ptnra_line_3" msprop:Generator_ColumnPropNameInTable="ptnra_line_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="arpay_tbilang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_tbilang" msprop:Generator_ColumnVarNameInTable="columnarpay_tbilang" msprop:Generator_ColumnPropNameInRow="arpay_tbilang" msprop:Generator_ColumnPropNameInTable="arpay_tbilangColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="arpay_total_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_total_amount" msprop:Generator_ColumnVarNameInTable="columnarpay_total_amount" msprop:Generator_ColumnPropNameInRow="arpay_total_amount" msprop:Generator_ColumnPropNameInTable="arpay_total_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="arpayd_ar_ref" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpayd_ar_ref" msprop:Generator_ColumnVarNameInTable="columnarpayd_ar_ref" msprop:Generator_ColumnPropNameInRow="arpayd_ar_ref" msprop:Generator_ColumnPropNameInTable="arpayd_ar_refColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

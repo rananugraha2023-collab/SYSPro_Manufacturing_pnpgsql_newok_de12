@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9D19FBF-EE25-4FF0-A8E8-0AB1A4C5A323}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>master_new</RootNamespace>
+    <AssemblyName>master_new</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/master_new/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>master_new.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>master_new.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>master_new.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>master_new.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>master_new.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>master_new.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v12.2.Core, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v12.2.UI, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.2.Wizard, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="MyPGDll, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Npgsql">
+      <HintPath>.\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\..\Visual Studio 2022\SYSPro_Manufacturing_WebAPI_de24_20250709_fix\sygma solution system\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Class7z.vb" />
+    <Compile Include="Classes\ClsVar.vb" />
+    <Compile Include="Classes\Cls_Bilangan.vb" />
+    <Compile Include="Classes\DBMysql.vb" />
+    <Compile Include="Classes\excelconn.vb" />
+    <Compile Include="Classes\ModFunction.vb" />
+    <Compile Include="Classes\ModFunctionMy.vb" />
+    <Compile Include="Classes\PGSqlConn.vb" />
+    <Compile Include="Classes\RandomKeyGenerator.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntitySearch.Designer.vb">
+      <DependentUpon>frmEntitySearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntitySearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.Designer.vb">
+      <DependentUpon>frmUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUserGroup.designer.vb">
+      <DependentUpon>FUserGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUserLocationSearch.designer.vb">
+      <DependentUpon>FUserLocationSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FUserLocationSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterChart.Designer.vb">
+      <DependentUpon>MasterChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuBrowse.Designer.vb">
+      <DependentUpon>frmMenuBrowse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuBrowse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuSearch.designer.vb">
+      <DependentUpon>FMenuSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMenuSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestMenu.Designer.vb">
+      <DependentUpon>frmTestMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSearchNew.Designer.vb">
+      <DependentUpon>FSearchNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSearchNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAbout.Designer.vb">
+      <DependentUpon>FAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAddMenu.designer.vb">
+      <DependentUpon>FAddMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FAddMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangePassword.Designer.vb">
+      <DependentUpon>FChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGroup.Designer.vb">
+      <DependentUpon>FGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLock.Designer.vb">
+      <DependentUpon>FLock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FLock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMail.Designer.vb">
+      <DependentUpon>FMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSearch.Designer.vb">
+      <DependentUpon>FSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterInfChart.Designer.vb">
+      <DependentUpon>MasterInfChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterInfChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuAuthorization.Designer.vb">
+      <DependentUpon>FMenuAuthorization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMenuAuthorization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOpacity.Designer.vb">
+      <DependentUpon>FOpacity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FOpacity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPass.Designer.vb">
+      <DependentUpon>FPass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrintScreen.Designer.vb">
+      <DependentUpon>FPrintScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPrintScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProgress.Designer.vb">
+      <DependentUpon>FProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FProgress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReminder.Designer.vb">
+      <DependentUpon>FReminder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FReminder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSyspro.Designer.vb">
+      <DependentUpon>FSyspro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSyspro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUser.Designer.vb">
+      <DependentUpon>FUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master.Designer.vb">
+      <DependentUpon>Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterInfChart2.Designer.vb">
+      <DependentUpon>MasterInfChart2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterInfChart2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterInfOne.Designer.vb">
+      <DependentUpon>MasterInfOne.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterInfOne.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterInfTwo.Designer.vb">
+      <DependentUpon>MasterInfTwo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterInfTwo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterMDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterMDI.Designer.vb">
+      <DependentUpon>MasterMDI.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterWIOne.Designer.vb">
+      <DependentUpon>MasterWIOne.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterWIOne.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterWITwo.Designer.vb">
+      <DependentUpon>MasterWITwo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterWITwo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterWork.Designer.vb">
+      <DependentUpon>MasterWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterWork.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WDABase.vb" />
+    <Compile Include="WDABaseexcell.vb" />
+    <Compile Include="WDABaseOle.vb" />
+    <Compile Include="WDABasepgsql.vb" />
+    <Compile Include="WDABasepgsql_erp.vb" />
+    <Compile Include="WDABasepgsql_local.vb" />
+    <Compile Include="WDABasepgsql_server.vb" />
+    <Compile Include="WDABaseSql.vb" />
+    <Compile Include="WDABaseSyspro.vb" />
+    <Compile Include="XtraForm1.Designer.vb">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.vb">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntitySearch.resx">
+      <DependentUpon>frmEntitySearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdate.resx">
+      <DependentUpon>frmUpdate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup.resx">
+      <DependentUpon>FUserGroup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserLocationSearch.resx">
+      <DependentUpon>FUserLocationSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterChart.resx">
+      <DependentUpon>MasterChart.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuBrowse.resx">
+      <DependentUpon>frmMenuBrowse.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuSearch.resx">
+      <DependentUpon>FMenuSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestMenu.resx">
+      <DependentUpon>frmTestMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSearchNew.resx">
+      <DependentUpon>FSearchNew.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAbout.resx">
+      <DependentUpon>FAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAddMenu.resx">
+      <DependentUpon>FAddMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangePassword.resx">
+      <DependentUpon>FChangePassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGroup.resx">
+      <DependentUpon>FGroup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLock.resx">
+      <DependentUpon>FLock.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMail.resx">
+      <DependentUpon>FMail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSearch.resx">
+      <DependentUpon>FSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterInfChart.resx">
+      <DependentUpon>MasterInfChart.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuAuthorization.resx">
+      <DependentUpon>FMenuAuthorization.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOpacity.resx">
+      <DependentUpon>FOpacity.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPass.resx">
+      <DependentUpon>FPass.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrintScreen.resx">
+      <DependentUpon>FPrintScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProgress.resx">
+      <DependentUpon>FProgress.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReminder.resx">
+      <DependentUpon>FReminder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSyspro.resx">
+      <DependentUpon>FSyspro.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUser.resx">
+      <DependentUpon>FUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterInfChart2.resx">
+      <DependentUpon>MasterInfChart2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterInfOne.resx">
+      <DependentUpon>MasterInfOne.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterInfTwo.resx">
+      <DependentUpon>MasterInfTwo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterMDI.resx">
+      <DependentUpon>MasterMDI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterWIOne.resx">
+      <DependentUpon>MasterWIOne.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterWITwo.resx">
+      <DependentUpon>MasterWITwo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterWork.resx">
+      <DependentUpon>MasterWork.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vtoast_smiley.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MyPGDll.dll" />
+    <Content Include="MySql.Data.dll" />
+    <Content Include="pagesetup.ico" />
+    <Content Include="previewgreen.ico" />
+    <Content Include="previewred.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

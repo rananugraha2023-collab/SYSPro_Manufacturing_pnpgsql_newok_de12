@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCalculateCost" targetNamespace="http://tempuri.org/DsCalculateCost.xsd" xmlns:mstns="http://tempuri.org/DsCalculateCost.xsd" xmlns="http://tempuri.org/DsCalculateCost.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCalculateCost" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsCalculateCost" msprop:Generator_DataSetName="DsCalculateCost">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TablePropName="Table" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="calc_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_oid" msprop:Generator_ColumnPropNameInRow="calc_oid" msprop:Generator_ColumnVarNameInTable="columncalc_oid" msprop:Generator_ColumnPropNameInTable="calc_oidColumn" type="xs:string" />
+              <xs:element name="calc_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_code" msprop:Generator_ColumnPropNameInRow="calc_code" msprop:Generator_ColumnVarNameInTable="columncalc_code" msprop:Generator_ColumnPropNameInTable="calc_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_en_id" msprop:Generator_ColumnPropNameInRow="calc_en_id" msprop:Generator_ColumnVarNameInTable="columncalc_en_id" msprop:Generator_ColumnPropNameInTable="calc_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="en_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="en_desc" msprop:Generator_ColumnPropNameInRow="en_desc" msprop:Generator_ColumnVarNameInTable="columnen_desc" msprop:Generator_ColumnPropNameInTable="en_descColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_date" msprop:Generator_ColumnPropNameInRow="calc_date" msprop:Generator_ColumnVarNameInTable="columncalc_date" msprop:Generator_ColumnPropNameInTable="calc_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="calc_judul" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_judul" msprop:Generator_ColumnPropNameInRow="calc_judul" msprop:Generator_ColumnVarNameInTable="columncalc_judul" msprop:Generator_ColumnPropNameInTable="calc_judulColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_jns_buku" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_jns_buku" msprop:Generator_ColumnPropNameInRow="calc_jns_buku" msprop:Generator_ColumnVarNameInTable="columncalc_jns_buku" msprop:Generator_ColumnPropNameInTable="calc_jns_bukuColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_remarks" msprop:Generator_ColumnPropNameInRow="calc_remarks" msprop:Generator_ColumnVarNameInTable="columncalc_remarks" msprop:Generator_ColumnPropNameInTable="calc_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_oplah" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_oplah" msprop:Generator_ColumnPropNameInRow="calc_oplah" msprop:Generator_ColumnVarNameInTable="columncalc_oplah" msprop:Generator_ColumnPropNameInTable="calc_oplahColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_ukuran" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_ukuran" msprop:Generator_ColumnPropNameInRow="calc_ukuran" msprop:Generator_ColumnVarNameInTable="columncalc_ukuran" msprop:Generator_ColumnPropNameInTable="calc_ukuranColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_biaya_produksi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_biaya_produksi" msprop:Generator_ColumnPropNameInRow="calc_biaya_produksi" msprop:Generator_ColumnVarNameInTable="columncalc_biaya_produksi" msprop:Generator_ColumnPropNameInTable="calc_biaya_produksiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_biaya_per_buku" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_biaya_per_buku" msprop:Generator_ColumnPropNameInRow="calc_biaya_per_buku" msprop:Generator_ColumnVarNameInTable="columncalc_biaya_per_buku" msprop:Generator_ColumnPropNameInTable="calc_biaya_per_bukuColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_panjang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_panjang" msprop:Generator_ColumnPropNameInRow="calc_panjang" msprop:Generator_ColumnVarNameInTable="columncalc_panjang" msprop:Generator_ColumnPropNameInTable="calc_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_lebar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_lebar" msprop:Generator_ColumnPropNameInRow="calc_lebar" msprop:Generator_ColumnVarNameInTable="columncalc_lebar" msprop:Generator_ColumnPropNameInTable="calc_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_berat" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_berat" msprop:Generator_ColumnPropNameInRow="calc_berat" msprop:Generator_ColumnVarNameInTable="columncalc_berat" msprop:Generator_ColumnPropNameInTable="calc_beratColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_jml" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_jml" msprop:Generator_ColumnPropNameInRow="calc_isi_jml" msprop:Generator_ColumnVarNameInTable="columncalc_isi_jml" msprop:Generator_ColumnPropNameInTable="calc_isi_jmlColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_opsi" msprop:Generator_ColumnPropNameInRow="calc_isi_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_isi_opsi" msprop:Generator_ColumnPropNameInTable="calc_isi_opsiColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="calc_isi_bahan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_bahan" msprop:Generator_ColumnPropNameInRow="calc_isi_bahan" msprop:Generator_ColumnVarNameInTable="columncalc_isi_bahan" msprop:Generator_ColumnPropNameInTable="calc_isi_bahanColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_isi_bhn_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_bhn_qty" msprop:Generator_ColumnPropNameInRow="calc_isi_bhn_qty" msprop:Generator_ColumnVarNameInTable="columncalc_isi_bhn_qty" msprop:Generator_ColumnPropNameInTable="calc_isi_bhn_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_panjang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_panjang" msprop:Generator_ColumnPropNameInRow="calc_isi_panjang" msprop:Generator_ColumnVarNameInTable="columncalc_isi_panjang" msprop:Generator_ColumnPropNameInTable="calc_isi_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_lebar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_lebar" msprop:Generator_ColumnPropNameInRow="calc_isi_lebar" msprop:Generator_ColumnVarNameInTable="columncalc_isi_lebar" msprop:Generator_ColumnPropNameInTable="calc_isi_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_jml_warna" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_jml_warna" msprop:Generator_ColumnPropNameInRow="calc_isi_jml_warna" msprop:Generator_ColumnVarNameInTable="columncalc_isi_jml_warna" msprop:Generator_ColumnPropNameInTable="calc_isi_jml_warnaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_insheet" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_insheet" msprop:Generator_ColumnPropNameInRow="calc_isi_insheet" msprop:Generator_ColumnVarNameInTable="columncalc_isi_insheet" msprop:Generator_ColumnPropNameInTable="calc_isi_insheetColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_naik_cetak" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_naik_cetak" msprop:Generator_ColumnPropNameInRow="calc_isi_naik_cetak" msprop:Generator_ColumnVarNameInTable="columncalc_isi_naik_cetak" msprop:Generator_ColumnPropNameInTable="calc_isi_naik_cetakColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_jns_mesin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_jns_mesin" msprop:Generator_ColumnPropNameInRow="calc_jns_mesin" msprop:Generator_ColumnVarNameInTable="columncalc_jns_mesin" msprop:Generator_ColumnPropNameInTable="calc_jns_mesinColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_isi_kbthn_bahan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_kbthn_bahan" msprop:Generator_ColumnPropNameInRow="calc_isi_kbthn_bahan" msprop:Generator_ColumnVarNameInTable="columncalc_isi_kbthn_bahan" msprop:Generator_ColumnPropNameInTable="calc_isi_kbthn_bahanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_nilai" msprop:Generator_ColumnPropNameInRow="calc_isi_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_isi_nilai" msprop:Generator_ColumnPropNameInTable="calc_isi_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_isi_outsource_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_outsource_opsi" msprop:Generator_ColumnPropNameInRow="calc_isi_outsource_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_isi_outsource_opsi" msprop:Generator_ColumnPropNameInTable="calc_isi_outsource_opsiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_isi_outsource_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_isi_outsource_nilai" msprop:Generator_ColumnPropNameInRow="calc_isi_outsource_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_isi_outsource_nilai" msprop:Generator_ColumnPropNameInTable="calc_isi_outsource_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_jml_design" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_jml_design" msprop:Generator_ColumnPropNameInRow="calc_sb_jml_design" msprop:Generator_ColumnVarNameInTable="columncalc_sb_jml_design" msprop:Generator_ColumnPropNameInTable="calc_sb_jml_designColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_opsi" msprop:Generator_ColumnPropNameInRow="calc_sb_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_sb_opsi" msprop:Generator_ColumnPropNameInTable="calc_sb_opsiColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="calc_sb_panjang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_panjang" msprop:Generator_ColumnPropNameInRow="calc_sb_panjang" msprop:Generator_ColumnVarNameInTable="columncalc_sb_panjang" msprop:Generator_ColumnPropNameInTable="calc_sb_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_lebar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_lebar" msprop:Generator_ColumnPropNameInRow="calc_sb_lebar" msprop:Generator_ColumnVarNameInTable="columncalc_sb_lebar" msprop:Generator_ColumnPropNameInTable="calc_sb_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_jns_bahan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_jns_bahan" msprop:Generator_ColumnPropNameInRow="calc_sb_jns_bahan" msprop:Generator_ColumnVarNameInTable="columncalc_sb_jns_bahan" msprop:Generator_ColumnPropNameInTable="calc_sb_jns_bahanColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_sb_bahan_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_bahan_qty" msprop:Generator_ColumnPropNameInRow="calc_sb_bahan_qty" msprop:Generator_ColumnVarNameInTable="columncalc_sb_bahan_qty" msprop:Generator_ColumnPropNameInTable="calc_sb_bahan_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_bhn_panjang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_bhn_panjang" msprop:Generator_ColumnPropNameInRow="calc_sb_bhn_panjang" msprop:Generator_ColumnVarNameInTable="columncalc_sb_bhn_panjang" msprop:Generator_ColumnPropNameInTable="calc_sb_bhn_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_bhn_lebar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_bhn_lebar" msprop:Generator_ColumnPropNameInRow="calc_sb_bhn_lebar" msprop:Generator_ColumnVarNameInTable="columncalc_sb_bhn_lebar" msprop:Generator_ColumnPropNameInTable="calc_sb_bhn_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_jml_warna" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_jml_warna" msprop:Generator_ColumnPropNameInRow="calc_sb_jml_warna" msprop:Generator_ColumnVarNameInTable="columncalc_sb_jml_warna" msprop:Generator_ColumnPropNameInTable="calc_sb_jml_warnaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_insheet" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_insheet" msprop:Generator_ColumnPropNameInRow="calc_sb_insheet" msprop:Generator_ColumnVarNameInTable="columncalc_sb_insheet" msprop:Generator_ColumnPropNameInTable="calc_sb_insheetColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_naik_cetak" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_naik_cetak" msprop:Generator_ColumnPropNameInRow="calc_sb_naik_cetak" msprop:Generator_ColumnVarNameInTable="columncalc_sb_naik_cetak" msprop:Generator_ColumnPropNameInTable="calc_sb_naik_cetakColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_berat" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_berat" msprop:Generator_ColumnPropNameInRow="calc_sb_berat" msprop:Generator_ColumnVarNameInTable="columncalc_sb_berat" msprop:Generator_ColumnPropNameInTable="calc_sb_beratColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_bhn_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_bhn_qty" msprop:Generator_ColumnPropNameInRow="calc_sb_bhn_qty" msprop:Generator_ColumnVarNameInTable="columncalc_sb_bhn_qty" msprop:Generator_ColumnPropNameInTable="calc_sb_bhn_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_jns_mesin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_jns_mesin" msprop:Generator_ColumnPropNameInRow="calc_sb_jns_mesin" msprop:Generator_ColumnVarNameInTable="columncalc_sb_jns_mesin" msprop:Generator_ColumnPropNameInTable="calc_sb_jns_mesinColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_sb_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_nilai" msprop:Generator_ColumnPropNameInRow="calc_sb_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_sb_nilai" msprop:Generator_ColumnPropNameInTable="calc_sb_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_sb_outsource_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_outsource_opsi" msprop:Generator_ColumnPropNameInRow="calc_sb_outsource_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_sb_outsource_opsi" msprop:Generator_ColumnPropNameInTable="calc_sb_outsource_opsiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_sb_outsource_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_sb_outsource_nilai" msprop:Generator_ColumnPropNameInRow="calc_sb_outsource_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_sb_outsource_nilai" msprop:Generator_ColumnPropNameInTable="calc_sb_outsource_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_jml_design" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_jml_design" msprop:Generator_ColumnPropNameInRow="calc_cv_jml_design" msprop:Generator_ColumnVarNameInTable="columncalc_cv_jml_design" msprop:Generator_ColumnPropNameInTable="calc_cv_jml_designColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_opsi" msprop:Generator_ColumnPropNameInRow="calc_cv_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_cv_opsi" msprop:Generator_ColumnPropNameInTable="calc_cv_opsiColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="calc_cv_panjang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_panjang" msprop:Generator_ColumnPropNameInRow="calc_cv_panjang" msprop:Generator_ColumnVarNameInTable="columncalc_cv_panjang" msprop:Generator_ColumnPropNameInTable="calc_cv_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_lebar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_lebar" msprop:Generator_ColumnPropNameInRow="calc_cv_lebar" msprop:Generator_ColumnVarNameInTable="columncalc_cv_lebar" msprop:Generator_ColumnPropNameInTable="calc_cv_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_jns_bahan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_jns_bahan" msprop:Generator_ColumnPropNameInRow="calc_cv_jns_bahan" msprop:Generator_ColumnVarNameInTable="columncalc_cv_jns_bahan" msprop:Generator_ColumnPropNameInTable="calc_cv_jns_bahanColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_cv_bahan_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_bahan_qty" msprop:Generator_ColumnPropNameInRow="calc_cv_bahan_qty" msprop:Generator_ColumnVarNameInTable="columncalc_cv_bahan_qty" msprop:Generator_ColumnPropNameInTable="calc_cv_bahan_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_bhn_panjang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_bhn_panjang" msprop:Generator_ColumnPropNameInRow="calc_cv_bhn_panjang" msprop:Generator_ColumnVarNameInTable="columncalc_cv_bhn_panjang" msprop:Generator_ColumnPropNameInTable="calc_cv_bhn_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_bhn_lebar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_bhn_lebar" msprop:Generator_ColumnPropNameInRow="calc_cv_bhn_lebar" msprop:Generator_ColumnVarNameInTable="columncalc_cv_bhn_lebar" msprop:Generator_ColumnPropNameInTable="calc_cv_bhn_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_jml_warna" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_jml_warna" msprop:Generator_ColumnPropNameInRow="calc_cv_jml_warna" msprop:Generator_ColumnVarNameInTable="columncalc_cv_jml_warna" msprop:Generator_ColumnPropNameInTable="calc_cv_jml_warnaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_insheet" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_insheet" msprop:Generator_ColumnPropNameInRow="calc_cv_insheet" msprop:Generator_ColumnVarNameInTable="columncalc_cv_insheet" msprop:Generator_ColumnPropNameInTable="calc_cv_insheetColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_naik_cetak" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_naik_cetak" msprop:Generator_ColumnPropNameInRow="calc_cv_naik_cetak" msprop:Generator_ColumnVarNameInTable="columncalc_cv_naik_cetak" msprop:Generator_ColumnPropNameInTable="calc_cv_naik_cetakColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_berat" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_berat" msprop:Generator_ColumnPropNameInRow="calc_cv_berat" msprop:Generator_ColumnVarNameInTable="columncalc_cv_berat" msprop:Generator_ColumnPropNameInTable="calc_cv_beratColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_kbthn_bhn_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_kbthn_bhn_qty" msprop:Generator_ColumnPropNameInRow="calc_cv_kbthn_bhn_qty" msprop:Generator_ColumnVarNameInTable="columncalc_cv_kbthn_bhn_qty" msprop:Generator_ColumnPropNameInTable="calc_cv_kbthn_bhn_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_jns_mesin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_jns_mesin" msprop:Generator_ColumnPropNameInRow="calc_cv_jns_mesin" msprop:Generator_ColumnVarNameInTable="columncalc_cv_jns_mesin" msprop:Generator_ColumnPropNameInTable="calc_cv_jns_mesinColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_cv_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_nilai" msprop:Generator_ColumnPropNameInRow="calc_cv_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_cv_nilai" msprop:Generator_ColumnPropNameInTable="calc_cv_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_cv_outsource_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_outsource_opsi" msprop:Generator_ColumnPropNameInRow="calc_cv_outsource_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_cv_outsource_opsi" msprop:Generator_ColumnPropNameInTable="calc_cv_outsource_opsiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_cv_outsource_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_cv_outsource_nilai" msprop:Generator_ColumnPropNameInRow="calc_cv_outsource_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_cv_outsource_nilai" msprop:Generator_ColumnPropNameInTable="calc_cv_outsource_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_kr_jns_bahan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_jns_bahan" msprop:Generator_ColumnPropNameInRow="calc_kr_jns_bahan" msprop:Generator_ColumnVarNameInTable="columncalc_kr_jns_bahan" msprop:Generator_ColumnPropNameInTable="calc_kr_jns_bahanColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_kr_jns_bhn_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_jns_bhn_qty" msprop:Generator_ColumnPropNameInRow="calc_kr_jns_bhn_qty" msprop:Generator_ColumnVarNameInTable="columncalc_kr_jns_bhn_qty" msprop:Generator_ColumnPropNameInTable="calc_kr_jns_bhn_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_kr_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_opsi" msprop:Generator_ColumnPropNameInRow="calc_kr_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_kr_opsi" msprop:Generator_ColumnPropNameInTable="calc_kr_opsiColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="calc_kr_bhn_panjang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_bhn_panjang" msprop:Generator_ColumnPropNameInRow="calc_kr_bhn_panjang" msprop:Generator_ColumnVarNameInTable="columncalc_kr_bhn_panjang" msprop:Generator_ColumnPropNameInTable="calc_kr_bhn_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_kr_bhn_lebar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_bhn_lebar" msprop:Generator_ColumnPropNameInRow="calc_kr_bhn_lebar" msprop:Generator_ColumnVarNameInTable="columncalc_kr_bhn_lebar" msprop:Generator_ColumnPropNameInTable="calc_kr_bhn_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_kr_insheet" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_insheet" msprop:Generator_ColumnPropNameInRow="calc_kr_insheet" msprop:Generator_ColumnVarNameInTable="columncalc_kr_insheet" msprop:Generator_ColumnPropNameInTable="calc_kr_insheetColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_kr_bhn_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_bhn_qty" msprop:Generator_ColumnPropNameInRow="calc_kr_bhn_qty" msprop:Generator_ColumnVarNameInTable="columncalc_kr_bhn_qty" msprop:Generator_ColumnPropNameInTable="calc_kr_bhn_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_kr_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_nilai" msprop:Generator_ColumnPropNameInRow="calc_kr_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_kr_nilai" msprop:Generator_ColumnPropNameInTable="calc_kr_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_kr_outsource_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_outsource_opsi" msprop:Generator_ColumnPropNameInRow="calc_kr_outsource_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_kr_outsource_opsi" msprop:Generator_ColumnPropNameInTable="calc_kr_outsource_opsiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_kr_outsource_nilai" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_kr_outsource_nilai" msprop:Generator_ColumnPropNameInRow="calc_kr_outsource_nilai" msprop:Generator_ColumnVarNameInTable="columncalc_kr_outsource_nilai" msprop:Generator_ColumnPropNameInTable="calc_kr_outsource_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_pra_opsi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_pra_opsi" msprop:Generator_ColumnPropNameInRow="calc_pra_opsi" msprop:Generator_ColumnVarNameInTable="columncalc_pra_opsi" msprop:Generator_ColumnPropNameInTable="calc_pra_opsiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_opsi_isi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_opsi_isi" msprop:Generator_ColumnPropNameInRow="calc_opsi_isi" msprop:Generator_ColumnVarNameInTable="columncalc_opsi_isi" msprop:Generator_ColumnPropNameInTable="calc_opsi_isiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_biaya_produksi2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_biaya_produksi2" msprop:Generator_ColumnPropNameInRow="calc_biaya_produksi2" msprop:Generator_ColumnVarNameInTable="columncalc_biaya_produksi2" msprop:Generator_ColumnPropNameInTable="calc_biaya_produksi2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_margin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_margin" msprop:Generator_ColumnPropNameInRow="calc_margin" msprop:Generator_ColumnVarNameInTable="columncalc_margin" msprop:Generator_ColumnPropNameInTable="calc_marginColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_nilai_margin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_nilai_margin" msprop:Generator_ColumnPropNameInRow="calc_nilai_margin" msprop:Generator_ColumnVarNameInTable="columncalc_nilai_margin" msprop:Generator_ColumnPropNameInTable="calc_nilai_marginColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_biaya_produksi_nilai_margin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_biaya_produksi_nilai_margin" msprop:Generator_ColumnPropNameInRow="calc_biaya_produksi_nilai_margin" msprop:Generator_ColumnVarNameInTable="columncalc_biaya_produksi_nilai_margin" msprop:Generator_ColumnPropNameInTable="calc_biaya_produksi_nilai_marginColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_ppn" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_ppn" msprop:Generator_ColumnPropNameInRow="calc_ppn" msprop:Generator_ColumnVarNameInTable="columncalc_ppn" msprop:Generator_ColumnPropNameInTable="calc_ppnColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_nilai_ppn" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_nilai_ppn" msprop:Generator_ColumnPropNameInRow="calc_nilai_ppn" msprop:Generator_ColumnVarNameInTable="columncalc_nilai_ppn" msprop:Generator_ColumnPropNameInTable="calc_nilai_ppnColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_biaya_produksi_nilai_margin_nilai_ppn" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_biaya_produksi_nilai_margin_nilai_ppn" msprop:Generator_ColumnPropNameInRow="calc_biaya_produksi_nilai_margin_nilai_ppn" msprop:Generator_ColumnVarNameInTable="columncalc_biaya_produksi_nilai_margin_nilai_ppn" msprop:Generator_ColumnPropNameInTable="calc_biaya_produksi_nilai_margin_nilai_ppnColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_biaya_cetak_pcs" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_biaya_cetak_pcs" msprop:Generator_ColumnPropNameInRow="calc_biaya_cetak_pcs" msprop:Generator_ColumnVarNameInTable="columncalc_biaya_cetak_pcs" msprop:Generator_ColumnPropNameInTable="calc_biaya_cetak_pcsColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_harga_jaket" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_harga_jaket" msprop:Generator_ColumnPropNameInRow="calc_harga_jaket" msprop:Generator_ColumnVarNameInTable="columncalc_harga_jaket" msprop:Generator_ColumnPropNameInTable="calc_harga_jaketColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_margin_jaket" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_margin_jaket" msprop:Generator_ColumnPropNameInRow="calc_margin_jaket" msprop:Generator_ColumnVarNameInTable="columncalc_margin_jaket" msprop:Generator_ColumnPropNameInTable="calc_margin_jaketColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_nilai_jaket" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_nilai_jaket" msprop:Generator_ColumnPropNameInRow="calc_nilai_jaket" msprop:Generator_ColumnVarNameInTable="columncalc_nilai_jaket" msprop:Generator_ColumnPropNameInTable="calc_nilai_jaketColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_biaya_cetak_final" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_biaya_cetak_final" msprop:Generator_ColumnPropNameInRow="calc_biaya_cetak_final" msprop:Generator_ColumnVarNameInTable="columncalc_biaya_cetak_final" msprop:Generator_ColumnPropNameInTable="calc_biaya_cetak_finalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calc_add_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_add_by" msprop:Generator_ColumnPropNameInRow="calc_add_by" msprop:Generator_ColumnVarNameInTable="columncalc_add_by" msprop:Generator_ColumnPropNameInTable="calc_add_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_add_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_add_date" msprop:Generator_ColumnPropNameInRow="calc_add_date" msprop:Generator_ColumnVarNameInTable="columncalc_add_date" msprop:Generator_ColumnPropNameInTable="calc_add_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="calc_upd_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_upd_by" msprop:Generator_ColumnPropNameInRow="calc_upd_by" msprop:Generator_ColumnVarNameInTable="columncalc_upd_by" msprop:Generator_ColumnPropNameInTable="calc_upd_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_upd_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="calc_upd_date" msprop:Generator_ColumnPropNameInRow="calc_upd_date" msprop:Generator_ColumnVarNameInTable="columncalc_upd_date" msprop:Generator_ColumnPropNameInTable="calc_upd_dateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:calc_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:en_desc" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

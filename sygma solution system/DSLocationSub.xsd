@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSLocationSub" targetNamespace="http://tempuri.org/DSLocationSub.xsd" xmlns:mstns="http://tempuri.org/DSLocationSub.xsd" xmlns="http://tempuri.org/DSLocationSub.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSLocationSub" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSLocationSub" msprop:Generator_DataSetName="DSLocationSub">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TablePropName="Table" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="locs_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="locs_en_id" msprop:Generator_ColumnPropNameInRow="locs_en_id" msprop:Generator_ColumnVarNameInTable="columnlocs_en_id" msprop:Generator_ColumnPropNameInTable="locs_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="locs_loc_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="locs_loc_id" msprop:Generator_ColumnPropNameInRow="locs_loc_id" msprop:Generator_ColumnVarNameInTable="columnlocs_loc_id" msprop:Generator_ColumnPropNameInTable="locs_loc_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="loc_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="loc_code" msprop:Generator_ColumnPropNameInRow="loc_code" msprop:Generator_ColumnVarNameInTable="columnloc_code" msprop:Generator_ColumnPropNameInTable="loc_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loc_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="loc_desc" msprop:Generator_ColumnPropNameInRow="loc_desc" msprop:Generator_ColumnVarNameInTable="columnloc_desc" msprop:Generator_ColumnPropNameInTable="loc_descColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="losc_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="losc_id" msprop:Generator_ColumnPropNameInRow="losc_id" msprop:Generator_ColumnVarNameInTable="columnlosc_id" msprop:Generator_ColumnPropNameInTable="losc_idColumn" type="xs:int" />
+              <xs:element name="locs_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="locs_name" msprop:Generator_ColumnPropNameInRow="locs_name" msprop:Generator_ColumnVarNameInTable="columnlocs_name" msprop:Generator_ColumnPropNameInTable="locs_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="locs_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="locs_remarks" msprop:Generator_ColumnPropNameInRow="locs_remarks" msprop:Generator_ColumnVarNameInTable="columnlocs_remarks" msprop:Generator_ColumnPropNameInTable="locs_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="175" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="locs_active" msdata:ReadOnly="true" msprop:Generator_UserColumnName="locs_active" msprop:Generator_ColumnPropNameInRow="locs_active" msprop:Generator_ColumnVarNameInTable="columnlocs_active" msprop:Generator_ColumnPropNameInTable="locs_activeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="en_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="en_desc" msprop:Generator_ColumnPropNameInRow="en_desc" msprop:Generator_ColumnVarNameInTable="columnen_desc" msprop:Generator_ColumnPropNameInTable="en_descColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:losc_id" />
+    </xs:unique>
+    <xs:unique name="Constraint2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:en_desc" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

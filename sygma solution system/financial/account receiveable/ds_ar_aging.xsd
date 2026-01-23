@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_ar_aging" targetNamespace="http://tempuri.org/ds_ar_aging.xsd" xmlns:mstns="http://tempuri.org/ds_ar_aging.xsd" xmlns="http://tempuri.org/ds_ar_aging.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_7" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_7 (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_7" Provider="System.Data.Odbc" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_lokal" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_lokal (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_lokal" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="odbc_sygma_lokal (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT en_desc,
+                     b.ptnr_name,
+                     c.code_name AS ar_type_name,
+                     coalesce(a.ar_amount,0) as ar_amount,
+                     coalesce(a.ar_pay_amount,0) as ar_pay_amount,
+                     coalesce(a.ar_amount,0)-coalesce(a.ar_pay_amount,0) as ar_outstanding , a.ar_due_date                  
+                   FROM
+                     ar_mstr a
+                     INNER JOIN ptnr_mstr b ON (a.ar_bill_to = b.ptnr_id)
+                     INNER JOIN code_mstr c ON (a.ar_type = c.code_id) 
+                     INNER JOIN en_mstr  on en_id = ar_en_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ptnr_name" DataSetColumn="ptnr_name" />
+              <Mapping SourceColumn="ar_type_name" DataSetColumn="ar_type_name" />
+              <Mapping SourceColumn="ar_amount" DataSetColumn="ar_amount" />
+              <Mapping SourceColumn="ar_pay_amount" DataSetColumn="ar_pay_amount" />
+              <Mapping SourceColumn="ar_outstanding" DataSetColumn="ar_outstanding" />
+              <Mapping SourceColumn="ar_due_date" DataSetColumn="ar_due_date" />
+              <Mapping SourceColumn="en_desc" DataSetColumn="en_desc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_ar_aging" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ds_ar_aging" msprop:Generator_UserDSName="ds_ar_aging" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TablePropName="DataTable1" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ptnr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_name" msprop:Generator_ColumnPropNameInRow="ptnr_name" msprop:Generator_ColumnVarNameInTable="columnptnr_name" msprop:Generator_ColumnPropNameInTable="ptnr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ar_type_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ar_type_name" msprop:Generator_ColumnPropNameInRow="ar_type_name" msprop:Generator_ColumnVarNameInTable="columnar_type_name" msprop:Generator_ColumnPropNameInTable="ar_type_nameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ar_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ar_amount" msprop:Generator_ColumnPropNameInRow="ar_amount" msprop:Generator_ColumnVarNameInTable="columnar_amount" msprop:Generator_ColumnPropNameInTable="ar_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ar_pay_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ar_pay_amount" msprop:Generator_ColumnPropNameInRow="ar_pay_amount" msprop:Generator_ColumnVarNameInTable="columnar_pay_amount" msprop:Generator_ColumnPropNameInTable="ar_pay_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ar_outstanding" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ar_outstanding" msprop:Generator_ColumnPropNameInRow="ar_outstanding" msprop:Generator_ColumnVarNameInTable="columnar_outstanding" msprop:Generator_ColumnPropNameInTable="ar_outstandingColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ar_due_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ar_due_date" msprop:Generator_ColumnPropNameInRow="ar_due_date" msprop:Generator_ColumnVarNameInTable="columnar_due_date" msprop:Generator_ColumnPropNameInTable="ar_due_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="en_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="en_desc" msprop:Generator_ColumnPropNameInRow="en_desc" msprop:Generator_ColumnVarNameInTable="columnen_desc" msprop:Generator_ColumnPropNameInTable="en_descColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:ar_type_name" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:en_desc" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

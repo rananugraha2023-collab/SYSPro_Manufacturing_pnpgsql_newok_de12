@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="POAmount" targetNamespace="http://tempuri.org/POAmount.xsd" xmlns:mstns="http://tempuri.org/POAmount.xsd" xmlns="http://tempuri.org/POAmount.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="POAmount" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="POAmount" msprop:Generator_DataSetName="POAmount">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pod_pt_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pod_pt_id" msprop:Generator_ColumnVarNameInTable="columnpod_pt_id" msprop:Generator_ColumnPropNameInRow="pod_pt_id" msprop:Generator_ColumnPropNameInTable="pod_pt_idColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="pt_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pt_code" msprop:Generator_ColumnVarNameInTable="columnpt_code" msprop:Generator_ColumnPropNameInRow="pt_code" msprop:Generator_ColumnPropNameInTable="pt_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lbl_periode" msdata:ReadOnly="true" msdata:Caption="pod_pt_desc1" msprop:Generator_UserColumnName="lbl_periode" msprop:Generator_ColumnPropNameInRow="lbl_periode" msprop:Generator_ColumnVarNameInTable="columnlbl_periode" msprop:Generator_ColumnPropNameInTable="lbl_periodeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pod_pt_desc1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pod_pt_desc1" msprop:Generator_ColumnVarNameInTable="columnpod_pt_desc1" msprop:Generator_ColumnPropNameInRow="pod_pt_desc1" msprop:Generator_ColumnPropNameInTable="pod_pt_desc1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_receive" msdata:ReadOnly="true" msprop:Generator_UserColumnName="amount_receive" msprop:Generator_ColumnVarNameInTable="columnamount_receive" msprop:Generator_ColumnPropNameInRow="amount_receive" msprop:Generator_ColumnPropNameInTable="amount_receiveColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:pt_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

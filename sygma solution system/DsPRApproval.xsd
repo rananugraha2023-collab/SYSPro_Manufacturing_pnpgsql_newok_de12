@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsPRApproval" targetNamespace="http://tempuri.org/DsPRApproval.xsd" xmlns:mstns="http://tempuri.org/DsPRApproval.xsd" xmlns="http://tempuri.org/DsPRApproval.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsPRApproval" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsPRApproval" msprop:Generator_DataSetName="DsPRApproval">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TablePropName="Table" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="wf_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_oid" msprop:Generator_ColumnPropNameInRow="wf_oid" msprop:Generator_ColumnVarNameInTable="columnwf_oid" msprop:Generator_ColumnPropNameInTable="wf_oidColumn" type="xs:string" />
+              <xs:element name="wf_ref_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_ref_oid" msprop:Generator_ColumnPropNameInRow="wf_ref_oid" msprop:Generator_ColumnVarNameInTable="columnwf_ref_oid" msprop:Generator_ColumnPropNameInTable="wf_ref_oidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="wf_ref_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_ref_code" msprop:Generator_ColumnPropNameInRow="wf_ref_code" msprop:Generator_ColumnVarNameInTable="columnwf_ref_code" msprop:Generator_ColumnPropNameInTable="wf_ref_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wf_user_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_user_id" msprop:Generator_ColumnPropNameInRow="wf_user_id" msprop:Generator_ColumnVarNameInTable="columnwf_user_id" msprop:Generator_ColumnPropNameInTable="wf_user_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wf_wfs_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_wfs_id" msprop:Generator_ColumnPropNameInRow="wf_wfs_id" msprop:Generator_ColumnVarNameInTable="columnwf_wfs_id" msprop:Generator_ColumnPropNameInTable="wf_wfs_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wfs_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wfs_desc" msprop:Generator_ColumnPropNameInRow="wfs_desc" msprop:Generator_ColumnVarNameInTable="columnwfs_desc" msprop:Generator_ColumnPropNameInTable="wfs_descColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wf_date_to" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_date_to" msprop:Generator_ColumnPropNameInRow="wf_date_to" msprop:Generator_ColumnVarNameInTable="columnwf_date_to" msprop:Generator_ColumnPropNameInTable="wf_date_toColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="wf_aprv_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_aprv_date" msprop:Generator_ColumnPropNameInRow="wf_aprv_date" msprop:Generator_ColumnVarNameInTable="columnwf_aprv_date" msprop:Generator_ColumnPropNameInTable="wf_aprv_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="wf_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_desc" msprop:Generator_ColumnPropNameInRow="wf_desc" msprop:Generator_ColumnVarNameInTable="columnwf_desc" msprop:Generator_ColumnPropNameInTable="wf_descColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wf_aprv_user" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_aprv_user" msprop:Generator_ColumnPropNameInRow="wf_aprv_user" msprop:Generator_ColumnVarNameInTable="columnwf_aprv_user" msprop:Generator_ColumnPropNameInTable="wf_aprv_userColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wf_iscurrent" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_iscurrent" msprop:Generator_ColumnPropNameInRow="wf_iscurrent" msprop:Generator_ColumnVarNameInTable="columnwf_iscurrent" msprop:Generator_ColumnPropNameInTable="wf_iscurrentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wf_seq" msdata:ReadOnly="true" msprop:Generator_UserColumnName="wf_seq" msprop:Generator_ColumnPropNameInRow="wf_seq" msprop:Generator_ColumnVarNameInTable="columnwf_seq" msprop:Generator_ColumnPropNameInTable="wf_seqColumn" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:wf_oid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

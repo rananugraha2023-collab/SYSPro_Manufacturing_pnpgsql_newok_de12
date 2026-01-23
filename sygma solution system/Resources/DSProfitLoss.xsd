@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSProfitLoss" targetNamespace="http://tempuri.org/DSProfitLoss.xsd" xmlns:mstns="http://tempuri.org/DSProfitLoss.xsd" xmlns="http://tempuri.org/DSProfitLoss.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSProfitLoss" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSProfitLoss" msprop:Generator_DataSetName="DSProfitLoss">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pl_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pl_oid" msprop:Generator_ColumnPropNameInRow="pl_oid" msprop:Generator_ColumnVarNameInTable="columnpl_oid" msprop:Generator_ColumnPropNameInTable="pl_oidColumn" type="xs:string" />
+              <xs:element name="pl_footer" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pl_footer" msprop:Generator_ColumnPropNameInRow="pl_footer" msprop:Generator_ColumnVarNameInTable="columnpl_footer" msprop:Generator_ColumnPropNameInTable="pl_footerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pl_sign" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pl_sign" msprop:Generator_ColumnPropNameInRow="pl_sign" msprop:Generator_ColumnVarNameInTable="columnpl_sign" msprop:Generator_ColumnPropNameInTable="pl_signColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pl_number" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pl_number" msprop:Generator_ColumnPropNameInRow="pl_number" msprop:Generator_ColumnVarNameInTable="columnpl_number" msprop:Generator_ColumnPropNameInTable="pl_numberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pls_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pls_oid" msprop:Generator_ColumnPropNameInRow="pls_oid" msprop:Generator_ColumnVarNameInTable="columnpls_oid" msprop:Generator_ColumnPropNameInTable="pls_oidColumn" type="xs:string" />
+              <xs:element name="pls_item" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pls_item" msprop:Generator_ColumnPropNameInRow="pls_item" msprop:Generator_ColumnVarNameInTable="columnpls_item" msprop:Generator_ColumnPropNameInTable="pls_itemColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pls_number" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pls_number" msprop:Generator_ColumnPropNameInRow="pls_number" msprop:Generator_ColumnVarNameInTable="columnpls_number" msprop:Generator_ColumnPropNameInTable="pls_numberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pla_ac_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pla_ac_id" msprop:Generator_ColumnPropNameInRow="pla_ac_id" msprop:Generator_ColumnVarNameInTable="columnpla_ac_id" msprop:Generator_ColumnPropNameInTable="pla_ac_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ac_code_det" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_code_det" msprop:Generator_ColumnPropNameInRow="ac_code_det" msprop:Generator_ColumnVarNameInTable="columnac_code_det" msprop:Generator_ColumnPropNameInTable="ac_code_detColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_code" msprop:Generator_ColumnPropNameInRow="ac_code" msprop:Generator_ColumnVarNameInTable="columnac_code" msprop:Generator_ColumnPropNameInTable="ac_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_name_det" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_name_det" msprop:Generator_ColumnPropNameInRow="ac_name_det" msprop:Generator_ColumnVarNameInTable="columnac_name_det" msprop:Generator_ColumnPropNameInTable="ac_name_detColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_name" msprop:Generator_ColumnPropNameInRow="ac_name" msprop:Generator_ColumnVarNameInTable="columnac_name" msprop:Generator_ColumnPropNameInTable="ac_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pla_ac_hirarki" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pla_ac_hirarki" msprop:Generator_ColumnPropNameInRow="pla_ac_hirarki" msprop:Generator_ColumnVarNameInTable="columnpla_ac_hirarki" msprop:Generator_ColumnPropNameInTable="pla_ac_hirarkiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="v_nilai" msprop:Generator_UserColumnName="v_nilai" msprop:Generator_ColumnVarNameInTable="columnv_nilai" msprop:Generator_ColumnPropNameInRow="v_nilai" msprop:Generator_ColumnPropNameInTable="v_nilaiColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:pl_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:pls_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:ac_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

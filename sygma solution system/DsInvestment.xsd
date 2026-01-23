@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsInvestment" targetNamespace="http://tempuri.org/DsInvestment.xsd" xmlns:mstns="http://tempuri.org/DsInvestment.xsd" xmlns="http://tempuri.org/DsInvestment.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsInvestment" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsInvestment" msprop:Generator_DataSetName="DsInvestment">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="invest_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_code" msprop:Generator_ColumnVarNameInTable="columninvest_code" msprop:Generator_ColumnPropNameInRow="invest_code" msprop:Generator_ColumnPropNameInTable="invest_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="invest_investp_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_investp_code" msprop:Generator_ColumnVarNameInTable="columninvest_investp_code" msprop:Generator_ColumnPropNameInRow="invest_investp_code" msprop:Generator_ColumnPropNameInTable="invest_investp_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="invest_ptnr_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_ptnr_id" msprop:Generator_ColumnVarNameInTable="columninvest_ptnr_id" msprop:Generator_ColumnPropNameInRow="invest_ptnr_id" msprop:Generator_ColumnPropNameInTable="invest_ptnr_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="invest_pokok" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_pokok" msprop:Generator_ColumnVarNameInTable="columninvest_pokok" msprop:Generator_ColumnPropNameInRow="invest_pokok" msprop:Generator_ColumnPropNameInTable="invest_pokokColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_margin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_margin" msprop:Generator_ColumnVarNameInTable="columninvest_margin" msprop:Generator_ColumnPropNameInRow="invest_margin" msprop:Generator_ColumnPropNameInTable="invest_marginColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_top_bulan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_top_bulan" msprop:Generator_ColumnVarNameInTable="columninvest_top_bulan" msprop:Generator_ColumnPropNameInRow="invest_top_bulan" msprop:Generator_ColumnPropNameInTable="invest_top_bulanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_total_margin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_total_margin" msprop:Generator_ColumnVarNameInTable="columninvest_total_margin" msprop:Generator_ColumnPropNameInRow="invest_total_margin" msprop:Generator_ColumnPropNameInTable="invest_total_marginColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_pengembalian_investasi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_pengembalian_investasi" msprop:Generator_ColumnVarNameInTable="columninvest_pengembalian_investasi" msprop:Generator_ColumnPropNameInRow="invest_pengembalian_investasi" msprop:Generator_ColumnPropNameInTable="invest_pengembalian_investasiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_angsuran_per_bulan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_angsuran_per_bulan" msprop:Generator_ColumnVarNameInTable="columninvest_angsuran_per_bulan" msprop:Generator_ColumnPropNameInRow="invest_angsuran_per_bulan" msprop:Generator_ColumnPropNameInTable="invest_angsuran_per_bulanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_tanggal_transfer" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_tanggal_transfer" msprop:Generator_ColumnVarNameInTable="columninvest_tanggal_transfer" msprop:Generator_ColumnPropNameInRow="invest_tanggal_transfer" msprop:Generator_ColumnPropNameInTable="invest_tanggal_transferColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invest_awal_angsuran" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_awal_angsuran" msprop:Generator_ColumnVarNameInTable="columninvest_awal_angsuran" msprop:Generator_ColumnPropNameInRow="invest_awal_angsuran" msprop:Generator_ColumnPropNameInTable="invest_awal_angsuranColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invest_akhir_angsuran" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_akhir_angsuran" msprop:Generator_ColumnVarNameInTable="columninvest_akhir_angsuran" msprop:Generator_ColumnPropNameInRow="invest_akhir_angsuran" msprop:Generator_ColumnPropNameInTable="invest_akhir_angsuranColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invest_type" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_type" msprop:Generator_ColumnVarNameInTable="columninvest_type" msprop:Generator_ColumnPropNameInRow="invest_type" msprop:Generator_ColumnPropNameInTable="invest_typeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="invest_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_en_id" msprop:Generator_ColumnVarNameInTable="columninvest_en_id" msprop:Generator_ColumnPropNameInRow="invest_en_id" msprop:Generator_ColumnPropNameInTable="invest_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="invest_add_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_add_date" msprop:Generator_ColumnVarNameInTable="columninvest_add_date" msprop:Generator_ColumnPropNameInRow="invest_add_date" msprop:Generator_ColumnPropNameInTable="invest_add_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invest_add_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_add_by" msprop:Generator_ColumnVarNameInTable="columninvest_add_by" msprop:Generator_ColumnPropNameInRow="invest_add_by" msprop:Generator_ColumnPropNameInTable="invest_add_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="invest_upd_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_upd_date" msprop:Generator_ColumnVarNameInTable="columninvest_upd_date" msprop:Generator_ColumnPropNameInRow="invest_upd_date" msprop:Generator_ColumnPropNameInTable="invest_upd_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invest_upd_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_upd_by" msprop:Generator_ColumnVarNameInTable="columninvest_upd_by" msprop:Generator_ColumnPropNameInRow="invest_upd_by" msprop:Generator_ColumnPropNameInTable="invest_upd_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="invest_grace_periode" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_grace_periode" msprop:Generator_ColumnVarNameInTable="columninvest_grace_periode" msprop:Generator_ColumnPropNameInRow="invest_grace_periode" msprop:Generator_ColumnPropNameInTable="invest_grace_periodeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_tanggal" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_tanggal" msprop:Generator_ColumnVarNameInTable="columninvest_tanggal" msprop:Generator_ColumnPropNameInRow="invest_tanggal" msprop:Generator_ColumnPropNameInTable="invest_tanggalColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invest_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_remarks" msprop:Generator_ColumnVarNameInTable="columninvest_remarks" msprop:Generator_ColumnPropNameInRow="invest_remarks" msprop:Generator_ColumnPropNameInTable="invest_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="145" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="en_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="en_desc" msprop:Generator_ColumnVarNameInTable="columnen_desc" msprop:Generator_ColumnPropNameInRow="en_desc" msprop:Generator_ColumnPropNameInTable="en_descColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_code" msprop:Generator_ColumnVarNameInTable="columnptnr_code" msprop:Generator_ColumnPropNameInRow="ptnr_code" msprop:Generator_ColumnPropNameInTable="ptnr_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_name" msprop:Generator_ColumnVarNameInTable="columnptnr_name" msprop:Generator_ColumnPropNameInRow="ptnr_name" msprop:Generator_ColumnPropNameInTable="ptnr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="investp_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investp_desc" msprop:Generator_ColumnVarNameInTable="columninvestp_desc" msprop:Generator_ColumnPropNameInRow="investp_desc" msprop:Generator_ColumnPropNameInTable="investp_descColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="invest_payment_in" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_payment_in" msprop:Generator_ColumnVarNameInTable="columninvest_payment_in" msprop:Generator_ColumnPropNameInRow="invest_payment_in" msprop:Generator_ColumnPropNameInTable="invest_payment_inColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invest_payment_out" msdata:ReadOnly="true" msprop:Generator_UserColumnName="invest_payment_out" msprop:Generator_ColumnVarNameInTable="columninvest_payment_out" msprop:Generator_ColumnPropNameInRow="invest_payment_out" msprop:Generator_ColumnPropNameInTable="invest_payment_outColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="investd_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_oid" msprop:Generator_ColumnPropNameInRow="investd_oid" msprop:Generator_ColumnVarNameInTable="columninvestd_oid" msprop:Generator_ColumnPropNameInTable="investd_oidColumn" type="xs:string" />
+              <xs:element name="investd_invest_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_invest_code" msprop:Generator_ColumnPropNameInRow="investd_invest_code" msprop:Generator_ColumnVarNameInTable="columninvestd_invest_code" msprop:Generator_ColumnPropNameInTable="investd_invest_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="investd_periode" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_periode" msprop:Generator_ColumnPropNameInRow="investd_periode" msprop:Generator_ColumnVarNameInTable="columninvestd_periode" msprop:Generator_ColumnPropNameInTable="investd_periodeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="investd_payment_date_schedule" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_payment_date_schedule" msprop:Generator_ColumnPropNameInRow="investd_payment_date_schedule" msprop:Generator_ColumnVarNameInTable="columninvestd_payment_date_schedule" msprop:Generator_ColumnPropNameInTable="investd_payment_date_scheduleColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="investd_payment_date_realization" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_payment_date_realization" msprop:Generator_ColumnPropNameInRow="investd_payment_date_realization" msprop:Generator_ColumnVarNameInTable="columninvestd_payment_date_realization" msprop:Generator_ColumnPropNameInTable="investd_payment_date_realizationColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="investd_principal_installment" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_principal_installment" msprop:Generator_ColumnPropNameInRow="investd_principal_installment" msprop:Generator_ColumnVarNameInTable="columninvestd_principal_installment" msprop:Generator_ColumnPropNameInTable="investd_principal_installmentColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="investd_profit_sharing" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_profit_sharing" msprop:Generator_ColumnPropNameInRow="investd_profit_sharing" msprop:Generator_ColumnVarNameInTable="columninvestd_profit_sharing" msprop:Generator_ColumnPropNameInTable="investd_profit_sharingColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="investd_remaining_principal" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_remaining_principal" msprop:Generator_ColumnPropNameInRow="investd_remaining_principal" msprop:Generator_ColumnVarNameInTable="columninvestd_remaining_principal" msprop:Generator_ColumnPropNameInTable="investd_remaining_principalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="investd_payment_total" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_payment_total" msprop:Generator_ColumnPropNameInRow="investd_payment_total" msprop:Generator_ColumnVarNameInTable="columninvestd_payment_total" msprop:Generator_ColumnPropNameInTable="investd_payment_totalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="investd_paid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_paid" msprop:Generator_ColumnPropNameInRow="investd_paid" msprop:Generator_ColumnVarNameInTable="columninvestd_paid" msprop:Generator_ColumnPropNameInTable="investd_paidColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="investd_outstanding" msdata:ReadOnly="true" msprop:Generator_UserColumnName="investd_outstanding" msprop:Generator_ColumnPropNameInRow="investd_outstanding" msprop:Generator_ColumnVarNameInTable="columninvestd_outstanding" msprop:Generator_ColumnPropNameInTable="investd_outstandingColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:invest_code" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:en_desc" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

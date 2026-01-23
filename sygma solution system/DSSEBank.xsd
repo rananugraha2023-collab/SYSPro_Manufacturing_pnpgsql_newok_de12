@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSEBank" targetNamespace="http://tempuri.org/DSSEBank.xsd" xmlns:mstns="http://tempuri.org/DSSEBank.xsd" xmlns="http://tempuri.org/DSSEBank.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSEBank" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSSEBank" msprop:Generator_DataSetName="DSSEBank">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="segend_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_oid" msprop:Generator_ColumnVarNameInTable="columnsegend_oid" msprop:Generator_ColumnPropNameInRow="segend_oid" msprop:Generator_ColumnPropNameInTable="segend_oidColumn" type="xs:string" />
+              <xs:element name="segend_segen_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_segen_oid" msprop:Generator_ColumnVarNameInTable="columnsegend_segen_oid" msprop:Generator_ColumnPropNameInRow="segend_segen_oid" msprop:Generator_ColumnPropNameInTable="segend_segen_oidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="segend_ptnr_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_ptnr_id" msprop:Generator_ColumnVarNameInTable="columnsegend_ptnr_id" msprop:Generator_ColumnPropNameInRow="segend_ptnr_id" msprop:Generator_ColumnPropNameInTable="segend_ptnr_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="segend_level" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_level" msprop:Generator_ColumnVarNameInTable="columnsegend_level" msprop:Generator_ColumnPropNameInRow="segend_level" msprop:Generator_ColumnPropNameInTable="segend_levelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_code" msdata:ReadOnly="true" msdata:Caption="segend_nama" msprop:Generator_UserColumnName="ptnr_code" msprop:Generator_ColumnPropNameInRow="ptnr_code" msprop:Generator_ColumnVarNameInTable="columnptnr_code" msprop:Generator_ColumnPropNameInTable="ptnr_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segend_nama_tax" msdata:ReadOnly="true" msdata:Caption="segend_nama" msprop:Generator_UserColumnName="segend_nama_tax" msprop:Generator_ColumnVarNameInTable="columnsegend_nama_tax" msprop:Generator_ColumnPropNameInRow="segend_nama_tax" msprop:Generator_ColumnPropNameInTable="segend_nama_taxColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segend_npwp" msdata:ReadOnly="true" msdata:Caption="segend_nama" msprop:Generator_UserColumnName="segend_npwp" msprop:Generator_ColumnVarNameInTable="columnsegend_npwp" msprop:Generator_ColumnPropNameInRow="segend_npwp" msprop:Generator_ColumnPropNameInTable="segend_npwpColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segend_status_marital" msdata:ReadOnly="true" msdata:Caption="segend_nama" msprop:Generator_UserColumnName="segend_status_marital" msprop:Generator_ColumnVarNameInTable="columnsegend_status_marital" msprop:Generator_ColumnPropNameInRow="segend_status_marital" msprop:Generator_ColumnPropNameInTable="segend_status_maritalColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segend_nama" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_nama" msprop:Generator_ColumnVarNameInTable="columnsegend_nama" msprop:Generator_ColumnPropNameInRow="segend_nama" msprop:Generator_ColumnPropNameInTable="segend_namaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segend_active_sales" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_active_sales" msprop:Generator_ColumnVarNameInTable="columnsegend_active_sales" msprop:Generator_ColumnPropNameInRow="segend_active_sales" msprop:Generator_ColumnPropNameInTable="segend_active_salesColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_amount_dependents" msdata:ReadOnly="true" msdata:Caption="segend_su_sales" msprop:Generator_UserColumnName="segend_amount_dependents" msprop:Generator_ColumnVarNameInTable="columnsegend_amount_dependents" msprop:Generator_ColumnPropNameInRow="segend_amount_dependents" msprop:Generator_ColumnPropNameInTable="segend_amount_dependentsColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_su_sales" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_su_sales" msprop:Generator_ColumnVarNameInTable="columnsegend_su_sales" msprop:Generator_ColumnPropNameInRow="segend_su_sales" msprop:Generator_ColumnPropNameInTable="segend_su_salesColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_pengali_komisi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_pengali_komisi" msprop:Generator_ColumnVarNameInTable="columnsegend_pengali_komisi" msprop:Generator_ColumnPropNameInRow="segend_pengali_komisi" msprop:Generator_ColumnPropNameInTable="segend_pengali_komisiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_komisi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_komisi" msprop:Generator_ColumnVarNameInTable="columnsegend_komisi" msprop:Generator_ColumnPropNameInRow="segend_komisi" msprop:Generator_ColumnPropNameInTable="segend_komisiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_su_group" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_su_group" msprop:Generator_ColumnVarNameInTable="columnsegend_su_group" msprop:Generator_ColumnPropNameInRow="segend_su_group" msprop:Generator_ColumnPropNameInTable="segend_su_groupColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_percent_add_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_percent_add_income" msprop:Generator_ColumnVarNameInTable="columnsegend_percent_add_income" msprop:Generator_ColumnPropNameInRow="segend_percent_add_income" msprop:Generator_ColumnPropNameInTable="segend_percent_add_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_pengali_add_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_pengali_add_income" msprop:Generator_ColumnVarNameInTable="columnsegend_pengali_add_income" msprop:Generator_ColumnPropNameInRow="segend_pengali_add_income" msprop:Generator_ColumnPropNameInTable="segend_pengali_add_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_add_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_add_income" msprop:Generator_ColumnVarNameInTable="columnsegend_add_income" msprop:Generator_ColumnPropNameInRow="segend_add_income" msprop:Generator_ColumnPropNameInTable="segend_add_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_percent_coaching_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_percent_coaching_income" msprop:Generator_ColumnVarNameInTable="columnsegend_percent_coaching_income" msprop:Generator_ColumnPropNameInRow="segend_percent_coaching_income" msprop:Generator_ColumnPropNameInTable="segend_percent_coaching_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_pengali_coaching_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_pengali_coaching_income" msprop:Generator_ColumnVarNameInTable="columnsegend_pengali_coaching_income" msprop:Generator_ColumnPropNameInRow="segend_pengali_coaching_income" msprop:Generator_ColumnPropNameInTable="segend_pengali_coaching_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_coaching_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_coaching_income" msprop:Generator_ColumnVarNameInTable="columnsegend_coaching_income" msprop:Generator_ColumnPropNameInRow="segend_coaching_income" msprop:Generator_ColumnPropNameInTable="segend_coaching_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_total_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_total_income" msprop:Generator_ColumnVarNameInTable="columnsegend_total_income" msprop:Generator_ColumnPropNameInRow="segend_total_income" msprop:Generator_ColumnPropNameInTable="segend_total_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_payment_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_payment_date" msprop:Generator_ColumnVarNameInTable="columnsegend_payment_date" msprop:Generator_ColumnPropNameInRow="segend_payment_date" msprop:Generator_ColumnPropNameInTable="segend_payment_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="segen_remarks" msdata:ReadOnly="true" msdata:Caption="segend_entity" msprop:Generator_UserColumnName="segen_remarks" msprop:Generator_ColumnPropNameInRow="segen_remarks" msprop:Generator_ColumnVarNameInTable="columnsegen_remarks" msprop:Generator_ColumnPropNameInTable="segen_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="norek" msdata:ReadOnly="true" msdata:Caption="segend_entity" msprop:Generator_UserColumnName="norek" msprop:Generator_ColumnVarNameInTable="columnnorek" msprop:Generator_ColumnPropNameInRow="norek" msprop:Generator_ColumnPropNameInTable="norekColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bank" msdata:ReadOnly="true" msdata:Caption="segend_entity" msprop:Generator_UserColumnName="bank" msprop:Generator_ColumnPropNameInRow="bank" msprop:Generator_ColumnVarNameInTable="columnbank" msprop:Generator_ColumnPropNameInTable="bankColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segend_entity" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_entity" msprop:Generator_ColumnVarNameInTable="columnsegend_entity" msprop:Generator_ColumnPropNameInRow="segend_entity" msprop:Generator_ColumnPropNameInTable="segend_entityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segend_lvl_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_lvl_id" msprop:Generator_ColumnVarNameInTable="columnsegend_lvl_id" msprop:Generator_ColumnPropNameInRow="segend_lvl_id" msprop:Generator_ColumnPropNameInTable="segend_lvl_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="segend_parent" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_parent" msprop:Generator_ColumnVarNameInTable="columnsegend_parent" msprop:Generator_ColumnPropNameInRow="segend_parent" msprop:Generator_ColumnPropNameInTable="segend_parentColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="segend_komisi_telah_dibayar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_komisi_telah_dibayar" msprop:Generator_ColumnVarNameInTable="columnsegend_komisi_telah_dibayar" msprop:Generator_ColumnPropNameInRow="segend_komisi_telah_dibayar" msprop:Generator_ColumnPropNameInTable="segend_komisi_telah_dibayarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_komisi_bulanan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_komisi_bulanan" msprop:Generator_ColumnVarNameInTable="columnsegend_komisi_bulanan" msprop:Generator_ColumnPropNameInRow="segend_komisi_bulanan" msprop:Generator_ColumnPropNameInTable="segend_komisi_bulananColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:segend_oid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

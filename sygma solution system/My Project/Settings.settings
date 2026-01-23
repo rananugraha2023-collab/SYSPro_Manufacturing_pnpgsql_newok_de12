@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="odbc_sygma_lokal" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Dsn=syspro&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.Odbc&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Dsn=syspro</Value>
+    </Setting>
+    <Setting Name="sygma_cmds_20121028ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;User Id=postgres;Password=bangkar;Host=localhost;Database=sygma_cmds_20121028;Persist Security Info=True;Schema=public&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;CoreLab.PostgreSql.Entity&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">User Id=postgres;Password=bangkar;Host=localhost;Database=sygma_cmds_20121028;Persist Security Info=True;Schema=public</Value>
+    </Setting>
+    <Setting Name="sygma_091014_020623ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;User Id=postgres;Host=localhost;Database=sygma_091014_020623;Persist Security Info=True;Schema=public&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;CoreLab.PostgreSql.Entity&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">User Id=postgres;Host=localhost;Database=sygma_091014_020623;Persist Security Info=True;Schema=public</Value>
+    </Setting>
+    <Setting Name="sygma_091014ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;User Id=postgres;Host=localhost;Database=sygma_091014;Persist Security Info=True;Schema=public&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;CoreLab.PostgreSql.Entity&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">User Id=postgres;Host=localhost;Database=sygma_091014;Persist Security Info=True;Schema=public</Value>
+    </Setting>
+    <Setting Name="sygma_exa_1020_20240606ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;User Id=postgres;Host=localhost;Database=sygma_exa_1020_20240606&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;CoreLab.PostgreSql.Entity&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">User Id=postgres;Host=localhost;Database=sygma_exa_1020_20240606</Value>
+    </Setting>
+    <Setting Name="sygma_exa_1020_20240606ConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;User Id=postgres;Password=bangkar;Host=localhost;Database=sygma_exa_1020_20240606;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;CoreLab.PostgreSql.Entity&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">User Id=postgres;Password=bangkar;Host=localhost;Database=sygma_exa_1020_20240606;Persist Security Info=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,4 @@
+﻿server=localhost; 192.168.1.114; localhost; 192.168.1.150 localhost 192.168.1.10
+db=sygma_exa_1020_20240606; sygma_exa_1020_20240325; sygma_091014_20240320; sygma_cmds_20121028; sygma_cmds_20121028_20231003; sygma_091014; invcs_backup; sygma_091014_active sygma_091014_ros
+port=5432;
+user=admin;

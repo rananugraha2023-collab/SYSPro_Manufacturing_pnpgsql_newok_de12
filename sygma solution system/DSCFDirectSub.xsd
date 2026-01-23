@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCFDirectSub" targetNamespace="http://tempuri.org/DSCFDirectSub.xsd" xmlns:mstns="http://tempuri.org/DSCFDirectSub.xsd" xmlns="http://tempuri.org/DSCFDirectSub.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCFDirectSub" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSCFDirectSub" msprop:Generator_DataSetName="DSCFDirectSub">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TablePropName="Table" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="glt_periode" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="glt_periode" msprop:Generator_ColumnPropNameInRow="glt_periode" msprop:Generator_ColumnVarNameInTable="columnglt_periode" msprop:Generator_ColumnPropNameInTable="glt_periodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="glt_code" msprop:Generator_UserColumnName="glt_code" msprop:Generator_ColumnPropNameInRow="glt_code" msprop:Generator_ColumnVarNameInTable="columnglt_code" msprop:Generator_ColumnPropNameInTable="glt_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="glt_date" msprop:Generator_UserColumnName="glt_date" msprop:Generator_ColumnPropNameInRow="glt_date" msprop:Generator_ColumnVarNameInTable="columnglt_date" msprop:Generator_ColumnPropNameInTable="glt_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="glt_ac_id" msprop:Generator_UserColumnName="glt_ac_id" msprop:Generator_ColumnPropNameInRow="glt_ac_id" msprop:Generator_ColumnVarNameInTable="columnglt_ac_id" msprop:Generator_ColumnPropNameInTable="glt_ac_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ac_code" msprop:Generator_UserColumnName="ac_code" msprop:Generator_ColumnPropNameInRow="ac_code" msprop:Generator_ColumnVarNameInTable="columnac_code" msprop:Generator_ColumnPropNameInTable="ac_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_name" msprop:Generator_UserColumnName="ac_name" msprop:Generator_ColumnPropNameInRow="ac_name" msprop:Generator_ColumnVarNameInTable="columnac_name" msprop:Generator_ColumnPropNameInTable="ac_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="glt_desc" msprop:Generator_UserColumnName="glt_desc" msprop:Generator_ColumnPropNameInRow="glt_desc" msprop:Generator_ColumnVarNameInTable="columnglt_desc" msprop:Generator_ColumnPropNameInTable="glt_descColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="glt_debit" msprop:Generator_UserColumnName="glt_debit" msprop:Generator_ColumnPropNameInRow="glt_debit" msprop:Generator_ColumnVarNameInTable="columnglt_debit" msprop:Generator_ColumnPropNameInTable="glt_debitColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="glt_credit" msprop:Generator_UserColumnName="glt_credit" msprop:Generator_ColumnPropNameInRow="glt_credit" msprop:Generator_ColumnVarNameInTable="columnglt_credit" msprop:Generator_ColumnPropNameInTable="glt_creditColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="glt_ref_trans_code" msprop:Generator_UserColumnName="glt_ref_trans_code" msprop:Generator_ColumnPropNameInRow="glt_ref_trans_code" msprop:Generator_ColumnVarNameInTable="columnglt_ref_trans_code" msprop:Generator_ColumnPropNameInTable="glt_ref_trans_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="glt_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="glt_oid" msprop:Generator_ColumnPropNameInRow="glt_oid" msprop:Generator_ColumnVarNameInTable="columnglt_oid" msprop:Generator_ColumnPropNameInTable="glt_oidColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

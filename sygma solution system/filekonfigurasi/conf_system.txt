@@ -1,0 +1,13 @@
+﻿user_default=sygma;
+pass_default=bangkawarah;
+report_path=D:\setting report syspro;
+exc_rate_reff=http://www.ortax.org/ortax/?mod=kursbi&search=;
+xmpp_on=0;
+url_nik=vpnsygma.ddns.net:81;vpnsygma.ddns.net;192.168.1.140;
+
+email_server_name=mail.sygmacorp.com;
+email_user_name=syspro@sygmacorp.com;
+email_port=587;
+email_ssl=0;
+email_cc=syspromail@sygmacorp.com;
+stop_inv=16:00;

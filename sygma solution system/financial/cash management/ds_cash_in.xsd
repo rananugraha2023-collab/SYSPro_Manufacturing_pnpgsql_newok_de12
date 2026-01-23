@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_cash_in" targetNamespace="http://tempuri.org/ds_cash_in.xsd" xmlns:mstns="http://tempuri.org/ds_cash_in.xsd" xmlns="http://tempuri.org/ds_cash_in.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_lokal" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_lokal (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_lokal" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="odbc_sygma_lokal (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+  cashi_oid,
+  cashi_dom_id,
+  cashi_en_id,
+  cashi_add_by,
+  cashi_add_date,
+  cashi_upd_by,
+  cashi_upd_date,
+  cashi_bk_id,
+  cashi_ptnr_id,
+  cashi_code,
+  cashi_date,
+  cashi_remarks,
+  cashi_reff,
+  cashi_cu_id,
+  cashi_exc_rate,
+  cashi_amount,
+  cashi_amount * cashi_exc_rate as cashi_amount_ext,
+  cashi_check_number,
+  cashi_post_dated_check,
+  cashid_oid,
+  cashid_cashi_oid,
+  cashid_ac_id,
+  cashid_amount,
+  cashid_amount * cashi_exc_rate as cashid_amount_ext,
+  cashid_remarks,
+  cashid_seq,
+  bk_name,
+  ptnr_name,
+  ac_code,
+  ac_name,
+  cmaddr_name,
+  cmaddr_line_1,
+  cmaddr_line_2,
+  cmaddr_line_3
+FROM 
+  cashi_in
+inner join cashid_detail on cashid_cashi_oid = cashi_oid
+inner join bk_mstr on bk_id = cashi_bk_id
+inner join ptnr_mstr on ptnr_id = cashi_ptnr_id
+inner join cu_mstr on cu_id = cashi_cu_id
+inner join ac_mstr on ac_id = cashid_ac_id
+inner join cmaddr_mstr on cmaddr_en_id = cashi_en_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cashi_oid" DataSetColumn="cashi_oid" />
+              <Mapping SourceColumn="cashi_dom_id" DataSetColumn="cashi_dom_id" />
+              <Mapping SourceColumn="cashi_en_id" DataSetColumn="cashi_en_id" />
+              <Mapping SourceColumn="cashi_add_by" DataSetColumn="cashi_add_by" />
+              <Mapping SourceColumn="cashi_add_date" DataSetColumn="cashi_add_date" />
+              <Mapping SourceColumn="cashi_upd_by" DataSetColumn="cashi_upd_by" />
+              <Mapping SourceColumn="cashi_upd_date" DataSetColumn="cashi_upd_date" />
+              <Mapping SourceColumn="cashi_bk_id" DataSetColumn="cashi_bk_id" />
+              <Mapping SourceColumn="cashi_ptnr_id" DataSetColumn="cashi_ptnr_id" />
+              <Mapping SourceColumn="cashi_code" DataSetColumn="cashi_code" />
+              <Mapping SourceColumn="cashi_date" DataSetColumn="cashi_date" />
+              <Mapping SourceColumn="cashi_remarks" DataSetColumn="cashi_remarks" />
+              <Mapping SourceColumn="cashi_reff" DataSetColumn="cashi_reff" />
+              <Mapping SourceColumn="cashi_amount" DataSetColumn="cashi_amount" />
+              <Mapping SourceColumn="cashi_check_number" DataSetColumn="cashi_check_number" />
+              <Mapping SourceColumn="cashi_post_dated_check" DataSetColumn="cashi_post_dated_check" />
+              <Mapping SourceColumn="cashi_cu_id" DataSetColumn="cashi_cu_id" />
+              <Mapping SourceColumn="cashi_exc_rate" DataSetColumn="cashi_exc_rate" />
+              <Mapping SourceColumn="cashid_cashi_oid" DataSetColumn="cashid_cashi_oid" />
+              <Mapping SourceColumn="cashid_ac_id" DataSetColumn="cashid_ac_id" />
+              <Mapping SourceColumn="cashid_amount" DataSetColumn="cashid_amount" />
+              <Mapping SourceColumn="cashid_remarks" DataSetColumn="cashid_remarks" />
+              <Mapping SourceColumn="cashid_seq" DataSetColumn="cashid_seq" />
+              <Mapping SourceColumn="bk_name" DataSetColumn="bk_name" />
+              <Mapping SourceColumn="ptnr_name" DataSetColumn="ptnr_name" />
+              <Mapping SourceColumn="ac_code" DataSetColumn="ac_code" />
+              <Mapping SourceColumn="ac_name" DataSetColumn="ac_name" />
+              <Mapping SourceColumn="cashi_amount_ext" DataSetColumn="cashi_amount_ext" />
+              <Mapping SourceColumn="cashid_oid" DataSetColumn="cashid_oid" />
+              <Mapping SourceColumn="cashid_amount_ext" DataSetColumn="cashid_amount_ext" />
+              <Mapping SourceColumn="cmaddr_name" DataSetColumn="cmaddr_name" />
+              <Mapping SourceColumn="cmaddr_line_1" DataSetColumn="cmaddr_line_1" />
+              <Mapping SourceColumn="cmaddr_line_2" DataSetColumn="cmaddr_line_2" />
+              <Mapping SourceColumn="cmaddr_line_3" DataSetColumn="cmaddr_line_3" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_cash_in" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ds_cash_in" msprop:Generator_UserDSName="ds_cash_in" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TablePropName="DataTable1" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cashi_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_oid" msprop:Generator_ColumnPropNameInRow="cashi_oid" msprop:Generator_ColumnVarNameInTable="columncashi_oid" msprop:Generator_ColumnPropNameInTable="cashi_oidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_dom_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_dom_id" msprop:Generator_ColumnPropNameInRow="cashi_dom_id" msprop:Generator_ColumnVarNameInTable="columncashi_dom_id" msprop:Generator_ColumnPropNameInTable="cashi_dom_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cashi_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_en_id" msprop:Generator_ColumnPropNameInRow="cashi_en_id" msprop:Generator_ColumnVarNameInTable="columncashi_en_id" msprop:Generator_ColumnPropNameInTable="cashi_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cashi_add_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_add_by" msprop:Generator_ColumnPropNameInRow="cashi_add_by" msprop:Generator_ColumnVarNameInTable="columncashi_add_by" msprop:Generator_ColumnPropNameInTable="cashi_add_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_add_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_add_date" msprop:Generator_ColumnPropNameInRow="cashi_add_date" msprop:Generator_ColumnVarNameInTable="columncashi_add_date" msprop:Generator_ColumnPropNameInTable="cashi_add_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cashi_upd_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_upd_by" msprop:Generator_ColumnPropNameInRow="cashi_upd_by" msprop:Generator_ColumnVarNameInTable="columncashi_upd_by" msprop:Generator_ColumnPropNameInTable="cashi_upd_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_upd_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_upd_date" msprop:Generator_ColumnPropNameInRow="cashi_upd_date" msprop:Generator_ColumnVarNameInTable="columncashi_upd_date" msprop:Generator_ColumnPropNameInTable="cashi_upd_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cashi_bk_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_bk_id" msprop:Generator_ColumnPropNameInRow="cashi_bk_id" msprop:Generator_ColumnVarNameInTable="columncashi_bk_id" msprop:Generator_ColumnPropNameInTable="cashi_bk_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cashi_ptnr_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_ptnr_id" msprop:Generator_ColumnPropNameInRow="cashi_ptnr_id" msprop:Generator_ColumnVarNameInTable="columncashi_ptnr_id" msprop:Generator_ColumnPropNameInTable="cashi_ptnr_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cashi_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_code" msprop:Generator_ColumnPropNameInRow="cashi_code" msprop:Generator_ColumnVarNameInTable="columncashi_code" msprop:Generator_ColumnPropNameInTable="cashi_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_date" msprop:Generator_ColumnPropNameInRow="cashi_date" msprop:Generator_ColumnVarNameInTable="columncashi_date" msprop:Generator_ColumnPropNameInTable="cashi_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cashi_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_remarks" msprop:Generator_ColumnPropNameInRow="cashi_remarks" msprop:Generator_ColumnVarNameInTable="columncashi_remarks" msprop:Generator_ColumnPropNameInTable="cashi_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_reff" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_reff" msprop:Generator_ColumnPropNameInRow="cashi_reff" msprop:Generator_ColumnVarNameInTable="columncashi_reff" msprop:Generator_ColumnPropNameInTable="cashi_reffColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_amount" msprop:Generator_ColumnPropNameInRow="cashi_amount" msprop:Generator_ColumnVarNameInTable="columncashi_amount" msprop:Generator_ColumnPropNameInTable="cashi_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cashi_check_number" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_check_number" msprop:Generator_ColumnPropNameInRow="cashi_check_number" msprop:Generator_ColumnVarNameInTable="columncashi_check_number" msprop:Generator_ColumnPropNameInTable="cashi_check_numberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_post_dated_check" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_post_dated_check" msprop:Generator_ColumnPropNameInRow="cashi_post_dated_check" msprop:Generator_ColumnVarNameInTable="columncashi_post_dated_check" msprop:Generator_ColumnPropNameInTable="cashi_post_dated_checkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_cu_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_cu_id" msprop:Generator_ColumnPropNameInRow="cashi_cu_id" msprop:Generator_ColumnVarNameInTable="columncashi_cu_id" msprop:Generator_ColumnPropNameInTable="cashi_cu_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cashi_exc_rate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_exc_rate" msprop:Generator_ColumnPropNameInRow="cashi_exc_rate" msprop:Generator_ColumnVarNameInTable="columncashi_exc_rate" msprop:Generator_ColumnPropNameInTable="cashi_exc_rateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cashid_cashi_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashid_cashi_oid" msprop:Generator_ColumnPropNameInRow="cashid_cashi_oid" msprop:Generator_ColumnVarNameInTable="columncashid_cashi_oid" msprop:Generator_ColumnPropNameInTable="cashid_cashi_oidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashid_ac_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashid_ac_id" msprop:Generator_ColumnPropNameInRow="cashid_ac_id" msprop:Generator_ColumnVarNameInTable="columncashid_ac_id" msprop:Generator_ColumnPropNameInTable="cashid_ac_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cashid_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashid_amount" msprop:Generator_ColumnPropNameInRow="cashid_amount" msprop:Generator_ColumnVarNameInTable="columncashid_amount" msprop:Generator_ColumnPropNameInTable="cashid_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cashid_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashid_remarks" msprop:Generator_ColumnPropNameInRow="cashid_remarks" msprop:Generator_ColumnVarNameInTable="columncashid_remarks" msprop:Generator_ColumnPropNameInTable="cashid_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashid_seq" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashid_seq" msprop:Generator_ColumnPropNameInRow="cashid_seq" msprop:Generator_ColumnVarNameInTable="columncashid_seq" msprop:Generator_ColumnPropNameInTable="cashid_seqColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bk_name" msprop:Generator_ColumnPropNameInRow="bk_name" msprop:Generator_ColumnVarNameInTable="columnbk_name" msprop:Generator_ColumnPropNameInTable="bk_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_name" msprop:Generator_ColumnPropNameInRow="ptnr_name" msprop:Generator_ColumnVarNameInTable="columnptnr_name" msprop:Generator_ColumnPropNameInTable="ptnr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_code" msprop:Generator_ColumnPropNameInRow="ac_code" msprop:Generator_ColumnVarNameInTable="columnac_code" msprop:Generator_ColumnPropNameInTable="ac_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_name" msprop:Generator_ColumnPropNameInRow="ac_name" msprop:Generator_ColumnVarNameInTable="columnac_name" msprop:Generator_ColumnPropNameInTable="ac_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashi_amount_ext" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashi_amount_ext" msprop:Generator_ColumnPropNameInRow="cashi_amount_ext" msprop:Generator_ColumnVarNameInTable="columncashi_amount_ext" msprop:Generator_ColumnPropNameInTable="cashi_amount_extColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cashid_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashid_oid" msprop:Generator_ColumnPropNameInRow="cashid_oid" msprop:Generator_ColumnVarNameInTable="columncashid_oid" msprop:Generator_ColumnPropNameInTable="cashid_oidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashid_amount_ext" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cashid_amount_ext" msprop:Generator_ColumnPropNameInRow="cashid_amount_ext" msprop:Generator_ColumnVarNameInTable="columncashid_amount_ext" msprop:Generator_ColumnPropNameInTable="cashid_amount_extColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cmaddr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_name" msprop:Generator_ColumnPropNameInRow="cmaddr_name" msprop:Generator_ColumnVarNameInTable="columncmaddr_name" msprop:Generator_ColumnPropNameInTable="cmaddr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_1" msprop:Generator_ColumnPropNameInRow="cmaddr_line_1" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_1" msprop:Generator_ColumnPropNameInTable="cmaddr_line_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_2" msprop:Generator_ColumnPropNameInRow="cmaddr_line_2" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_2" msprop:Generator_ColumnPropNameInTable="cmaddr_line_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_3" msprop:Generator_ColumnPropNameInRow="cmaddr_line_3" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_3" msprop:Generator_ColumnPropNameInTable="cmaddr_line_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:cashi_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:cashid_cashi_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:ac_code" />
+    </xs:unique>
+    <xs:unique name="Constraint4">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:cashid_oid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

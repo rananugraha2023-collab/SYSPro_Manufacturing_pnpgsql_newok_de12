@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_req" targetNamespace="http://tempuri.org/ds_req.xsd" xmlns:mstns="http://tempuri.org/ds_req.xsd" xmlns="http://tempuri.org/ds_req.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_7" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_7 (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_7" Provider="System.Data.Odbc" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_lokal" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_lokal (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_lokal" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="odbc_sygma_lokal (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+  req_oid,
+  req_dom_id,
+  req_en_id,
+  req_upd_date,
+  req_upd_by,
+  req_add_date,
+  req_add_by,
+  req_code,
+  req_ptnr_id,
+  req_cmaddr_id,
+  req_date,
+  req_need_date,
+  req_due_date,
+  req_requested,
+  req_end_user,
+  req_rmks,
+  req_sb_id,
+  req_cc_id,
+  req_si_id,
+  req_type,
+  req_pjc_id,
+  req_close_date,
+  req_total,
+  req_tran_id,
+  req_trans_id,
+  req_trans_rmks,
+  req_current_route,
+  req_next_route,
+  req_dt,
+  reqd_ptnr_id,
+  reqd_pt_id,
+  reqd_rmks,
+  reqd_end_user,
+  reqd_qty,
+  reqd_um,
+  reqd_cost,
+  reqd_disc,
+  reqd_need_date,
+  reqd_due_date,
+  cmaddr_name,
+  cmaddr_line_1,
+  cmaddr_line_2,
+  cmaddr_line_3,
+  ptnr_name,
+  pt_code,
+  pt_desc1,
+  pt_desc2,
+  um_master.code_name as um_name,
+  tranaprvd_name_1, tranaprvd_name_2, tranaprvd_name_3, tranaprvd_name_4,
+  tranaprvd_pos_1, tranaprvd_pos_2, tranaprvd_pos_3, tranaprvd_pos_4
+FROM 
+  req_mstr
+  inner join reqd_det on reqd_req_oid = req_oid
+  left outer join cmaddr_mstr on cmaddr_id = req_cmaddr_id
+  left outer join ptnr_mstr on ptnr_id = reqd_ptnr_id
+  inner join pt_mstr on pt_id = reqd_pt_id
+  inner join code_mstr um_master on um_master.code_id = reqd_um
+  left outer join tranaprvd_dok on tranaprvd_tran_oid = req_oid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="req_oid" DataSetColumn="req_oid" />
+              <Mapping SourceColumn="req_dom_id" DataSetColumn="req_dom_id" />
+              <Mapping SourceColumn="req_en_id" DataSetColumn="req_en_id" />
+              <Mapping SourceColumn="req_upd_date" DataSetColumn="req_upd_date" />
+              <Mapping SourceColumn="req_upd_by" DataSetColumn="req_upd_by" />
+              <Mapping SourceColumn="req_add_date" DataSetColumn="req_add_date" />
+              <Mapping SourceColumn="req_add_by" DataSetColumn="req_add_by" />
+              <Mapping SourceColumn="req_code" DataSetColumn="req_code" />
+              <Mapping SourceColumn="req_ptnr_id" DataSetColumn="req_ptnr_id" />
+              <Mapping SourceColumn="req_cmaddr_id" DataSetColumn="req_cmaddr_id" />
+              <Mapping SourceColumn="req_date" DataSetColumn="req_date" />
+              <Mapping SourceColumn="req_need_date" DataSetColumn="req_need_date" />
+              <Mapping SourceColumn="req_due_date" DataSetColumn="req_due_date" />
+              <Mapping SourceColumn="req_requested" DataSetColumn="req_requested" />
+              <Mapping SourceColumn="req_end_user" DataSetColumn="req_end_user" />
+              <Mapping SourceColumn="req_rmks" DataSetColumn="req_rmks" />
+              <Mapping SourceColumn="req_sb_id" DataSetColumn="req_sb_id" />
+              <Mapping SourceColumn="req_cc_id" DataSetColumn="req_cc_id" />
+              <Mapping SourceColumn="req_si_id" DataSetColumn="req_si_id" />
+              <Mapping SourceColumn="req_type" DataSetColumn="req_type" />
+              <Mapping SourceColumn="req_pjc_id" DataSetColumn="req_pjc_id" />
+              <Mapping SourceColumn="req_close_date" DataSetColumn="req_close_date" />
+              <Mapping SourceColumn="req_total" DataSetColumn="req_total" />
+              <Mapping SourceColumn="req_tran_id" DataSetColumn="req_tran_id" />
+              <Mapping SourceColumn="req_trans_id" DataSetColumn="req_trans_id" />
+              <Mapping SourceColumn="req_trans_rmks" DataSetColumn="req_trans_rmks" />
+              <Mapping SourceColumn="req_current_route" DataSetColumn="req_current_route" />
+              <Mapping SourceColumn="req_next_route" DataSetColumn="req_next_route" />
+              <Mapping SourceColumn="req_dt" DataSetColumn="req_dt" />
+              <Mapping SourceColumn="reqd_ptnr_id" DataSetColumn="reqd_ptnr_id" />
+              <Mapping SourceColumn="reqd_pt_id" DataSetColumn="reqd_pt_id" />
+              <Mapping SourceColumn="reqd_rmks" DataSetColumn="reqd_rmks" />
+              <Mapping SourceColumn="reqd_end_user" DataSetColumn="reqd_end_user" />
+              <Mapping SourceColumn="reqd_qty" DataSetColumn="reqd_qty" />
+              <Mapping SourceColumn="reqd_um" DataSetColumn="reqd_um" />
+              <Mapping SourceColumn="reqd_cost" DataSetColumn="reqd_cost" />
+              <Mapping SourceColumn="reqd_disc" DataSetColumn="reqd_disc" />
+              <Mapping SourceColumn="reqd_need_date" DataSetColumn="reqd_need_date" />
+              <Mapping SourceColumn="reqd_due_date" DataSetColumn="reqd_due_date" />
+              <Mapping SourceColumn="cmaddr_name" DataSetColumn="cmaddr_name" />
+              <Mapping SourceColumn="cmaddr_line_1" DataSetColumn="cmaddr_line_1" />
+              <Mapping SourceColumn="cmaddr_line_2" DataSetColumn="cmaddr_line_2" />
+              <Mapping SourceColumn="cmaddr_line_3" DataSetColumn="cmaddr_line_3" />
+              <Mapping SourceColumn="ptnr_name" DataSetColumn="ptnr_name" />
+              <Mapping SourceColumn="pt_code" DataSetColumn="pt_code" />
+              <Mapping SourceColumn="pt_desc1" DataSetColumn="pt_desc1" />
+              <Mapping SourceColumn="pt_desc2" DataSetColumn="pt_desc2" />
+              <Mapping SourceColumn="um_name" DataSetColumn="um_name" />
+              <Mapping SourceColumn="tranaprvd_name_1" DataSetColumn="tranaprvd_name_1" />
+              <Mapping SourceColumn="tranaprvd_name_2" DataSetColumn="tranaprvd_name_2" />
+              <Mapping SourceColumn="tranaprvd_name_3" DataSetColumn="tranaprvd_name_3" />
+              <Mapping SourceColumn="tranaprvd_name_4" DataSetColumn="tranaprvd_name_4" />
+              <Mapping SourceColumn="tranaprvd_pos_1" DataSetColumn="tranaprvd_pos_1" />
+              <Mapping SourceColumn="tranaprvd_pos_2" DataSetColumn="tranaprvd_pos_2" />
+              <Mapping SourceColumn="tranaprvd_pos_3" DataSetColumn="tranaprvd_pos_3" />
+              <Mapping SourceColumn="tranaprvd_pos_4" DataSetColumn="tranaprvd_pos_4" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_req" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ds_req" msprop:Generator_DataSetName="ds_req" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="req_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_oid" msprop:Generator_ColumnPropNameInRow="req_oid" msprop:Generator_ColumnVarNameInTable="columnreq_oid" msprop:Generator_ColumnPropNameInTable="req_oidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_dom_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_dom_id" msprop:Generator_ColumnPropNameInRow="req_dom_id" msprop:Generator_ColumnVarNameInTable="columnreq_dom_id" msprop:Generator_ColumnPropNameInTable="req_dom_idColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="req_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_en_id" msprop:Generator_ColumnPropNameInRow="req_en_id" msprop:Generator_ColumnVarNameInTable="columnreq_en_id" msprop:Generator_ColumnPropNameInTable="req_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_upd_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_upd_date" msprop:Generator_ColumnPropNameInRow="req_upd_date" msprop:Generator_ColumnVarNameInTable="columnreq_upd_date" msprop:Generator_ColumnPropNameInTable="req_upd_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="req_upd_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_upd_by" msprop:Generator_ColumnPropNameInRow="req_upd_by" msprop:Generator_ColumnVarNameInTable="columnreq_upd_by" msprop:Generator_ColumnPropNameInTable="req_upd_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_add_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_add_date" msprop:Generator_ColumnPropNameInRow="req_add_date" msprop:Generator_ColumnVarNameInTable="columnreq_add_date" msprop:Generator_ColumnPropNameInTable="req_add_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="req_add_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_add_by" msprop:Generator_ColumnPropNameInRow="req_add_by" msprop:Generator_ColumnVarNameInTable="columnreq_add_by" msprop:Generator_ColumnPropNameInTable="req_add_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_code" msprop:Generator_ColumnPropNameInRow="req_code" msprop:Generator_ColumnVarNameInTable="columnreq_code" msprop:Generator_ColumnPropNameInTable="req_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_ptnr_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_ptnr_id" msprop:Generator_ColumnPropNameInRow="req_ptnr_id" msprop:Generator_ColumnVarNameInTable="columnreq_ptnr_id" msprop:Generator_ColumnPropNameInTable="req_ptnr_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_cmaddr_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_cmaddr_id" msprop:Generator_ColumnPropNameInRow="req_cmaddr_id" msprop:Generator_ColumnVarNameInTable="columnreq_cmaddr_id" msprop:Generator_ColumnPropNameInTable="req_cmaddr_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_date" msprop:Generator_ColumnPropNameInRow="req_date" msprop:Generator_ColumnVarNameInTable="columnreq_date" msprop:Generator_ColumnPropNameInTable="req_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="req_need_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_need_date" msprop:Generator_ColumnPropNameInRow="req_need_date" msprop:Generator_ColumnVarNameInTable="columnreq_need_date" msprop:Generator_ColumnPropNameInTable="req_need_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="req_due_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_due_date" msprop:Generator_ColumnPropNameInRow="req_due_date" msprop:Generator_ColumnVarNameInTable="columnreq_due_date" msprop:Generator_ColumnPropNameInTable="req_due_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="req_requested" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_requested" msprop:Generator_ColumnPropNameInRow="req_requested" msprop:Generator_ColumnVarNameInTable="columnreq_requested" msprop:Generator_ColumnPropNameInTable="req_requestedColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_end_user" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_end_user" msprop:Generator_ColumnPropNameInRow="req_end_user" msprop:Generator_ColumnVarNameInTable="columnreq_end_user" msprop:Generator_ColumnPropNameInTable="req_end_userColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_rmks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_rmks" msprop:Generator_ColumnPropNameInRow="req_rmks" msprop:Generator_ColumnVarNameInTable="columnreq_rmks" msprop:Generator_ColumnPropNameInTable="req_rmksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_sb_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_sb_id" msprop:Generator_ColumnPropNameInRow="req_sb_id" msprop:Generator_ColumnVarNameInTable="columnreq_sb_id" msprop:Generator_ColumnPropNameInTable="req_sb_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_cc_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_cc_id" msprop:Generator_ColumnPropNameInRow="req_cc_id" msprop:Generator_ColumnVarNameInTable="columnreq_cc_id" msprop:Generator_ColumnPropNameInTable="req_cc_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_si_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_si_id" msprop:Generator_ColumnPropNameInRow="req_si_id" msprop:Generator_ColumnVarNameInTable="columnreq_si_id" msprop:Generator_ColumnPropNameInTable="req_si_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_type" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_type" msprop:Generator_ColumnPropNameInRow="req_type" msprop:Generator_ColumnVarNameInTable="columnreq_type" msprop:Generator_ColumnPropNameInTable="req_typeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_pjc_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_pjc_id" msprop:Generator_ColumnPropNameInRow="req_pjc_id" msprop:Generator_ColumnVarNameInTable="columnreq_pjc_id" msprop:Generator_ColumnPropNameInTable="req_pjc_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_close_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_close_date" msprop:Generator_ColumnPropNameInRow="req_close_date" msprop:Generator_ColumnVarNameInTable="columnreq_close_date" msprop:Generator_ColumnPropNameInTable="req_close_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="req_total" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_total" msprop:Generator_ColumnPropNameInRow="req_total" msprop:Generator_ColumnVarNameInTable="columnreq_total" msprop:Generator_ColumnPropNameInTable="req_totalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="req_tran_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_tran_id" msprop:Generator_ColumnPropNameInRow="req_tran_id" msprop:Generator_ColumnVarNameInTable="columnreq_tran_id" msprop:Generator_ColumnPropNameInTable="req_tran_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="req_trans_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_trans_id" msprop:Generator_ColumnPropNameInRow="req_trans_id" msprop:Generator_ColumnVarNameInTable="columnreq_trans_id" msprop:Generator_ColumnPropNameInTable="req_trans_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_trans_rmks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_trans_rmks" msprop:Generator_ColumnPropNameInRow="req_trans_rmks" msprop:Generator_ColumnVarNameInTable="columnreq_trans_rmks" msprop:Generator_ColumnPropNameInTable="req_trans_rmksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_current_route" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_current_route" msprop:Generator_ColumnPropNameInRow="req_current_route" msprop:Generator_ColumnVarNameInTable="columnreq_current_route" msprop:Generator_ColumnPropNameInTable="req_current_routeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_next_route" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_next_route" msprop:Generator_ColumnPropNameInRow="req_next_route" msprop:Generator_ColumnVarNameInTable="columnreq_next_route" msprop:Generator_ColumnPropNameInTable="req_next_routeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="req_dt" msdata:ReadOnly="true" msprop:Generator_UserColumnName="req_dt" msprop:Generator_ColumnPropNameInRow="req_dt" msprop:Generator_ColumnVarNameInTable="columnreq_dt" msprop:Generator_ColumnPropNameInTable="req_dtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="reqd_ptnr_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_ptnr_id" msprop:Generator_ColumnPropNameInRow="reqd_ptnr_id" msprop:Generator_ColumnVarNameInTable="columnreqd_ptnr_id" msprop:Generator_ColumnPropNameInTable="reqd_ptnr_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="reqd_pt_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_pt_id" msprop:Generator_ColumnPropNameInRow="reqd_pt_id" msprop:Generator_ColumnVarNameInTable="columnreqd_pt_id" msprop:Generator_ColumnPropNameInTable="reqd_pt_idColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="reqd_rmks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_rmks" msprop:Generator_ColumnPropNameInRow="reqd_rmks" msprop:Generator_ColumnVarNameInTable="columnreqd_rmks" msprop:Generator_ColumnPropNameInTable="reqd_rmksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="reqd_end_user" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_end_user" msprop:Generator_ColumnPropNameInRow="reqd_end_user" msprop:Generator_ColumnVarNameInTable="columnreqd_end_user" msprop:Generator_ColumnPropNameInTable="reqd_end_userColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="reqd_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_qty" msprop:Generator_ColumnPropNameInRow="reqd_qty" msprop:Generator_ColumnVarNameInTable="columnreqd_qty" msprop:Generator_ColumnPropNameInTable="reqd_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="reqd_um" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_um" msprop:Generator_ColumnPropNameInRow="reqd_um" msprop:Generator_ColumnVarNameInTable="columnreqd_um" msprop:Generator_ColumnPropNameInTable="reqd_umColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="reqd_cost" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_cost" msprop:Generator_ColumnPropNameInRow="reqd_cost" msprop:Generator_ColumnVarNameInTable="columnreqd_cost" msprop:Generator_ColumnPropNameInTable="reqd_costColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="reqd_disc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_disc" msprop:Generator_ColumnPropNameInRow="reqd_disc" msprop:Generator_ColumnVarNameInTable="columnreqd_disc" msprop:Generator_ColumnPropNameInTable="reqd_discColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="reqd_need_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_need_date" msprop:Generator_ColumnPropNameInRow="reqd_need_date" msprop:Generator_ColumnVarNameInTable="columnreqd_need_date" msprop:Generator_ColumnPropNameInTable="reqd_need_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="reqd_due_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reqd_due_date" msprop:Generator_ColumnPropNameInRow="reqd_due_date" msprop:Generator_ColumnVarNameInTable="columnreqd_due_date" msprop:Generator_ColumnPropNameInTable="reqd_due_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cmaddr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_name" msprop:Generator_ColumnPropNameInRow="cmaddr_name" msprop:Generator_ColumnVarNameInTable="columncmaddr_name" msprop:Generator_ColumnPropNameInTable="cmaddr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_1" msprop:Generator_ColumnPropNameInRow="cmaddr_line_1" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_1" msprop:Generator_ColumnPropNameInTable="cmaddr_line_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_2" msprop:Generator_ColumnPropNameInRow="cmaddr_line_2" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_2" msprop:Generator_ColumnPropNameInTable="cmaddr_line_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_3" msprop:Generator_ColumnPropNameInRow="cmaddr_line_3" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_3" msprop:Generator_ColumnPropNameInTable="cmaddr_line_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_name" msprop:Generator_ColumnPropNameInRow="ptnr_name" msprop:Generator_ColumnVarNameInTable="columnptnr_name" msprop:Generator_ColumnPropNameInTable="ptnr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pt_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pt_code" msprop:Generator_ColumnPropNameInRow="pt_code" msprop:Generator_ColumnVarNameInTable="columnpt_code" msprop:Generator_ColumnPropNameInTable="pt_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pt_desc1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pt_desc1" msprop:Generator_ColumnPropNameInRow="pt_desc1" msprop:Generator_ColumnVarNameInTable="columnpt_desc1" msprop:Generator_ColumnPropNameInTable="pt_desc1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pt_desc2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pt_desc2" msprop:Generator_ColumnPropNameInRow="pt_desc2" msprop:Generator_ColumnVarNameInTable="columnpt_desc2" msprop:Generator_ColumnPropNameInTable="pt_desc2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="um_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="um_name" msprop:Generator_ColumnPropNameInRow="um_name" msprop:Generator_ColumnVarNameInTable="columnum_name" msprop:Generator_ColumnPropNameInTable="um_nameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_1" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_1" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_1" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_2" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_2" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_2" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_3" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_3" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_3" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_4" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_4" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_4" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_4" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_1" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_1" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_1" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_2" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_2" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_2" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_3" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_3" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_3" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_4" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_4" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_4" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_4" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:req_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:pt_code" />
+    </xs:unique>
+    <xs:unique name="Constraint3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:um_name" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

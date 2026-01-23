@@ -1,0 +1,4 @@
+﻿server=vpnsygma.ddns.net; 
+db=sygma_091014;
+port=5432;
+user=postgres;

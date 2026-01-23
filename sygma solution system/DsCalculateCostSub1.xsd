@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCalculateCostSub1" targetNamespace="http://tempuri.org/DsCalculateCostSub1.xsd" xmlns:mstns="http://tempuri.org/DsCalculateCostSub1.xsd" xmlns="http://tempuri.org/DsCalculateCostSub1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCalculateCostSub1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsCalculateCostSub1" msprop:Generator_DataSetName="DsCalculateCostSub1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TablePropName="Table" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cald_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="cald_oid" msprop:Generator_ColumnPropNameInRow="cald_oid" msprop:Generator_ColumnVarNameInTable="columncald_oid" msprop:Generator_ColumnPropNameInTable="cald_oidColumn" type="xs:string" />
+              <xs:element name="calcd_calc_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="calcd_calc_oid" msprop:Generator_ColumnPropNameInRow="calcd_calc_oid" msprop:Generator_ColumnVarNameInTable="columncalcd_calc_oid" msprop:Generator_ColumnPropNameInTable="calcd_calc_oidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="calcd_cetak_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="calcd_cetak_oid" msprop:Generator_ColumnPropNameInRow="calcd_cetak_oid" msprop:Generator_ColumnVarNameInTable="columncalcd_cetak_oid" msprop:Generator_ColumnPropNameInTable="calcd_cetak_oidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="calcd_cetak_item" msprop:Generator_UserColumnName="calcd_cetak_item" msprop:Generator_ColumnPropNameInRow="calcd_cetak_item" msprop:Generator_ColumnVarNameInTable="columncalcd_cetak_item" msprop:Generator_ColumnPropNameInTable="calcd_cetak_itemColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calcd_cetak_group" msprop:Generator_UserColumnName="calcd_cetak_group" msprop:Generator_ColumnPropNameInRow="calcd_cetak_group" msprop:Generator_ColumnVarNameInTable="columncalcd_cetak_group" msprop:Generator_ColumnPropNameInTable="calcd_cetak_groupColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calcd_cetak_order" msprop:Generator_UserColumnName="calcd_cetak_order" msprop:Generator_ColumnPropNameInRow="calcd_cetak_order" msprop:Generator_ColumnVarNameInTable="columncalcd_cetak_order" msprop:Generator_ColumnPropNameInTable="calcd_cetak_orderColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="calcd_cetak_sub_group" msprop:Generator_UserColumnName="calcd_cetak_sub_group" msprop:Generator_ColumnPropNameInRow="calcd_cetak_sub_group" msprop:Generator_ColumnVarNameInTable="columncalcd_cetak_sub_group" msprop:Generator_ColumnPropNameInTable="calcd_cetak_sub_groupColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calcd_cetak_sub_order" msprop:Generator_UserColumnName="calcd_cetak_sub_order" msprop:Generator_ColumnPropNameInRow="calcd_cetak_sub_order" msprop:Generator_ColumnVarNameInTable="columncalcd_cetak_sub_order" msprop:Generator_ColumnPropNameInTable="calcd_cetak_sub_orderColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="calcd_cetak_sub_group_name" msprop:Generator_UserColumnName="calcd_cetak_sub_group_name" msprop:Generator_ColumnPropNameInRow="calcd_cetak_sub_group_name" msprop:Generator_ColumnVarNameInTable="columncalcd_cetak_sub_group_name" msprop:Generator_ColumnPropNameInTable="calcd_cetak_sub_group_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calcd_qty" msprop:Generator_UserColumnName="calcd_qty" msprop:Generator_ColumnPropNameInRow="calcd_qty" msprop:Generator_ColumnVarNameInTable="columncalcd_qty" msprop:Generator_ColumnPropNameInTable="calcd_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_harga" msprop:Generator_UserColumnName="calcd_harga" msprop:Generator_ColumnPropNameInRow="calcd_harga" msprop:Generator_ColumnVarNameInTable="columncalcd_harga" msprop:Generator_ColumnPropNameInTable="calcd_hargaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_harga_kg" msprop:Generator_UserColumnName="calcd_harga_kg" msprop:Generator_ColumnPropNameInRow="calcd_harga_kg" msprop:Generator_ColumnVarNameInTable="columncalcd_harga_kg" msprop:Generator_ColumnPropNameInTable="calcd_harga_kgColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_lebar" msprop:Generator_UserColumnName="calcd_lebar" msprop:Generator_ColumnPropNameInRow="calcd_lebar" msprop:Generator_ColumnVarNameInTable="columncalcd_lebar" msprop:Generator_ColumnPropNameInTable="calcd_lebarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_panjang" msprop:Generator_UserColumnName="calcd_panjang" msprop:Generator_ColumnPropNameInRow="calcd_panjang" msprop:Generator_ColumnVarNameInTable="columncalcd_panjang" msprop:Generator_ColumnPropNameInTable="calcd_panjangColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_jml_potong" msprop:Generator_UserColumnName="calcd_jml_potong" msprop:Generator_ColumnPropNameInRow="calcd_jml_potong" msprop:Generator_ColumnVarNameInTable="columncalcd_jml_potong" msprop:Generator_ColumnPropNameInTable="calcd_jml_potongColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_kg" msprop:Generator_UserColumnName="calcd_kg" msprop:Generator_ColumnPropNameInRow="calcd_kg" msprop:Generator_ColumnVarNameInTable="columncalcd_kg" msprop:Generator_ColumnPropNameInTable="calcd_kgColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_bop_btkl" msprop:Generator_UserColumnName="calcd_bop_btkl" msprop:Generator_ColumnPropNameInRow="calcd_bop_btkl" msprop:Generator_ColumnVarNameInTable="columncalcd_bop_btkl" msprop:Generator_ColumnPropNameInTable="calcd_bop_btklColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_nilai" msprop:Generator_UserColumnName="calcd_nilai" msprop:Generator_ColumnPropNameInRow="calcd_nilai" msprop:Generator_ColumnVarNameInTable="columncalcd_nilai" msprop:Generator_ColumnPropNameInTable="calcd_nilaiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_warna" msprop:Generator_UserColumnName="calcd_warna" msprop:Generator_ColumnPropNameInRow="calcd_warna" msprop:Generator_ColumnVarNameInTable="columncalcd_warna" msprop:Generator_ColumnPropNameInTable="calcd_warnaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_velt" msprop:Generator_UserColumnName="calcd_velt" msprop:Generator_ColumnPropNameInRow="calcd_velt" msprop:Generator_ColumnVarNameInTable="columncalcd_velt" msprop:Generator_ColumnPropNameInTable="calcd_veltColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_insheet" msprop:Generator_UserColumnName="calcd_insheet" msprop:Generator_ColumnPropNameInRow="calcd_insheet" msprop:Generator_ColumnVarNameInTable="columncalcd_insheet" msprop:Generator_ColumnPropNameInTable="calcd_insheetColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_biaya_potong" msprop:Generator_UserColumnName="calcd_biaya_potong" msprop:Generator_ColumnPropNameInRow="calcd_biaya_potong" msprop:Generator_ColumnVarNameInTable="columncalcd_biaya_potong" msprop:Generator_ColumnPropNameInTable="calcd_biaya_potongColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_opsi" msprop:Generator_UserColumnName="calcd_opsi" msprop:Generator_ColumnPropNameInRow="calcd_opsi" msprop:Generator_ColumnVarNameInTable="columncalcd_opsi" msprop:Generator_ColumnPropNameInTable="calcd_opsiColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="calcd_outsource" msprop:Generator_UserColumnName="calcd_outsource" msprop:Generator_ColumnPropNameInRow="calcd_outsource" msprop:Generator_ColumnVarNameInTable="columncalcd_outsource" msprop:Generator_ColumnPropNameInTable="calcd_outsourceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="calcd_jenis" msprop:Generator_UserColumnName="calcd_jenis" msprop:Generator_ColumnPropNameInRow="calcd_jenis" msprop:Generator_ColumnVarNameInTable="columncalcd_jenis" msprop:Generator_ColumnPropNameInTable="calcd_jenisColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calcd_tipe" msprop:Generator_UserColumnName="calcd_tipe" msprop:Generator_ColumnPropNameInRow="calcd_tipe" msprop:Generator_ColumnVarNameInTable="columncalcd_tipe" msprop:Generator_ColumnPropNameInTable="calcd_tipeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:cald_oid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

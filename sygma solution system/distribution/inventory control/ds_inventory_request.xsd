@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_inventory_request" targetNamespace="http://tempuri.org/ds_inventory_request.xsd" xmlns:mstns="http://tempuri.org/ds_inventory_request.xsd" xmlns="http://tempuri.org/ds_inventory_request.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_7" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_7 (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_7" Provider="System.Data.Odbc" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_lokal" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_lokal (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_lokal" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="odbc_sygma_lokal (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT
+        pb_mstr.pb_oid,
+        pb_mstr.pb_dom_id, 
+        pb_mstr.pb_en_id, 
+        pb_mstr.pb_add_by, 
+        pb_mstr.pb_add_date,
+        pb_mstr.pb_upd_by, 
+        pb_mstr.pb_upd_date, 
+        pb_mstr.pb_date, 
+        pb_mstr.pb_due_date,
+        pb_mstr.pb_requested, 
+        pb_mstr.pb_end_user, 
+        pb_mstr.pb_rmks,
+        pb_mstr.pb_status, 
+        pb_mstr.pb_close_date, 
+        pb_mstr.pb_dt, 
+        pb_mstr.pb_code,
+        pbd_det.pbd_oid, 
+        pbd_det.pbd_dom_id, 
+        pbd_det.pbd_en_id, 
+        pbd_det.pbd_add_by, 
+        pbd_det.pbd_add_date, 
+        pbd_det.pbd_upd_by, 
+        pbd_det.pbd_upd_date, 
+        pbd_det.pbd_pb_oid, 
+        pbd_det.pbd_seq, 
+        pbd_det.pbd_pt_id, 
+        pbd_det.pbd_rmks,
+        pbd_det.pbd_end_user, 
+        pbd_det.pbd_qty, 
+        pbd_det.pbd_qty_processed,
+        pbd_det.pbd_qty_completed, 
+        pbd_det.pbd_um, 
+        pbd_det.pbd_due_date, 
+        pbd_det.pbd_status, 
+        pbd_det.pbd_dt, 
+        pt_mstr.pt_code, 
+        pt_mstr.pt_desc1, 
+        pt_mstr.pt_desc2, 
+        en_mstr.en_id, 
+        en_mstr.en_desc,
+        cmaddr_en_id,
+        cmaddr_mstr.cmaddr_name, 
+        cmaddr_mstr.cmaddr_line_1,
+        cmaddr_mstr.cmaddr_line_2, 
+        cmaddr_mstr.cmaddr_line_3,
+        code_mstr.code_id, 
+        code_mstr.code_code,
+        tranaprvd_name_1, tranaprvd_name_2, tranaprvd_name_3, tranaprvd_name_4,
+        tranaprvd_pos_1, tranaprvd_pos_2, tranaprvd_pos_3, tranaprvd_pos_4
+        FROM pb_mstr
+        inner join pbd_det on pb_mstr.pb_oid = pbd_det.pbd_pb_oid
+        inner join en_mstr on pb_mstr.pb_en_id = en_mstr.en_id
+        inner join pt_mstr on pbd_det.pbd_pt_id = pt_mstr.pt_id
+        inner join code_mstr on pbd_det.pbd_um = code_mstr.code_id 
+        inner join cmaddr_mstr on pb_mstr.pb_en_id = cmaddr_mstr.cmaddr_en_id
+        left outer join tranaprvd_dok on tranaprvd_tran_oid = pb_oid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pb_oid" DataSetColumn="pb_oid" />
+              <Mapping SourceColumn="pb_dom_id" DataSetColumn="pb_dom_id" />
+              <Mapping SourceColumn="pb_en_id" DataSetColumn="pb_en_id" />
+              <Mapping SourceColumn="pb_add_by" DataSetColumn="pb_add_by" />
+              <Mapping SourceColumn="pb_add_date" DataSetColumn="pb_add_date" />
+              <Mapping SourceColumn="pb_upd_by" DataSetColumn="pb_upd_by" />
+              <Mapping SourceColumn="pb_upd_date" DataSetColumn="pb_upd_date" />
+              <Mapping SourceColumn="pb_date" DataSetColumn="pb_date" />
+              <Mapping SourceColumn="pb_due_date" DataSetColumn="pb_due_date" />
+              <Mapping SourceColumn="pb_requested" DataSetColumn="pb_requested" />
+              <Mapping SourceColumn="pb_end_user" DataSetColumn="pb_end_user" />
+              <Mapping SourceColumn="pb_rmks" DataSetColumn="pb_rmks" />
+              <Mapping SourceColumn="pb_status" DataSetColumn="pb_status" />
+              <Mapping SourceColumn="pb_close_date" DataSetColumn="pb_close_date" />
+              <Mapping SourceColumn="pb_dt" DataSetColumn="pb_dt" />
+              <Mapping SourceColumn="pb_code" DataSetColumn="pb_code" />
+              <Mapping SourceColumn="pbd_oid" DataSetColumn="pbd_oid" />
+              <Mapping SourceColumn="pbd_dom_id" DataSetColumn="pbd_dom_id" />
+              <Mapping SourceColumn="pbd_en_id" DataSetColumn="pbd_en_id" />
+              <Mapping SourceColumn="pbd_add_by" DataSetColumn="pbd_add_by" />
+              <Mapping SourceColumn="pbd_add_date" DataSetColumn="pbd_add_date" />
+              <Mapping SourceColumn="pbd_upd_by" DataSetColumn="pbd_upd_by" />
+              <Mapping SourceColumn="pbd_upd_date" DataSetColumn="pbd_upd_date" />
+              <Mapping SourceColumn="pbd_pb_oid" DataSetColumn="pbd_pb_oid" />
+              <Mapping SourceColumn="pbd_seq" DataSetColumn="pbd_seq" />
+              <Mapping SourceColumn="pbd_pt_id" DataSetColumn="pbd_pt_id" />
+              <Mapping SourceColumn="pbd_rmks" DataSetColumn="pbd_rmks" />
+              <Mapping SourceColumn="pbd_end_user" DataSetColumn="pbd_end_user" />
+              <Mapping SourceColumn="pbd_qty" DataSetColumn="pbd_qty" />
+              <Mapping SourceColumn="pbd_qty_processed" DataSetColumn="pbd_qty_processed" />
+              <Mapping SourceColumn="pbd_qty_completed" DataSetColumn="pbd_qty_completed" />
+              <Mapping SourceColumn="pbd_um" DataSetColumn="pbd_um" />
+              <Mapping SourceColumn="pbd_due_date" DataSetColumn="pbd_due_date" />
+              <Mapping SourceColumn="pbd_status" DataSetColumn="pbd_status" />
+              <Mapping SourceColumn="pbd_dt" DataSetColumn="pbd_dt" />
+              <Mapping SourceColumn="pt_code" DataSetColumn="pt_code" />
+              <Mapping SourceColumn="pt_desc1" DataSetColumn="pt_desc1" />
+              <Mapping SourceColumn="pt_desc2" DataSetColumn="pt_desc2" />
+              <Mapping SourceColumn="en_id" DataSetColumn="en_id" />
+              <Mapping SourceColumn="en_desc" DataSetColumn="en_desc" />
+              <Mapping SourceColumn="cmaddr_en_id" DataSetColumn="cmaddr_en_id" />
+              <Mapping SourceColumn="cmaddr_name" DataSetColumn="cmaddr_name" />
+              <Mapping SourceColumn="cmaddr_line_1" DataSetColumn="cmaddr_line_1" />
+              <Mapping SourceColumn="cmaddr_line_2" DataSetColumn="cmaddr_line_2" />
+              <Mapping SourceColumn="cmaddr_line_3" DataSetColumn="cmaddr_line_3" />
+              <Mapping SourceColumn="code_id" DataSetColumn="code_id" />
+              <Mapping SourceColumn="code_code" DataSetColumn="code_code" />
+              <Mapping SourceColumn="tranaprvd_name_1" DataSetColumn="tranaprvd_name_1" />
+              <Mapping SourceColumn="tranaprvd_name_2" DataSetColumn="tranaprvd_name_2" />
+              <Mapping SourceColumn="tranaprvd_name_3" DataSetColumn="tranaprvd_name_3" />
+              <Mapping SourceColumn="tranaprvd_name_4" DataSetColumn="tranaprvd_name_4" />
+              <Mapping SourceColumn="tranaprvd_pos_1" DataSetColumn="tranaprvd_pos_1" />
+              <Mapping SourceColumn="tranaprvd_pos_2" DataSetColumn="tranaprvd_pos_2" />
+              <Mapping SourceColumn="tranaprvd_pos_3" DataSetColumn="tranaprvd_pos_3" />
+              <Mapping SourceColumn="tranaprvd_pos_4" DataSetColumn="tranaprvd_pos_4" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_inventory_request" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ds_inventory_request" msprop:Generator_DataSetName="ds_inventory_request" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pb_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_oid" msprop:Generator_ColumnVarNameInTable="columnpb_oid" msprop:Generator_ColumnPropNameInRow="pb_oid" msprop:Generator_ColumnPropNameInTable="pb_oidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pb_dom_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_dom_id" msprop:Generator_ColumnVarNameInTable="columnpb_dom_id" msprop:Generator_ColumnPropNameInRow="pb_dom_id" msprop:Generator_ColumnPropNameInTable="pb_dom_idColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="pb_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_en_id" msprop:Generator_ColumnVarNameInTable="columnpb_en_id" msprop:Generator_ColumnPropNameInRow="pb_en_id" msprop:Generator_ColumnPropNameInTable="pb_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="pb_add_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_add_by" msprop:Generator_ColumnVarNameInTable="columnpb_add_by" msprop:Generator_ColumnPropNameInRow="pb_add_by" msprop:Generator_ColumnPropNameInTable="pb_add_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pb_add_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_add_date" msprop:Generator_ColumnVarNameInTable="columnpb_add_date" msprop:Generator_ColumnPropNameInRow="pb_add_date" msprop:Generator_ColumnPropNameInTable="pb_add_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pb_upd_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_upd_by" msprop:Generator_ColumnVarNameInTable="columnpb_upd_by" msprop:Generator_ColumnPropNameInRow="pb_upd_by" msprop:Generator_ColumnPropNameInTable="pb_upd_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pb_upd_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_upd_date" msprop:Generator_ColumnVarNameInTable="columnpb_upd_date" msprop:Generator_ColumnPropNameInRow="pb_upd_date" msprop:Generator_ColumnPropNameInTable="pb_upd_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pb_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_date" msprop:Generator_ColumnVarNameInTable="columnpb_date" msprop:Generator_ColumnPropNameInRow="pb_date" msprop:Generator_ColumnPropNameInTable="pb_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pb_due_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_due_date" msprop:Generator_ColumnVarNameInTable="columnpb_due_date" msprop:Generator_ColumnPropNameInRow="pb_due_date" msprop:Generator_ColumnPropNameInTable="pb_due_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pb_requested" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_requested" msprop:Generator_ColumnVarNameInTable="columnpb_requested" msprop:Generator_ColumnPropNameInRow="pb_requested" msprop:Generator_ColumnPropNameInTable="pb_requestedColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pb_end_user" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_end_user" msprop:Generator_ColumnVarNameInTable="columnpb_end_user" msprop:Generator_ColumnPropNameInRow="pb_end_user" msprop:Generator_ColumnPropNameInTable="pb_end_userColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pb_rmks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_rmks" msprop:Generator_ColumnVarNameInTable="columnpb_rmks" msprop:Generator_ColumnPropNameInRow="pb_rmks" msprop:Generator_ColumnPropNameInTable="pb_rmksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pb_status" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_status" msprop:Generator_ColumnVarNameInTable="columnpb_status" msprop:Generator_ColumnPropNameInRow="pb_status" msprop:Generator_ColumnPropNameInTable="pb_statusColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pb_close_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_close_date" msprop:Generator_ColumnVarNameInTable="columnpb_close_date" msprop:Generator_ColumnPropNameInRow="pb_close_date" msprop:Generator_ColumnPropNameInTable="pb_close_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pb_dt" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_dt" msprop:Generator_ColumnVarNameInTable="columnpb_dt" msprop:Generator_ColumnPropNameInRow="pb_dt" msprop:Generator_ColumnPropNameInTable="pb_dtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pb_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pb_code" msprop:Generator_ColumnVarNameInTable="columnpb_code" msprop:Generator_ColumnPropNameInRow="pb_code" msprop:Generator_ColumnPropNameInTable="pb_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_oid" msprop:Generator_ColumnVarNameInTable="columnpbd_oid" msprop:Generator_ColumnPropNameInRow="pbd_oid" msprop:Generator_ColumnPropNameInTable="pbd_oidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_dom_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_dom_id" msprop:Generator_ColumnVarNameInTable="columnpbd_dom_id" msprop:Generator_ColumnPropNameInRow="pbd_dom_id" msprop:Generator_ColumnPropNameInTable="pbd_dom_idColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="pbd_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_en_id" msprop:Generator_ColumnVarNameInTable="columnpbd_en_id" msprop:Generator_ColumnPropNameInRow="pbd_en_id" msprop:Generator_ColumnPropNameInTable="pbd_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="pbd_add_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_add_by" msprop:Generator_ColumnVarNameInTable="columnpbd_add_by" msprop:Generator_ColumnPropNameInRow="pbd_add_by" msprop:Generator_ColumnPropNameInTable="pbd_add_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_add_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_add_date" msprop:Generator_ColumnVarNameInTable="columnpbd_add_date" msprop:Generator_ColumnPropNameInRow="pbd_add_date" msprop:Generator_ColumnPropNameInTable="pbd_add_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pbd_upd_by" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_upd_by" msprop:Generator_ColumnVarNameInTable="columnpbd_upd_by" msprop:Generator_ColumnPropNameInRow="pbd_upd_by" msprop:Generator_ColumnPropNameInTable="pbd_upd_byColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_upd_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_upd_date" msprop:Generator_ColumnVarNameInTable="columnpbd_upd_date" msprop:Generator_ColumnPropNameInRow="pbd_upd_date" msprop:Generator_ColumnPropNameInTable="pbd_upd_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pbd_pb_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_pb_oid" msprop:Generator_ColumnVarNameInTable="columnpbd_pb_oid" msprop:Generator_ColumnPropNameInRow="pbd_pb_oid" msprop:Generator_ColumnPropNameInTable="pbd_pb_oidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_seq" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_seq" msprop:Generator_ColumnVarNameInTable="columnpbd_seq" msprop:Generator_ColumnPropNameInRow="pbd_seq" msprop:Generator_ColumnPropNameInTable="pbd_seqColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="pbd_pt_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_pt_id" msprop:Generator_ColumnVarNameInTable="columnpbd_pt_id" msprop:Generator_ColumnPropNameInRow="pbd_pt_id" msprop:Generator_ColumnPropNameInTable="pbd_pt_idColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="pbd_rmks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_rmks" msprop:Generator_ColumnVarNameInTable="columnpbd_rmks" msprop:Generator_ColumnPropNameInRow="pbd_rmks" msprop:Generator_ColumnPropNameInTable="pbd_rmksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_end_user" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_end_user" msprop:Generator_ColumnVarNameInTable="columnpbd_end_user" msprop:Generator_ColumnPropNameInRow="pbd_end_user" msprop:Generator_ColumnPropNameInTable="pbd_end_userColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_qty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_qty" msprop:Generator_ColumnVarNameInTable="columnpbd_qty" msprop:Generator_ColumnPropNameInRow="pbd_qty" msprop:Generator_ColumnPropNameInTable="pbd_qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pbd_qty_processed" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_qty_processed" msprop:Generator_ColumnVarNameInTable="columnpbd_qty_processed" msprop:Generator_ColumnPropNameInRow="pbd_qty_processed" msprop:Generator_ColumnPropNameInTable="pbd_qty_processedColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pbd_qty_completed" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_qty_completed" msprop:Generator_ColumnVarNameInTable="columnpbd_qty_completed" msprop:Generator_ColumnPropNameInRow="pbd_qty_completed" msprop:Generator_ColumnPropNameInTable="pbd_qty_completedColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pbd_um" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_um" msprop:Generator_ColumnVarNameInTable="columnpbd_um" msprop:Generator_ColumnPropNameInRow="pbd_um" msprop:Generator_ColumnPropNameInTable="pbd_umColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="pbd_due_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_due_date" msprop:Generator_ColumnVarNameInTable="columnpbd_due_date" msprop:Generator_ColumnPropNameInRow="pbd_due_date" msprop:Generator_ColumnPropNameInTable="pbd_due_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pbd_status" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_status" msprop:Generator_ColumnVarNameInTable="columnpbd_status" msprop:Generator_ColumnPropNameInRow="pbd_status" msprop:Generator_ColumnPropNameInTable="pbd_statusColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pbd_dt" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pbd_dt" msprop:Generator_ColumnVarNameInTable="columnpbd_dt" msprop:Generator_ColumnPropNameInRow="pbd_dt" msprop:Generator_ColumnPropNameInTable="pbd_dtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pt_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pt_code" msprop:Generator_ColumnVarNameInTable="columnpt_code" msprop:Generator_ColumnPropNameInRow="pt_code" msprop:Generator_ColumnPropNameInTable="pt_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pt_desc1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pt_desc1" msprop:Generator_ColumnVarNameInTable="columnpt_desc1" msprop:Generator_ColumnPropNameInRow="pt_desc1" msprop:Generator_ColumnPropNameInTable="pt_desc1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pt_desc2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pt_desc2" msprop:Generator_ColumnVarNameInTable="columnpt_desc2" msprop:Generator_ColumnPropNameInRow="pt_desc2" msprop:Generator_ColumnPropNameInTable="pt_desc2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="en_id" msprop:Generator_ColumnVarNameInTable="columnen_id" msprop:Generator_ColumnPropNameInRow="en_id" msprop:Generator_ColumnPropNameInTable="en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="en_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="en_desc" msprop:Generator_ColumnVarNameInTable="columnen_desc" msprop:Generator_ColumnPropNameInRow="en_desc" msprop:Generator_ColumnPropNameInTable="en_descColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_en_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_en_id" msprop:Generator_ColumnVarNameInTable="columncmaddr_en_id" msprop:Generator_ColumnPropNameInRow="cmaddr_en_id" msprop:Generator_ColumnPropNameInTable="cmaddr_en_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cmaddr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_name" msprop:Generator_ColumnVarNameInTable="columncmaddr_name" msprop:Generator_ColumnPropNameInRow="cmaddr_name" msprop:Generator_ColumnPropNameInTable="cmaddr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_1" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_1" msprop:Generator_ColumnPropNameInRow="cmaddr_line_1" msprop:Generator_ColumnPropNameInTable="cmaddr_line_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_2" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_2" msprop:Generator_ColumnPropNameInRow="cmaddr_line_2" msprop:Generator_ColumnPropNameInTable="cmaddr_line_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cmaddr_line_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cmaddr_line_3" msprop:Generator_ColumnVarNameInTable="columncmaddr_line_3" msprop:Generator_ColumnPropNameInRow="cmaddr_line_3" msprop:Generator_ColumnPropNameInTable="cmaddr_line_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="code_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="code_id" msprop:Generator_ColumnVarNameInTable="columncode_id" msprop:Generator_ColumnPropNameInRow="code_id" msprop:Generator_ColumnPropNameInTable="code_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="code_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="code_code" msprop:Generator_ColumnVarNameInTable="columncode_code" msprop:Generator_ColumnPropNameInRow="code_code" msprop:Generator_ColumnPropNameInTable="code_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_1" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_1" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_1" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_2" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_2" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_2" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_3" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_3" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_3" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_name_4" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_name_4" msprop:Generator_ColumnPropNameInRow="tranaprvd_name_4" msprop:Generator_ColumnVarNameInTable="columntranaprvd_name_4" msprop:Generator_ColumnPropNameInTable="tranaprvd_name_4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_1" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_1" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_1" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_2" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_2" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_2" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_3" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_3" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_3" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tranaprvd_pos_4" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tranaprvd_pos_4" msprop:Generator_ColumnPropNameInRow="tranaprvd_pos_4" msprop:Generator_ColumnVarNameInTable="columntranaprvd_pos_4" msprop:Generator_ColumnPropNameInTable="tranaprvd_pos_4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:pb_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:pbd_oid" />
+    </xs:unique>
+    <xs:unique name="Constraint3">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:pt_code" />
+    </xs:unique>
+    <xs:unique name="Constraint4">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:en_desc" />
+    </xs:unique>
+    <xs:unique name="Constraint5" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:code_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_gl" targetNamespace="http://tempuri.org/ds_gl.xsd" xmlns:mstns="http://tempuri.org/ds_gl.xsd" xmlns="http://tempuri.org/ds_gl.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_gl" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ds_gl" msprop:Generator_DataSetName="ds_gl">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="glt_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_code" msprop:Generator_ColumnVarNameInTable="columnglt_code" msprop:Generator_ColumnPropNameInRow="glt_code" msprop:Generator_ColumnPropNameInTable="glt_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="glt_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_date" msprop:Generator_ColumnVarNameInTable="columnglt_date" msprop:Generator_ColumnPropNameInRow="glt_date" msprop:Generator_ColumnPropNameInTable="glt_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="glt_type" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_type" msprop:Generator_ColumnVarNameInTable="columnglt_type" msprop:Generator_ColumnPropNameInRow="glt_type" msprop:Generator_ColumnPropNameInTable="glt_typeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_cu_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_cu_id" msprop:Generator_ColumnVarNameInTable="columnac_cu_id" msprop:Generator_ColumnPropNameInRow="ac_cu_id" msprop:Generator_ColumnPropNameInTable="ac_cu_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="glt_exc_rate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_exc_rate" msprop:Generator_ColumnVarNameInTable="columnglt_exc_rate" msprop:Generator_ColumnPropNameInRow="glt_exc_rate" msprop:Generator_ColumnPropNameInTable="glt_exc_rateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="glt_seq" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_seq" msprop:Generator_ColumnVarNameInTable="columnglt_seq" msprop:Generator_ColumnPropNameInRow="glt_seq" msprop:Generator_ColumnPropNameInTable="glt_seqColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ac_id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_id" msprop:Generator_ColumnVarNameInTable="columnac_id" msprop:Generator_ColumnPropNameInRow="ac_id" msprop:Generator_ColumnPropNameInTable="ac_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ac_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_code" msprop:Generator_ColumnVarNameInTable="columnac_code" msprop:Generator_ColumnPropNameInRow="ac_code" msprop:Generator_ColumnPropNameInTable="ac_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ac_name" msprop:Generator_ColumnVarNameInTable="columnac_name" msprop:Generator_ColumnPropNameInRow="ac_name" msprop:Generator_ColumnPropNameInTable="ac_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="glt_desc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_desc" msprop:Generator_ColumnVarNameInTable="columnglt_desc" msprop:Generator_ColumnPropNameInRow="glt_desc" msprop:Generator_ColumnPropNameInTable="glt_descColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="glt_debit" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_debit" msprop:Generator_ColumnVarNameInTable="columnglt_debit" msprop:Generator_ColumnPropNameInRow="glt_debit" msprop:Generator_ColumnPropNameInTable="glt_debitColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="glt_credit" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_credit" msprop:Generator_ColumnVarNameInTable="columnglt_credit" msprop:Generator_ColumnPropNameInRow="glt_credit" msprop:Generator_ColumnPropNameInTable="glt_creditColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="glt_ref_trans_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="glt_ref_trans_code" msprop:Generator_ColumnVarNameInTable="columnglt_ref_trans_code" msprop:Generator_ColumnPropNameInRow="glt_ref_trans_code" msprop:Generator_ColumnPropNameInTable="glt_ref_trans_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="value" msdata:ReadOnly="true" msprop:Generator_UserColumnName="value" msprop:Generator_ColumnVarNameInTable="columnvalue" msprop:Generator_ColumnPropNameInRow="value" msprop:Generator_ColumnPropNameInTable="valueColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="glt_add_date" msprop:Generator_UserColumnName="glt_add_date" msprop:Generator_ColumnPropNameInRow="glt_add_date" msprop:Generator_ColumnVarNameInTable="columnglt_add_date" msprop:Generator_ColumnPropNameInTable="glt_add_dateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:ac_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

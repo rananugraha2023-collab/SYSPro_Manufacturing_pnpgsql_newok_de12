@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_cashFlowdirect" targetNamespace="http://tempuri.org/Ds_cashFlowdirect.xsd" xmlns:mstns="http://tempuri.org/Ds_cashFlowdirect.xsd" xmlns="http://tempuri.org/Ds_cashFlowdirect.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_cashFlowdirect" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_cashFlowdirect" msprop:Generator_DataSetName="Ds_cashFlowdirect">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="code" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInTable="codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remark" msdata:ReadOnly="true" msprop:Generator_UserColumnName="remark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInTable="remarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sort_number" msdata:ReadOnly="true" msprop:Generator_UserColumnName="sort_number" msprop:Generator_ColumnPropNameInRow="sort_number" msprop:Generator_ColumnVarNameInTable="columnsort_number" msprop:Generator_ColumnPropNameInTable="sort_numberColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="remark_header" msdata:ReadOnly="true" msprop:Generator_UserColumnName="remark_header" msprop:Generator_ColumnPropNameInRow="remark_header" msprop:Generator_ColumnVarNameInTable="columnremark_header" msprop:Generator_ColumnPropNameInTable="remark_headerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remark_footer" msdata:ReadOnly="true" msprop:Generator_UserColumnName="remark_footer" msprop:Generator_ColumnPropNameInRow="remark_footer" msprop:Generator_ColumnVarNameInTable="columnremark_footer" msprop:Generator_ColumnPropNameInTable="remark_footerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cfsign_header" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cfsign_header" msprop:Generator_ColumnPropNameInRow="cfsign_header" msprop:Generator_ColumnVarNameInTable="columncfsign_header" msprop:Generator_ColumnPropNameInTable="cfsign_headerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cf_value_sign" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cf_value_sign" msprop:Generator_ColumnPropNameInRow="cf_value_sign" msprop:Generator_ColumnVarNameInTable="columncf_value_sign" msprop:Generator_ColumnPropNameInTable="cf_value_signColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cfdet_oid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cfdet_oid" msprop:Generator_ColumnPropNameInRow="cfdet_oid" msprop:Generator_ColumnVarNameInTable="columncfdet_oid" msprop:Generator_ColumnPropNameInTable="cfdet_oidColumn" type="xs:string" />
+              <xs:element name="cfdet_pk" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cfdet_pk" msprop:Generator_ColumnPropNameInRow="cfdet_pk" msprop:Generator_ColumnVarNameInTable="columncfdet_pk" msprop:Generator_ColumnPropNameInTable="cfdet_pkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="seq" msdata:ReadOnly="true" msprop:Generator_UserColumnName="seq" msprop:Generator_ColumnPropNameInRow="seq" msprop:Generator_ColumnVarNameInTable="columnseq" msprop:Generator_ColumnPropNameInTable="seqColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="sub_header2" msdata:ReadOnly="true" msdata:Caption="sub_header" msprop:Generator_UserColumnName="sub_header2" msprop:Generator_ColumnPropNameInRow="sub_header2" msprop:Generator_ColumnVarNameInTable="columnsub_header2" msprop:Generator_ColumnPropNameInTable="sub_header2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_name" msdata:ReadOnly="true" msdata:Caption="sub_header" msprop:Generator_UserColumnName="ac_name" msprop:Generator_ColumnVarNameInTable="columnac_name" msprop:Generator_ColumnPropNameInRow="ac_name" msprop:Generator_ColumnPropNameInTable="ac_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_sign" msdata:ReadOnly="true" msdata:Caption="sub_header" msprop:Generator_UserColumnName="ac_sign" msprop:Generator_ColumnVarNameInTable="columnac_sign" msprop:Generator_ColumnPropNameInRow="ac_sign" msprop:Generator_ColumnPropNameInTable="ac_signColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac_code" msdata:ReadOnly="true" msdata:Caption="sub_header" msprop:Generator_UserColumnName="ac_code" msprop:Generator_ColumnVarNameInTable="columnac_code" msprop:Generator_ColumnPropNameInRow="ac_code" msprop:Generator_ColumnPropNameInTable="ac_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sub_header" msdata:ReadOnly="true" msprop:Generator_UserColumnName="sub_header" msprop:Generator_ColumnPropNameInRow="sub_header" msprop:Generator_ColumnVarNameInTable="columnsub_header" msprop:Generator_ColumnPropNameInTable="sub_headerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cf_value_ending" msdata:ReadOnly="true" msdata:Caption="cf_value" msprop:Generator_UserColumnName="cf_value_ending" msprop:Generator_ColumnVarNameInTable="columncf_value_ending" msprop:Generator_ColumnPropNameInRow="cf_value_ending" msprop:Generator_ColumnPropNameInTable="cf_value_endingColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cf_value_beginning" msdata:ReadOnly="true" msdata:Caption="cf_value" msprop:Generator_UserColumnName="cf_value_beginning" msprop:Generator_ColumnVarNameInTable="columncf_value_beginning" msprop:Generator_ColumnPropNameInRow="cf_value_beginning" msprop:Generator_ColumnPropNameInTable="cf_value_beginningColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cf_value_original" msdata:ReadOnly="true" msdata:Caption="cf_value" msprop:Generator_UserColumnName="cf_value_original" msprop:Generator_ColumnPropNameInRow="cf_value_original" msprop:Generator_ColumnVarNameInTable="columncf_value_original" msprop:Generator_ColumnPropNameInTable="cf_value_originalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ac_value_header" msdata:ReadOnly="true" msdata:Caption="cf_value" msprop:Generator_UserColumnName="ac_value_header" msprop:Generator_ColumnPropNameInRow="ac_value_header" msprop:Generator_ColumnVarNameInTable="columnac_value_header" msprop:Generator_ColumnPropNameInTable="ac_value_headerColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ac_value" msdata:ReadOnly="true" msdata:Caption="cf_value" msprop:Generator_UserColumnName="ac_value" msprop:Generator_ColumnVarNameInTable="columnac_value" msprop:Generator_ColumnPropNameInRow="ac_value" msprop:Generator_ColumnPropNameInTable="ac_valueColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cf_value" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cf_value" msprop:Generator_ColumnPropNameInRow="cf_value" msprop:Generator_ColumnVarNameInTable="columncf_value" msprop:Generator_ColumnPropNameInTable="cf_valueColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table" />
+      <xs:field xpath="mstns:code" />
+      <xs:field xpath="mstns:cfdet_oid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

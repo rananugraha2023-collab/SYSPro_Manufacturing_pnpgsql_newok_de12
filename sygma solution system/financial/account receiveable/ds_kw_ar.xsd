@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_kw_ar" targetNamespace="http://tempuri.org/ds_kw_ar.xsd" xmlns:mstns="http://tempuri.org/ds_kw_ar.xsd" xmlns="http://tempuri.org/ds_kw_ar.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="odbc_sygma_lokal" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="odbc_sygma_lokal (MySettings)" PropertyReference="ApplicationSettings.sygma_solution_system.My.MySettings.GlobalReference.Default.odbc_sygma_lokal" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="odbc_sygma_lokal (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT
+arpay_payment.arpay_code,
+arpay_payment.arpay_bill_to,
+arpay_payment.arpay_date,
+arpay_payment.arpay_total_amount, 
+arpay_payment.arpay_tbilang,
+arpay_payment.arpay_remarks,
+arpayd_det.arpayd_amount,
+arpayd_det.arpayd_cash_amount,
+arpayd_det.arpayd_disc_amount, 
+arpayd_det.arpayd_sokp_oid,
+sokp_piutang.sokp_seq,
+sokp_piutang.sokp_amount_pay,
+sokp_piutang.sokp_date_payment,
+ptnr_mstr.ptnr_name, 
+ptnra_addr.ptnra_line,
+ptnra_addr.ptnra_line_1,
+ptnra_addr.ptnra_line_2,
+ptnra_addr.ptnra_line_3
+FROM 
+arpay_payment
+INNER JOIN ptnr_mstr ON arpay_payment.arpay_bill_to = ptnr_mstr.ptnr_id 
+INNER JOIN arpayd_det ON arpay_payment.arpay_oid = arpayd_det.arpayd_arpay_oid
+INNER JOIN sokp_piutang ON arpayd_det.arpayd_sokp_oid = sokp_piutang.sokp_oid
+INNER JOIN ptnra_addr ON ptnr_mstr.ptnr_oid = ptnra_addr.ptnra_ptnr_oid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="arpay_code" DataSetColumn="arpay_code" />
+              <Mapping SourceColumn="arpay_bill_to" DataSetColumn="arpay_bill_to" />
+              <Mapping SourceColumn="arpay_date" DataSetColumn="arpay_date" />
+              <Mapping SourceColumn="arpay_total_amount" DataSetColumn="arpay_total_amount" />
+              <Mapping SourceColumn="arpay_tbilang" DataSetColumn="arpay_tbilang" />
+              <Mapping SourceColumn="arpay_remarks" DataSetColumn="arpay_remarks" />
+              <Mapping SourceColumn="arpayd_amount" DataSetColumn="arpayd_amount" />
+              <Mapping SourceColumn="arpayd_cash_amount" DataSetColumn="arpayd_cash_amount" />
+              <Mapping SourceColumn="arpayd_disc_amount" DataSetColumn="arpayd_disc_amount" />
+              <Mapping SourceColumn="arpayd_sokp_oid" DataSetColumn="arpayd_sokp_oid" />
+              <Mapping SourceColumn="sokp_seq" DataSetColumn="sokp_seq" />
+              <Mapping SourceColumn="sokp_amount_pay" DataSetColumn="sokp_amount_pay" />
+              <Mapping SourceColumn="sokp_date_payment" DataSetColumn="sokp_date_payment" />
+              <Mapping SourceColumn="ptnr_name" DataSetColumn="ptnr_name" />
+              <Mapping SourceColumn="ptnra_line" DataSetColumn="ptnra_line" />
+              <Mapping SourceColumn="ptnra_line_1" DataSetColumn="ptnra_line_1" />
+              <Mapping SourceColumn="ptnra_line_2" DataSetColumn="ptnra_line_2" />
+              <Mapping SourceColumn="ptnra_line_3" DataSetColumn="ptnra_line_3" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_kw_ar" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ds_kw_ar" msprop:Generator_UserDSName="ds_kw_ar" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TablePropName="DataTable1" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="arpay_code" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_code" msprop:Generator_ColumnPropNameInRow="arpay_code" msprop:Generator_ColumnVarNameInTable="columnarpay_code" msprop:Generator_ColumnPropNameInTable="arpay_codeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="arpay_bill_to" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_bill_to" msprop:Generator_ColumnPropNameInRow="arpay_bill_to" msprop:Generator_ColumnVarNameInTable="columnarpay_bill_to" msprop:Generator_ColumnPropNameInTable="arpay_bill_toColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="arpay_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_date" msprop:Generator_ColumnPropNameInRow="arpay_date" msprop:Generator_ColumnVarNameInTable="columnarpay_date" msprop:Generator_ColumnPropNameInTable="arpay_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="arpay_total_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_total_amount" msprop:Generator_ColumnPropNameInRow="arpay_total_amount" msprop:Generator_ColumnVarNameInTable="columnarpay_total_amount" msprop:Generator_ColumnPropNameInTable="arpay_total_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="arpay_tbilang" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_tbilang" msprop:Generator_ColumnPropNameInRow="arpay_tbilang" msprop:Generator_ColumnVarNameInTable="columnarpay_tbilang" msprop:Generator_ColumnPropNameInTable="arpay_tbilangColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="arpay_remarks" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpay_remarks" msprop:Generator_ColumnPropNameInRow="arpay_remarks" msprop:Generator_ColumnVarNameInTable="columnarpay_remarks" msprop:Generator_ColumnPropNameInTable="arpay_remarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="arpayd_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpayd_amount" msprop:Generator_ColumnPropNameInRow="arpayd_amount" msprop:Generator_ColumnVarNameInTable="columnarpayd_amount" msprop:Generator_ColumnPropNameInTable="arpayd_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="arpayd_cash_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpayd_cash_amount" msprop:Generator_ColumnPropNameInRow="arpayd_cash_amount" msprop:Generator_ColumnVarNameInTable="columnarpayd_cash_amount" msprop:Generator_ColumnPropNameInTable="arpayd_cash_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="arpayd_disc_amount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpayd_disc_amount" msprop:Generator_ColumnPropNameInRow="arpayd_disc_amount" msprop:Generator_ColumnVarNameInTable="columnarpayd_disc_amount" msprop:Generator_ColumnPropNameInTable="arpayd_disc_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="arpayd_sokp_oid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="arpayd_sokp_oid" msprop:Generator_ColumnPropNameInRow="arpayd_sokp_oid" msprop:Generator_ColumnVarNameInTable="columnarpayd_sokp_oid" msprop:Generator_ColumnPropNameInTable="arpayd_sokp_oidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sokp_seq" msdata:ReadOnly="true" msprop:Generator_UserColumnName="sokp_seq" msprop:Generator_ColumnPropNameInRow="sokp_seq" msprop:Generator_ColumnVarNameInTable="columnsokp_seq" msprop:Generator_ColumnPropNameInTable="sokp_seqColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="sokp_amount_pay" msdata:ReadOnly="true" msprop:Generator_UserColumnName="sokp_amount_pay" msprop:Generator_ColumnPropNameInRow="sokp_amount_pay" msprop:Generator_ColumnVarNameInTable="columnsokp_amount_pay" msprop:Generator_ColumnPropNameInTable="sokp_amount_payColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sokp_date_payment" msdata:ReadOnly="true" msprop:Generator_UserColumnName="sokp_date_payment" msprop:Generator_ColumnPropNameInRow="sokp_date_payment" msprop:Generator_ColumnVarNameInTable="columnsokp_date_payment" msprop:Generator_ColumnPropNameInTable="sokp_date_paymentColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ptnr_name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnr_name" msprop:Generator_ColumnPropNameInRow="ptnr_name" msprop:Generator_ColumnVarNameInTable="columnptnr_name" msprop:Generator_ColumnPropNameInTable="ptnr_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnra_line" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnra_line" msprop:Generator_ColumnPropNameInRow="ptnra_line" msprop:Generator_ColumnVarNameInTable="columnptnra_line" msprop:Generator_ColumnPropNameInTable="ptnra_lineColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ptnra_line_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnra_line_1" msprop:Generator_ColumnPropNameInRow="ptnra_line_1" msprop:Generator_ColumnVarNameInTable="columnptnra_line_1" msprop:Generator_ColumnPropNameInTable="ptnra_line_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnra_line_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnra_line_2" msprop:Generator_ColumnPropNameInRow="ptnra_line_2" msprop:Generator_ColumnVarNameInTable="columnptnra_line_2" msprop:Generator_ColumnPropNameInTable="ptnra_line_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ptnra_line_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ptnra_line_3" msprop:Generator_ColumnPropNameInRow="ptnra_line_3" msprop:Generator_ColumnVarNameInTable="columnptnra_line_3" msprop:Generator_ColumnPropNameInTable="ptnra_line_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

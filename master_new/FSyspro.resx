@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PictureBox21.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="PictureBox22.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="PictureBox20.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox106.Text" xml:space="preserve">
+    <value>1. Recrutment
+2. Human Resources
+3. Attendance (Integrated with Finger Scan System)
+4. Pengajuan Dana (Inet PD)
+5. ERP Support
+6. QIS (Quality Information System)
+7. Asset Management
+8. SMS Gateway (Integrated with Yahoo Messenger)
+9. Email Gateway
+10. Reminder System
+11. Alerting System</value>
+  </data>
+  <data name="PictureBox19.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox107.Text" xml:space="preserve">
+    <value>SYSPRO dengan kepanjangan Support System Programe adalah sebuah aplikasi program yang diterapkan di PT. Hariff DTE untuk menunjang bussines proces yang berjalan agar bisa lebih efektif dan efisien.
+
+SYSPRO dibuat menjadi sebuah software yang sangat mengedapankan kemudahan (user friendly) dan menjadi sebuah software yang interaktif dengan user. Mudahnya instalasi, mudahnya registrasi, pengaturan skin, pengaturan menu, pengaturan form, pengaturan coloum, pengaturan warna, pengaturan dan cara pelaporan dari data adalah hal-hal yang bisa diatur oleh user2 sendiri. Ditambah dengan terintegrasinya dengan reminder system, paperless system, sms gateway, email gateway, yahoo messenger, bug system menambah nilai positif bagi software ini.
+
+Awal mula pembuatan SYSPRO ini adalah melihat bahwa report-report ERP kurang sesuai dengan kebutuhan user dan melihat bahwa tidak semua hal tercakup dalam ERP maka dibuatlah module-module tambahan untuk menunjang jalannya ERP agar sesuai dengan bussiness process yang berjalan di PT. Hariff DTE, seperti halnya pembuatan Target Batch, Instruksi Pengiriman Barang (IPB) , Delivery Order (DO), Goods Receipt (GR), Bukti Penerimaan Barang (BPB) dan lain sebagainya.
+
+Seiring dengan berjalannya waktu, maka SYSPRO pun mulai diterapkan sebagai system utama dan tidak lagi sebagai sebuah software pendukung saja.
+
+Sedikit demi sedikit, perlahan tapi pasti SYSPRO akan menjadi sebuah software yang menggantikan peranan ERP (Enterprise Resource Planning) bagi PT. Hariff DTE. Peran serta, bantuan serta kepercayaan dari rekan-rekan semua akan membantu kami untuk mewujudkan cita-cita ini.</value>
+  </data>
+  <data name="RichTextBox3.Text" xml:space="preserve">
+    <value>1. Menjadi asset bagi karyawan dan masyarakat di sekitarnya.
+
+2. Memberikan pelayanan dan perlakuan yang terbaik, kepada siapapun yang berhubungan kerja dengan kita.
+
+3. Saling menghargai dan membina kerja sama.
+
+4. Berusaha mencapai yang terbaik.
+
+5. Allah Meridhoi Kita.</value>
+  </data>
+  <data name="PictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="PictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="PictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Vision : Menjadi Perusahaan terkemuka di Indonesia yang berbasis inovasi teknologi &amp; pelayanan pelanggan
+
+Mission : Menciptakan inovasi &amp; nilai tambah dengan  mendayagunakan teknologi untuk pemangku kepentingan
+
+Value : Usaha yang halal, kerja keras, cerdas, amanah, mentaati aturan &amp; etika bisnis</value>
+  </data>
+  <data name="RichTextBox2.Text" xml:space="preserve">
+    <value>HARIFF DTE adalah suatu perusahaan swasta nasional yang khusus bergerak dalam bidang pelayanan jasa teknis, perencanaan sistem, pabrikasi dan proyek-proyek Turn Key dari sistem telekomunikasi, komputer, dan kontrol
+
+Didirikan pada tahun 1982, Hariff memulai aktifitasnya di dalam proyek telekomunikasi HF, VHF, dan UHF. Dan sejak itu kegiatan perusahaan terus berkembang dengan penggunaan teknis-teknis komputer dan kontrol di dalam melaksanakan pekerjaan. Setiap tenaga teknis di Hariff adalah orang-orang yang ahli dan menguasai salah satu atau beberapa bidang di dalam dunia telekomunikasi, komputer dan kontrol.
+
+Pengalaman para teknisi didalam proyek berskala nasional seperti jaringan sistem komunikasi satelit dan komunikasi radio terrestrial untuk operator-operator telekomunikasi perusahaan-perusahaan pertambangan, perusahaan minyak dan perusahaan-perusahaan swasta nasional dan asing.
+
+Dengan bekal pengalaman ini perusahaan kami mampu melaksanakan perencanaan dan pembangunan proyek-proyek yang berskala besar yang melibatkan disiplin-disiplin ilmu telekomunikasi, komputer, dan kontrol.
+
+Pelayanan kami meliputi perencanaan, pengadaan, instalasi, dan pemeliharaan dari sistem telekomunikasi, komputer, dan kontrol. </value>
+  </data>
+  <data name="RichTextBox91.Text" xml:space="preserve">
+    <value>Alpa/mangkir selama 5 (lima) hari kerja berturut-turut atau selama 7 (tujuh) hari kerja tidak berturut-turut dalam 1 (satu) bulan tanpa alasan yang sah dan telah dipanggil secara patut melalui surat sebanyak 2 (dua) dua kali, namun pekerja tidak hadir untuk menghadap Personalia, maka akan dinyatakan mengundurkan diri</value>
+  </data>
+  <data name="RichTextBox85.Text" xml:space="preserve">
+    <value>Alpha/mangkir selama 3 (tiga) hari kerja berturut-turut atau 4 (empat) hari tidak berturut-turut dalam 1 (satu) bulan tanpa alasan yang sah dan setelah 3 (tiga) kali berturut-turut tetap menolak untuk mentaati perintah atau penugasan yang layak dari atasannya</value>
+  </data>
+  <data name="RichTextBox77.Text" xml:space="preserve">
+    <value>Alpha/mangkir sebanyak 2 (dua) hari berturut-turut atau 3 (tiga) hari tidak berturut-turut dalam 1 (satu) bulan tanpa memberi laporan/keterangan tertulis atau memberi laporan yang ternyata dikemudian hari diketahui sebagai laporan palsu atau tidak mengikuti prosedur cuti yang berlaku</value>
+  </data>
+  <data name="PictureBox16.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox23.Text" xml:space="preserve">
+    <value>Waktu masuk kerja adalah jam 8.00 dan waktu pulang kerja adalah jam 17.00 dengan waktu istirahat selama 1 (satu) jam  mulai jam 12.00 sampai dengan jam 13.00 kecuali pada hari Jum'at waktu istirahat adalah selama 2 (dua) jam mulai jam 11.30-13.30. Dalam keadaan tertentu, waktu kerja ini dapat dirubah sesuai kebijakan perusahaan.</value>
+  </data>
+  <data name="PictureBox15.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox20.Text" xml:space="preserve">
+    <value>Ijin Pulang Cepat adalah keadaan dimana karyawan terpaksa meninggalkan pekerjaan karena keadaan tertentu yang bersifat mendesak, misalnya sakit atau kepentingan keluarga
+Karyawan yang melakukan Ijin Pulang Cepat wajib mendapat persetujuan dari managernya dan menginformasikan hal ini kepada SDM. Jam berapapun karyawan tersebut melakukan ijin pulang cepat wajib melakukan finger scan check out.
+Ijin Pulang Cepat dibuat oleh masing2 karyawan dengan cara : login ke syspro--&gt; pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih Ijin Pulang Cepat--&gt;input, setelah itu manager yang bersangkutan akan mendapatkan konfirmasi melalui sms dan email. Persetujuan dari user/manager dengan cara sms ketik *nik*password*tmpc*no ijin# contoh : *0103090000*abcd*tmpc*O209TMPC1# kirim ke 081322255111, atau reply email dengan format yang sama seperti hal sms atau melalui program syspro.
+
+
+</value>
+  </data>
+  <data name="RichTextBox15.Text" xml:space="preserve">
+    <value>Dinas Dalam Kota adalah keadaan dimana karyawan meninggalkan tempat kerja atau tidak hadir di tempat kerja dikarenakan kepentingan pekerjaan di luar kantor (radius kurang dari 50 km) berdasarkan perintah dari atasan.
+Dinas dalam kota dilakukan sesuai kebutuhan pekerjaan atau perintah atasan. Ijin melaksanakan Dinas Dalam Kota tidak berlaku via sms tetapi harus dibuat oleh admin masing-masing department melalui program syspro karena memerlukan persetujuan dari user atau manager. Pemberitahuan Dinas dalam Kota yang dilakukan setelah kegiatan tersebut terjadi akan menjadi tidak sah dan berakibat tidak dapat diproses. Persetujuan dinas dalam kota dilakukan oleh user atau manager dalam kurun waktu 7 hari, terhitung pada saat admin departement melakukan approval. Apabila persetujuan dari manager tidak dilakukan dalam batas waktu tersebut, maka akan mempengaruhi dalam perhitungan absensi karyawan yang melakukan dinas dalam kota akhir bulan dan dianggap tidak pernah terjadi. Kegiatan ini tidak mendapatkan uang perjalanan dinas. 
+Tata cara input data ini dengan cara : login ke syspro--&gt;pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih dinas dalam kota--&gt;input, setelah itu manager yang bersangkutan akan mendapatkan konfirmasi melalui sms dan email. Persetujuan dari user/manager dengan cara sms ketik *nik*password*tmdk*no DDK# contoh : *0103090000*abcd*tmdk*O209TMDK1# kirim ke 081322255111, atau reply email dengan format yang sama seperti hal sms atau melalui program syspro.</value>
+  </data>
+  <data name="RichTextBox13.Text" xml:space="preserve">
+    <value>Perjalanan Dinas adalah keadaan dimana karyawan meninggalkan tempat kerja atau tidak hadir di tempat kerja karena kepentingan pekerjaan di luar kantor (radius lebih dari 50 km) berdasarkan perintah dari atasan.
+Perjalanan Dinas dilakukan sesuai kebutuhan pekerjaan atau perintah atasan. Ijin melaksanakan Perjalanan Dinas tidak berlaku via sms tetapi harus dibuat oleh admin masing-masing department melalui program syspro karena memerlukan persetujuan dari user atau manager. Pemberitahuan Perjalanan Dinas yang dilakukan setelah kegiatan tersebut terjadi akan menjadi tidak sah dan berakibat tidak dapat diproses. Persetujuan perjalanan dinas dilakukan oleh user atau manager dalam kurun waktu 7 hari, terhitung pada saat admin departement melakukan approval. Apabila persetujuan dari manager tidak dilakukan dalam batas waktu tersebut, maka akan mempengaruhi dalam perhitungan absensi karyawan yang melakukan Perjalanan Dinas akhir bulan dan dianggap tidak pernah terjadi. Kegiatan ini mendapatkan uang perjalanan dinas.
+Tata cara input data ini dengan cara : login ke syspro--&gt;pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih perjalanan dinas--&gt;input, setelah itu manager yang bersangkutan akan mendapatkan konfirmasi melalui sms dan email. Persetujuan dari user/manager bisa melalui sms dengan cara ketik *nik*password*tmpd*no PD# contoh : *0103090000*abcd*tmpd*O209TMPD1# kirim ke 081322255111, atau reply email dengan format yang sama seperti hal sms atau melalui program syspro</value>
+  </data>
+  <data name="RichTextBox8.Text" xml:space="preserve">
+    <value>Ijin Masuk Siang adalah keadaan dimana karyawan tidak dapat hadir di tempat kerja tepat pada waktunya dikarenakan urusan pribadi ataupun pekerjaan.
+Ijin Masuk Siang yang dilakukan pada saat Forum Komunikasi Internal (FKI) wajib mendapatkan persetujuan dari manager.
+Ijin Masuk Siang maksimal 5 (lima) kali dalam sebulan, apabila melewati batas maksimal maka Ijin Masuk Siang akan ditolak secara system. Ijin Masuk Siang berlaku mulai jam 08.31. Kehadiran antara jam 08.01-08.30 dikategorikan terlambat. Ijin Masuk Siang yang dilakukan setelah kegiatan tersebut terjadi akan menjadi tidak sah. 
+Pemberitahuan Ijin Masuk Siang kepada SDM bisa dilakukan via sms dengan cara ketik *nik*password_syspro*ims#. Contoh : 0103090000*abcd*ims kirim ke 081322255111, atau input ke program syspro oleh yang bersangkutan atau admin departmentnya dengan cara : login ke syspro--&gt;pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih ijin masuk siang--&gt;input data
+</value>
+  </data>
+  <data name="RichTextBox7.Text" xml:space="preserve">
+    <value>Ijin Pribadi adalah ketidakhadiran dengan alasan kepentingan pribadi.
+Ijin Pribadi yang dilakukan pada saat Forum Komunikasi Internal (FKI) wajib mendapatkan persetujuan dari manager.
+Prosedure pemberitahuan Ijin Pribadi kepada SDM bisa dilakukan via sms dengan cara ketik *nik*password_syspro*ip#
+contoh : *0103090000*abcd*ip#  kirim ke 081322255111, atau input ke program syspro oleh yang bersangkutan atau admin departmentnya dengan cara : login ke syspro--&gt;pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih ijin pribadi--&gt;input data</value>
+  </data>
+  <data name="RichTextBox5.Text" xml:space="preserve">
+    <value>Sakit adalah ketidakhadiran yang disebabkan terganggunya kesehatan karyawan
+Sakit lebih dari atau sama dengan 2 (dua) hari wajib menyertakan surat keterangan sakit dari dokter pada saat hari pertama masuk kerja kembali. Untuk ketidakhadiran karena sakit yang lebih dari 1 (satu) hari, harus melakukan ijin dengan SMS setiap harinya, kecuali surat dokter telah diterima oleh HR Department. Ijin sakit yang dilakukan setelah kegiatan tersebut terjadi akan menjadi tidak sah.
+Prosedure pemberitahuan Ijin Sakit kepada SDM bisa dilakukan via sms dengan cara ketik *nik*password_syspro*sa#, contoh : *0103090000*abcd*sa# kirim ke 081322255111, atau input ke program syspro oleh admin departmentnya dengan cara : login ke syspro--&gt;pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih sakit--&gt;input data</value>
+  </data>
+  <data name="PictureBox14.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox18.Text" xml:space="preserve">
+    <value>Yang termasuk kedalam kategori cuti pribadi adalah cuti untuk melaksanakan ibadah haji dan cuti melahirkan. Cuti melaksanakan ibadah haji adalah keadaan dimana karyawan tidak hadir di tempat kerja karena sedang melaksanakan ibadah haji. Cuti Melahirkan adalah keadaan dimana karyawan wanita tidak hadir di tempat kerja dikarenakan keadaan tertentu yaitu persalinan. 
+Lamanya cuti ibadah haji ini tergantung kepada program haji yang diambil karyawan, sedangkan Cuti Melahirkan selama 3 (tiga) bulan sesuai perhitungan hari kalender. Mulai cuti adalah 1.5 bulan sebelum persalinan sampai 1.5 bulan sesudah persalinan atau menurut petunjuk dokter dengan batas maksimal 3 (tiga) bulan. Cuti melahirkan ini harus disertai surat keterangan dokter.
+Cuti Pribadi dibuat oleh masing2 karyawan dengan cara : login ke syspro--&gt; pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih Cuti Pribadi--&gt;input, setelah itu manager yang bersangkutan akan mendapatkan konfirmasi melalui sms dan email. Persetujuan dari user/manager dengan cara sms ketik *nik*password*tmcp*no cuti# contoh : *0103090000*abcd*tmcp*O209TMCP1# kirim ke 081322255111, atau reply email dengan format yang sama seperti hal sms atau melalui program syspro.
+
+</value>
+  </data>
+  <data name="RichTextBox17.Text" xml:space="preserve">
+    <value>Cuti Tahunan adalah keadaan dimana karyawan tidak hadir ditempat kerja karena timbulnya hak dari setiap karyawan yang sudah mencapai masa kerja 12 (duabelas) bulan berturut-turut tanpa putus. 
+Cuti Tahunan ini berjumlah 12 (duabelas) hari setiap tahunnya sebelum dipotong dengan cuti bersama dan ijin-ijin lain yang memotong hak cuti. Cuti Tahunan ini harus atas persetujuan Manager yang bersangkutan dan Manager HRD. Karyawan boleh mengajukan cuti dalam hitungan hari yang sudah mendapat persetujuan dari managernya.
+Cuti Tahunan dibuat oleh masing2 karyawan dengan cara : login ke syspro--&gt; pilih HRIS module-time management--&gt;masuk kategori ijin--&gt;pilih Cuti Tahunan--&gt;input, setelah itu manager yang bersangkutan akan mendapatkan konfirmasi melalui sms dan email. Persetujuan dari user/manager dengan cara sms ketik *nik*password*tmct*no cuti# contoh : *0103090000*abcd*tmct*O209TMCT1# kirim ke 081322255111, atau reply email dengan format yang sama seperti hal sms atau melalui program syspro.
+
+</value>
+  </data>
+  <data name="PictureBox18.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="PictureBox17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox111.Text" xml:space="preserve">
+    <value>1. Recrutment
+2. Human Resources
+3. Attendance (Integrated with Finger Scan System)
+4. Pengajuan Dana (Inet PD)
+5. ERP Support
+6. QIS (Quality Information System)
+7. Asset Management
+8. SMS Gateway (Integrated with Yahoo Messenger)</value>
+  </data>
+  <data name="PictureBox23.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="RichTextBox108.Text" xml:space="preserve">
+    <value>1. Recrutment
+2. Human Resources
+3. Attendance (Integrated with Finger Scan System)
+4. Pengajuan Dana (Inet PD)
+5. ERP Support
+6. QIS (Quality Information System)
+7. Asset Management
+8. SMS Gateway (Integrated with Yahoo Messenger)</value>
+  </data>
+  <data name="PictureBox26.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAATCwAAEwsAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////AAAAAAAAAAAA////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAA////////////////////////////////////////////AAAAAAAA////AAAAAAAAAAAA
+        ////////////////////////////////////////AAAA////////////AAAAAAAAAAAA////////////
+        ////////////////////////////////////////////AAAAAAAA////////////////////////////
+        ////////////////////////////////AAAA////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+        AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+        AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAIAAgDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1P/gjZ/w+L/4pX/hVH/JpP+hf8nT/ANuf8Kt/4R35P+SNf81M
+        /wCPL+0f7B/4Vr/xa7/hIs/8Jj+9ooor+X8PC1KHvzfNFS1le10tI6aRXRep/XXjVxV9b8RuJKP+rnCm
+        F/s7H1sD7XB5P7Cvj/Zyc/rmZVPrEvrWPqc/LVxFoc8IQjyLlu//2Q==
+</value>
+  </data>
+  <metadata name="DataSet11BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>367, 17</value>
+  </metadata>
+  <metadata name="Sdmpgsql.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>267, 17</value>
+  </metadata>
+  <metadata name="nPgSqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="FontDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>541, 17</value>
+  </metadata>
+</root>

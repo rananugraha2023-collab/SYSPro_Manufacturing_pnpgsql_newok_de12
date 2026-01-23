@@ -1,0 +1,7 @@
+﻿Public Class FAssetReturnReasonCode
+
+    Private Sub FAssetReturnReasonCode_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        form_first_load()
+        _code_field = "asbackd_reason"
+    End Sub
+End Class

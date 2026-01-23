@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSlipSub" targetNamespace="http://tempuri.org/DSSlipSub.xsd" xmlns:mstns="http://tempuri.org/DSSlipSub.xsd" xmlns="http://tempuri.org/DSSlipSub.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSlipSub" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSSlipSub" msprop:Generator_DataSetName="DSSlipSub">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table" msprop:Generator_UserTableName="Table" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_TablePropName="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="segend_komisi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_komisi" msprop:Generator_ColumnVarNameInTable="columnsegend_komisi" msprop:Generator_ColumnPropNameInRow="segend_komisi" msprop:Generator_ColumnPropNameInTable="segend_komisiColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_add_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_add_income" msprop:Generator_ColumnVarNameInTable="columnsegend_add_income" msprop:Generator_ColumnPropNameInRow="segend_add_income" msprop:Generator_ColumnPropNameInTable="segend_add_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_coaching_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_coaching_income" msprop:Generator_ColumnVarNameInTable="columnsegend_coaching_income" msprop:Generator_ColumnPropNameInRow="segend_coaching_income" msprop:Generator_ColumnPropNameInTable="segend_coaching_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_total_income" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_total_income" msprop:Generator_ColumnVarNameInTable="columnsegend_total_income" msprop:Generator_ColumnPropNameInRow="segend_total_income" msprop:Generator_ColumnPropNameInTable="segend_total_incomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_payment_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_payment_date" msprop:Generator_ColumnVarNameInTable="columnsegend_payment_date" msprop:Generator_ColumnPropNameInRow="segend_payment_date" msprop:Generator_ColumnPropNameInTable="segend_payment_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="segend_su_sales" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_su_sales" msprop:Generator_ColumnVarNameInTable="columnsegend_su_sales" msprop:Generator_ColumnPropNameInRow="segend_su_sales" msprop:Generator_ColumnPropNameInTable="segend_su_salesColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="seperiode_start_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="seperiode_start_date" msprop:Generator_ColumnVarNameInTable="columnseperiode_start_date" msprop:Generator_ColumnPropNameInRow="seperiode_start_date" msprop:Generator_ColumnPropNameInTable="seperiode_start_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="seperiode_end_date" msdata:ReadOnly="true" msprop:Generator_UserColumnName="seperiode_end_date" msprop:Generator_ColumnVarNameInTable="columnseperiode_end_date" msprop:Generator_ColumnPropNameInRow="seperiode_end_date" msprop:Generator_ColumnPropNameInTable="seperiode_end_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="segend_komisi_bulanan" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_komisi_bulanan" msprop:Generator_ColumnVarNameInTable="columnsegend_komisi_bulanan" msprop:Generator_ColumnPropNameInRow="segend_komisi_bulanan" msprop:Generator_ColumnPropNameInTable="segend_komisi_bulananColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="segend_komisi_telah_dibayar" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segend_komisi_telah_dibayar" msprop:Generator_ColumnVarNameInTable="columnsegend_komisi_telah_dibayar" msprop:Generator_ColumnPropNameInRow="segend_komisi_telah_dibayar" msprop:Generator_ColumnPropNameInTable="segend_komisi_telah_dibayarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="seperiode_bonus_gen" msdata:ReadOnly="true" msprop:Generator_UserColumnName="seperiode_bonus_gen" msprop:Generator_ColumnVarNameInTable="columnseperiode_bonus_gen" msprop:Generator_ColumnPropNameInRow="seperiode_bonus_gen" msprop:Generator_ColumnPropNameInTable="seperiode_bonus_genColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="segen_periode" msdata:ReadOnly="true" msprop:Generator_UserColumnName="segen_periode" msprop:Generator_ColumnPropNameInRow="segen_periode" msprop:Generator_ColumnVarNameInTable="columnsegen_periode" msprop:Generator_ColumnPropNameInTable="segen_periodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

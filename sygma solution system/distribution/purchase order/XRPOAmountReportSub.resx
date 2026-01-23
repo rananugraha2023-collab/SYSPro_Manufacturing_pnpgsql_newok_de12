@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="Detail.Name" xml:space="preserve">
+    <value>Detail</value>
+  </metadata>
+  <metadata name="XrTable2.Name" xml:space="preserve">
+    <value>XrTable2</value>
+  </metadata>
+  <metadata name="XrTableRow2.Name" xml:space="preserve">
+    <value>XrTableRow2</value>
+  </metadata>
+  <metadata name="XrTableCell8.Name" xml:space="preserve">
+    <value>XrTableCell8</value>
+  </metadata>
+  <metadata name="XrTableCell4.Name" xml:space="preserve">
+    <value>XrTableCell4</value>
+  </metadata>
+  <metadata name="XrTableCell5.Name" xml:space="preserve">
+    <value>XrTableCell5</value>
+  </metadata>
+  <metadata name="XrTableCell12.Name" xml:space="preserve">
+    <value>XrTableCell12</value>
+  </metadata>
+  <metadata name="XrTableCell6.Name" xml:space="preserve">
+    <value>XrTableCell6</value>
+  </metadata>
+  <metadata name="XrTableCell10.Name" xml:space="preserve">
+    <value>XrTableCell10</value>
+  </metadata>
+  <metadata name="PageFooter.Name" xml:space="preserve">
+    <value>PageFooter</value>
+  </metadata>
+  <metadata name="PageHeader.Name" xml:space="preserve">
+    <value>PageHeader</value>
+  </metadata>
+  <metadata name="XrTable1.Name" xml:space="preserve">
+    <value>XrTable1</value>
+  </metadata>
+  <metadata name="XrTableRow1.Name" xml:space="preserve">
+    <value>XrTableRow1</value>
+  </metadata>
+  <metadata name="XrTableCell7.Name" xml:space="preserve">
+    <value>XrTableCell7</value>
+  </metadata>
+  <metadata name="XrTableCell1.Name" xml:space="preserve">
+    <value>XrTableCell1</value>
+  </metadata>
+  <metadata name="XrTableCell2.Name" xml:space="preserve">
+    <value>XrTableCell2</value>
+  </metadata>
+  <metadata name="XrTableCell11.Name" xml:space="preserve">
+    <value>XrTableCell11</value>
+  </metadata>
+  <metadata name="XrTableCell3.Name" xml:space="preserve">
+    <value>XrTableCell3</value>
+  </metadata>
+  <metadata name="XrTableCell9.Name" xml:space="preserve">
+    <value>XrTableCell9</value>
+  </metadata>
+  <metadata name="DataTable1TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="DataTable1TableAdapter.Name" xml:space="preserve">
+    <value>DataTable1TableAdapter</value>
+  </metadata>
+  <metadata name="OdbcSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="OdbcSelectCommand1.Name" xml:space="preserve">
+    <value>OdbcSelectCommand1</value>
+  </metadata>
+  <metadata name="OdbcSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="OdbcSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="OdbcSelectCommand1.CommandText" xml:space="preserve">
+    <value>SELECT  en_mstr_header.en_desc as en_desc_header, public.po_mstr.po_oid, public.po_mstr.po_dom_id, public.po_mstr.po_en_id, public.po_mstr.po_upd_date, public.po_mstr.po_upd_by, public.po_mstr.po_add_date, public.po_mstr.po_add_by, public.po_mstr.po_code, public.po_mstr.po_ptnr_id, public.po_mstr.po_cmaddr_id, public.po_mstr.po_date, public.po_mstr.po_need_date, public.po_mstr.po_due_date, public.po_mstr.po_rmks, public.po_mstr.po_sb_id, public.po_mstr.po_cc_id, public.po_mstr.po_si_id, public.po_mstr.po_pjc_id, public.po_mstr.po_close_date, public.po_mstr.po_total, public.po_mstr.po_tran_id, public.po_mstr.po_trans_id, public.po_mstr.po_trans_rmks, public.po_mstr.po_current_route, public.po_mstr.po_next_route, public.po_mstr.po_dt, public.ptnr_mstr.ptnr_name, cmaddr_name, tran_name, po_status_cash, pjc_mstr_header.pjc_desc as pjc_desc_header, si_mstr_header.si_desc as si_desc_header, sb_mstr_header.sb_desc as sb_desc_header,  cc_mstr_header.cc_desc as cc_desc_header, po_credit_term, po_taxable, po_tax_class, po_tax_inc, po_total_ppn, po_total_pph, po_cu_id, po_exc_rate, cu_name, creditterm_mstr.code_name as po_credit_term_name, taxclass_mstr.code_name as po_tax_class_name, (po_total + po_total_ppn + po_total_pph) as po_total_after_tax, po_exc_rate * po_total as po_total_ext,  po_exc_rate * po_total_ppn as po_total_ppn_ext, po_exc_rate * po_total_pph as po_total_pph_ext,  po_exc_rate * (po_total + po_total_ppn + po_total_pph) as po_total_after_tax_ext, en_mstr_detail.en_desc as en_desc_detail, pod_seq, si_mstr_detail.si_desc as si_desc_detail,pod_pt_id, pt_code, pod_pt_desc1, pod_pt_desc2, pod_rmks, pod_end_user, pod_qty, pod_qty_receive, pod_qty_invoice, pod_qty - coalesce(pod_qty_receive,0) as pod_qty_outstanding, pod_um, um_master.code_name as um_name, pod_cost, pod_disc, pod_sb_id, pod_cc_id, pod_pjc_id, pod_need_date, pod_due_date, pod_um_conv, pod_qty_real, pod_pt_class, pod_taxable, pod_tax_inc, pod_tax_class, pod_status, pod_qty_return, pjc_mstr_detail.pjc_desc as pjc_desc_detail, si_mstr_detail.si_desc as si_desc_detailr, sb_mstr_detail.sb_desc as sb_desc_detail,   taxclass_mstr_detail.code_name as pod_tax_class_name,req_code, cc_mstr_detail.cc_desc as cc_desc_detail, ((pod_qty * pod_cost) - (pod_qty * pod_cost * pod_disc)) as pod_qty_cost , ((pod_qty_receive * pod_cost) - (pod_qty_receive * pod_cost * pod_disc)) as amount_receive FROM public.po_mstr INNER JOIN public.en_mstr en_mstr_header ON (public.po_mstr.po_en_id = en_mstr_header.en_id) INNER JOIN public.ptnr_mstr ON (public.po_mstr.po_ptnr_id = public.ptnr_mstr.ptnr_id) INNER JOIN public.cmaddr_mstr ON (public.po_mstr.po_cmaddr_id = public.cmaddr_mstr.cmaddr_id) INNER JOIN public.sb_mstr sb_mstr_header ON (public.po_mstr.po_sb_id = sb_mstr_header.sb_id) INNER JOIN public.cc_mstr cc_mstr_header ON (public.po_mstr.po_cc_id = cc_mstr_header .cc_id) INNER JOIN public.si_mstr si_mstr_header ON (public.po_mstr.po_si_id = si_mstr_header.si_id) INNER JOIN public.pjc_mstr pjc_mstr_header ON (public.po_mstr.po_pjc_id = pjc_mstr_header.pjc_id) INNER JOIN public.tran_mstr ON (public.po_mstr.po_tran_id = public.tran_mstr.tran_id) INNER JOIN public.cu_mstr ON (public.po_mstr.po_cu_id = public.cu_mstr.cu_id) INNER JOIN public.code_mstr as creditterm_mstr ON (public.po_mstr.po_credit_term = creditterm_mstr.code_id) INNER JOIN public.code_mstr as taxclass_mstr ON taxclass_mstr.code_id  = public.po_mstr.po_tax_class   inner join pod_det on pod_po_oid = po_oid INNER JOIN public.en_mstr en_mstr_detail ON (pod_en_id = en_mstr_detail.en_id) INNER JOIN public.si_mstr si_mstr_detail ON (pod_si_id = si_mstr_detail.si_id) inner join pt_mstr on pt_id = pod_pt_id INNER JOIN public.sb_mstr sb_mstr_detail ON (pod_sb_id = sb_mstr_detail.sb_id) INNER JOIN public.cc_mstr cc_mstr_detail ON (pod_cc_id = cc_mstr_detail .cc_id) INNER JOIN public.pjc_mstr pjc_mstr_detail ON (pod_pjc_id = pjc_mstr_detail.pjc_id) INNER JOIN public.code_mstr as um_master ON um_master.code_id  = pod_um INNER JOIN public.code_mstr as taxclass_mstr_detail ON taxclass_mstr_detail.code_id  = pod_tax_class   left outer join reqd_det on pod_reqd_oid = reqd_oid left outer join req_mstr on reqd_req_oid = req_oid  where po_date &gt;= '31/10/2017 00:00:00' and po_date &lt;= '31/10/2019 00:00:00' and po_en_id in (select user_en_id from tconfuserentity  where userid = 1) and pod_pt_id=304316</value>
+  </data>
+  <metadata name="OdbcConnection1.Name" xml:space="preserve">
+    <value>OdbcConnection1</value>
+  </metadata>
+  <metadata name="OdbcConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>203, 17</value>
+  </metadata>
+  <data name="OdbcConnection1.ConnectionString" xml:space="preserve">
+    <value>Dsn=exapro;database=exapro_gembong01;server=localhost;port=5432;uid=postgres;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;socket=4096;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;optimizer=0;ksqo=1;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;cancelasfreestmt=0;extrasystableprefixes=dd_;lfconversion=1;updatablecursors=1;disallowpremature=0;trueisminus1=0;bi=0;byteaaslongvarbinary=0;useserversideprepare=0;lowercaseidentifier=0;xaopt=1</value>
+  </data>
+  <metadata name="OdbcDataAdapter1.Name" xml:space="preserve">
+    <value>OdbcDataAdapter1</value>
+  </metadata>
+  <metadata name="OdbcDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>353, 17</value>
+  </metadata>
+  <metadata name="DspoAmountSub1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>510, 17</value>
+  </metadata>
+  <metadata name="DspoAmountSub1.Name" xml:space="preserve">
+    <value>DspoAmountSub1</value>
+  </metadata>
+  <metadata name="$this.Name" xml:space="preserve">
+    <value>XRPOAmountReportSub</value>
+  </metadata>
+</root>
