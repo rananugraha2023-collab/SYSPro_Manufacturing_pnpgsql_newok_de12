@@ -23,22 +23,37 @@ Partial Class FShift
         CType(Me.lci_code_usr_1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scc_master.SuspendLayout()
-        CType(Me.xtc_master, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.xtc_master.SuspendLayout()
         Me.xtp_edit.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.xtc_master, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.xtc_master.SuspendLayout()
+        CType(Me._dt_lang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.xtcd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dt_control, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'lci_master
+        '
+        Me.lci_master.Size = New System.Drawing.Size(543, 367)
         '
         'xtp_data
         '
         Me.xtp_data.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Window
         Me.xtp_data.Appearance.PageClient.Options.UseBackColor = True
+        Me.xtp_data.Size = New System.Drawing.Size(553, 412)
+        '
+        'xtp_edit
+        '
+        Me.xtp_edit.Size = New System.Drawing.Size(553, 412)
+        '
+        'Panel1
+        '
+        Me.Panel1.Size = New System.Drawing.Size(543, 367)
         '
         'xtc_master
         '
-        Me.xtc_master.Size = New System.Drawing.Size(555, 433)
+        Me.xtc_master.SelectedTabPage = Me.xtp_data
         '
         'FShift
         '
@@ -50,12 +65,14 @@ Partial Class FShift
         CType(Me.lci_code_usr_1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).EndInit()
         Me.scc_master.ResumeLayout(False)
-        CType(Me.xtc_master, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.xtc_master.ResumeLayout(False)
         Me.xtp_edit.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        CType(Me.xtc_master, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.xtc_master.ResumeLayout(False)
+        CType(Me._dt_lang, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.xtcd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dt_control, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

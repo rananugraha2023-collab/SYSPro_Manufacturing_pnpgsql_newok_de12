@@ -86,7 +86,6 @@ Partial Class FWorkOrder
         Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.StyleController1 = New DevExpress.XtraEditors.StyleController(Me.components)
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
-        Me.hideContainerBottom = New DevExpress.XtraBars.Docking.AutoHideContainer()
         Me.dp_detail = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.xtc_detail = New DevExpress.XtraTab.XtraTabControl()
@@ -189,7 +188,6 @@ Partial Class FWorkOrder
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StyleController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.hideContainerBottom.SuspendLayout()
         Me.dp_detail.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.xtc_detail, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -219,7 +217,7 @@ Partial Class FWorkOrder
         Me.xtp_data.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Window
         Me.xtp_data.Appearance.PageClient.Options.UseBackColor = True
         Me.xtp_data.Controls.Add(Me.gc_master)
-        Me.xtp_data.Size = New System.Drawing.Size(880, 583)
+        Me.xtp_data.Size = New System.Drawing.Size(880, 402)
         '
         'scc_master
         '
@@ -230,7 +228,7 @@ Partial Class FWorkOrder
         Me.scc_master.Panel1.Controls.Add(Me.LabelControl2)
         Me.scc_master.Panel1.Controls.Add(Me.pr_txttglawal)
         Me.scc_master.Panel1.Controls.Add(Me.LabelControl1)
-        Me.scc_master.Size = New System.Drawing.Size(882, 641)
+        Me.scc_master.Size = New System.Drawing.Size(882, 460)
         Me.scc_master.SplitterPosition = 32
         '
         'xtp_edit
@@ -244,7 +242,7 @@ Partial Class FWorkOrder
         '
         'xtc_master
         '
-        Me.xtc_master.Size = New System.Drawing.Size(882, 604)
+        Me.xtc_master.Size = New System.Drawing.Size(882, 423)
         '
         'gc_master
         '
@@ -253,7 +251,7 @@ Partial Class FWorkOrder
         Me.gc_master.Location = New System.Drawing.Point(5, 5)
         Me.gc_master.MainView = Me.gv_master
         Me.gc_master.Name = "gc_master"
-        Me.gc_master.Size = New System.Drawing.Size(870, 573)
+        Me.gc_master.Size = New System.Drawing.Size(870, 392)
         Me.gc_master.TabIndex = 0
         Me.gc_master.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_master})
         '
@@ -587,7 +585,7 @@ Partial Class FWorkOrder
         Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup4, Me.LayoutControlGroup5, Me.LayoutControlGroup6, Me.LayoutControlGroup7, Me.LayoutControlGroup8})
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(475, 418)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(458, 418)
         Me.LayoutControlGroup3.Text = "Header"
         Me.LayoutControlGroup3.TextLocation = DevExpress.Utils.Locations.Bottom
         '
@@ -888,7 +886,7 @@ Partial Class FWorkOrder
         Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem15})
         Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
-        Me.LayoutControlGroup9.Size = New System.Drawing.Size(475, 418)
+        Me.LayoutControlGroup9.Size = New System.Drawing.Size(458, 418)
         Me.LayoutControlGroup9.Text = "Routing"
         Me.LayoutControlGroup9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
@@ -911,39 +909,27 @@ Partial Class FWorkOrder
         '
         'DockManager1
         '
-        Me.DockManager1.AutoHideContainers.AddRange(New DevExpress.XtraBars.Docking.AutoHideContainer() {Me.hideContainerBottom})
         Me.DockManager1.Form = Me
+        Me.DockManager1.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.dp_detail})
         Me.DockManager1.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl"})
-        '
-        'hideContainerBottom
-        '
-        Me.hideContainerBottom.BackColor = System.Drawing.SystemColors.Control
-        Me.hideContainerBottom.Controls.Add(Me.dp_detail)
-        Me.hideContainerBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.hideContainerBottom.Location = New System.Drawing.Point(0, 641)
-        Me.hideContainerBottom.Name = "hideContainerBottom"
-        Me.hideContainerBottom.Size = New System.Drawing.Size(882, 19)
         '
         'dp_detail
         '
         Me.dp_detail.Controls.Add(Me.DockPanel1_Container)
         Me.dp_detail.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom
         Me.dp_detail.ID = New System.Guid("7e1d1e4a-87f8-4b89-8a0c-ee59cc8ee030")
-        Me.dp_detail.Location = New System.Drawing.Point(0, 0)
+        Me.dp_detail.Location = New System.Drawing.Point(0, 460)
         Me.dp_detail.Name = "dp_detail"
         Me.dp_detail.OriginalSize = New System.Drawing.Size(882, 200)
-        Me.dp_detail.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Bottom
-        Me.dp_detail.SavedIndex = 0
         Me.dp_detail.Size = New System.Drawing.Size(882, 200)
         Me.dp_detail.Text = "Data Detail"
-        Me.dp_detail.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
         'DockPanel1_Container
         '
         Me.DockPanel1_Container.Controls.Add(Me.xtc_detail)
-        Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 25)
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(4, 23)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
-        Me.DockPanel1_Container.Size = New System.Drawing.Size(876, 172)
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(874, 173)
         Me.DockPanel1_Container.TabIndex = 0
         '
         'xtc_detail
@@ -955,7 +941,7 @@ Partial Class FWorkOrder
         Me.xtc_detail.PaintStyleName = "PropertyView"
         Me.xtc_detail.SelectedTabPage = Me.xtp_detail
         Me.xtc_detail.ShowTabHeader = DevExpress.Utils.DefaultBoolean.[True]
-        Me.xtc_detail.Size = New System.Drawing.Size(876, 172)
+        Me.xtc_detail.Size = New System.Drawing.Size(874, 173)
         Me.xtc_detail.TabIndex = 3
         Me.xtc_detail.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.xtp_detail, Me.xtp_woroute})
         '
@@ -963,7 +949,7 @@ Partial Class FWorkOrder
         '
         Me.xtp_detail.Controls.Add(Me.scc_detail)
         Me.xtp_detail.Name = "xtp_detail"
-        Me.xtp_detail.Size = New System.Drawing.Size(874, 151)
+        Me.xtp_detail.Size = New System.Drawing.Size(872, 152)
         Me.xtp_detail.Text = "Data Material"
         '
         'scc_detail
@@ -975,7 +961,7 @@ Partial Class FWorkOrder
         Me.scc_detail.Panel1.Text = "Panel1"
         Me.scc_detail.Panel2.Text = "Panel2"
         Me.scc_detail.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1
-        Me.scc_detail.Size = New System.Drawing.Size(874, 151)
+        Me.scc_detail.Size = New System.Drawing.Size(872, 152)
         Me.scc_detail.TabIndex = 0
         Me.scc_detail.Text = "SplitContainerControl1"
         '
@@ -985,7 +971,7 @@ Partial Class FWorkOrder
         Me.gc_detail.Location = New System.Drawing.Point(0, 0)
         Me.gc_detail.MainView = Me.gv_detail
         Me.gc_detail.Name = "gc_detail"
-        Me.gc_detail.Size = New System.Drawing.Size(874, 151)
+        Me.gc_detail.Size = New System.Drawing.Size(872, 152)
         Me.gc_detail.TabIndex = 0
         Me.gc_detail.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_detail})
         '
@@ -1144,10 +1130,10 @@ Partial Class FWorkOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(882, 660)
-        Me.Controls.Add(Me.hideContainerBottom)
+        Me.Controls.Add(Me.dp_detail)
         Me.Name = "FWorkOrder"
         Me.Text = "Work Order"
-        Me.Controls.SetChildIndex(Me.hideContainerBottom, 0)
+        Me.Controls.SetChildIndex(Me.dp_detail, 0)
         Me.Controls.SetChildIndex(Me.scc_master, 0)
         Me.xtp_data.ResumeLayout(False)
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1229,7 +1215,6 @@ Partial Class FWorkOrder
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StyleController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.hideContainerBottom.ResumeLayout(False)
         Me.dp_detail.ResumeLayout(False)
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.xtc_detail, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1341,7 +1326,6 @@ Partial Class FWorkOrder
     Friend WithEvents wo_start_date As DevExpress.XtraEditors.DateEdit
     Friend WithEvents LayoutControlItem23 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem24 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents hideContainerBottom As DevExpress.XtraBars.Docking.AutoHideContainer
     Public WithEvents wo_pt_id_prj As DevExpress.XtraEditors.ButtonEdit
     Friend WithEvents BtUpdateSod As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LabelControl4 As DevExpress.XtraEditors.LabelControl

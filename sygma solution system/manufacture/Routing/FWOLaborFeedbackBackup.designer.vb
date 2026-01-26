@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FWOLaborFeedback
+Partial Class FWOLaborFeedbackBackup
     Inherits master_new.MasterWITwo
 
     'Form overrides dispose to clean up the component list.
@@ -59,10 +59,14 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem4 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -79,8 +83,6 @@ Partial Class FWOLaborFeedback
         Me.EmptySpaceItem3 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlItem25 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem26 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.StyleController1 = New DevExpress.XtraEditors.StyleController(Me.components)
         Me.pr_txttglakhir = New DevExpress.XtraEditors.DateEdit()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
@@ -89,6 +91,7 @@ Partial Class FWOLaborFeedback
         Me.pr_entity = New DevExpress.XtraEditors.LookUpEdit()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
+        Me.hideContainerBottom = New DevExpress.XtraBars.Docking.AutoHideContainer()
         Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.xtc_detail = New DevExpress.XtraTab.XtraTabControl()
@@ -161,10 +164,14 @@ Partial Class FWOLaborFeedback
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,8 +188,6 @@ Partial Class FWOLaborFeedback
         CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StyleController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pr_txttglakhir.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pr_txttglakhir.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,6 +195,7 @@ Partial Class FWOLaborFeedback
         CType(Me.pr_txttglawal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pr_entity.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.hideContainerBottom.SuspendLayout()
         Me.DockPanel1.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.xtc_detail, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -224,21 +230,21 @@ Partial Class FWOLaborFeedback
         Me.scc_master.Panel1.Controls.Add(Me.LabelControl1)
         Me.scc_master.Panel1.Controls.Add(Me.pr_entity)
         Me.scc_master.Panel1.Controls.Add(Me.Label2)
-        Me.scc_master.Size = New System.Drawing.Size(925, 430)
+        Me.scc_master.Size = New System.Drawing.Size(925, 611)
         Me.scc_master.SplitterPosition = 32
         '
         'xtp_edit
         '
-        Me.xtp_edit.Size = New System.Drawing.Size(923, 372)
+        Me.xtp_edit.Size = New System.Drawing.Size(923, 553)
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.lci_master)
-        Me.Panel1.Size = New System.Drawing.Size(913, 327)
+        Me.Panel1.Size = New System.Drawing.Size(913, 508)
         '
         'xtc_master
         '
-        Me.xtc_master.Size = New System.Drawing.Size(925, 393)
+        Me.xtc_master.Size = New System.Drawing.Size(925, 574)
         '
         'gc_master
         '
@@ -287,17 +293,17 @@ Partial Class FWOLaborFeedback
         Me.lci_master.Location = New System.Drawing.Point(0, 0)
         Me.lci_master.Name = "lci_master"
         Me.lci_master.Root = Me.LayoutControlGroup1
-        Me.lci_master.Size = New System.Drawing.Size(913, 327)
+        Me.lci_master.Size = New System.Drawing.Size(913, 508)
         Me.lci_master.StyleController = Me.StyleController1
         Me.lci_master.TabIndex = 0
         Me.lci_master.Text = "LayoutControl1"
         '
         'gc_downtime_edit
         '
-        Me.gc_downtime_edit.Location = New System.Drawing.Point(424, 300)
+        Me.gc_downtime_edit.Location = New System.Drawing.Point(430, 348)
         Me.gc_downtime_edit.MainView = Me.gv_downtime_edit
         Me.gc_downtime_edit.Name = "gc_downtime_edit"
-        Me.gc_downtime_edit.Size = New System.Drawing.Size(168, 20)
+        Me.gc_downtime_edit.Size = New System.Drawing.Size(174, 148)
         Me.gc_downtime_edit.TabIndex = 36
         Me.gc_downtime_edit.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_downtime_edit})
         '
@@ -305,15 +311,13 @@ Partial Class FWOLaborFeedback
         '
         Me.gv_downtime_edit.GridControl = Me.gc_downtime_edit
         Me.gv_downtime_edit.Name = "gv_downtime_edit"
-        Me.gv_downtime_edit.OptionsView.ColumnAutoWidth = False
-        Me.gv_downtime_edit.OptionsView.ShowGroupPanel = False
         '
         'gc_reject_edit
         '
-        Me.gc_reject_edit.Location = New System.Drawing.Point(716, 300)
+        Me.gc_reject_edit.Location = New System.Drawing.Point(728, 348)
         Me.gc_reject_edit.MainView = Me.gv_reject_edit
         Me.gc_reject_edit.Name = "gc_reject_edit"
-        Me.gc_reject_edit.Size = New System.Drawing.Size(168, 20)
+        Me.gc_reject_edit.Size = New System.Drawing.Size(173, 148)
         Me.gc_reject_edit.TabIndex = 35
         Me.gc_reject_edit.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_reject_edit})
         '
@@ -321,24 +325,22 @@ Partial Class FWOLaborFeedback
         '
         Me.gv_reject_edit.GridControl = Me.gc_reject_edit
         Me.gv_reject_edit.Name = "gv_reject_edit"
-        Me.gv_reject_edit.OptionsView.ColumnAutoWidth = False
-        Me.gv_reject_edit.OptionsView.ShowGroupPanel = False
         '
         'lbrf_mch_id
         '
-        Me.lbrf_mch_id.Location = New System.Drawing.Point(570, 60)
+        Me.lbrf_mch_id.Location = New System.Drawing.Point(578, 60)
         Me.lbrf_mch_id.Name = "lbrf_mch_id"
         Me.lbrf_mch_id.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lbrf_mch_id.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_mch_id.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_mch_id.StyleController = Me.lci_master
         Me.lbrf_mch_id.TabIndex = 34
         '
         'gc_person_edit
         '
-        Me.gc_person_edit.Location = New System.Drawing.Point(132, 300)
+        Me.gc_person_edit.Location = New System.Drawing.Point(132, 348)
         Me.gc_person_edit.MainView = Me.gv_person_edit
         Me.gc_person_edit.Name = "gc_person_edit"
-        Me.gc_person_edit.Size = New System.Drawing.Size(168, 20)
+        Me.gc_person_edit.Size = New System.Drawing.Size(174, 148)
         Me.gc_person_edit.TabIndex = 33
         Me.gc_person_edit.UseEmbeddedNavigator = True
         Me.gc_person_edit.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_person_edit})
@@ -353,9 +355,9 @@ Partial Class FWOLaborFeedback
         'lbrf_qty_conversion
         '
         Me.lbrf_qty_conversion.Enabled = False
-        Me.lbrf_qty_conversion.Location = New System.Drawing.Point(570, 84)
+        Me.lbrf_qty_conversion.Location = New System.Drawing.Point(578, 84)
         Me.lbrf_qty_conversion.Name = "lbrf_qty_conversion"
-        Me.lbrf_qty_conversion.Size = New System.Drawing.Size(177, 20)
+        Me.lbrf_qty_conversion.Size = New System.Drawing.Size(183, 20)
         Me.lbrf_qty_conversion.StyleController = Me.lci_master
         Me.lbrf_qty_conversion.TabIndex = 32
         '
@@ -364,7 +366,7 @@ Partial Class FWOLaborFeedback
         Me.lbrf_shift_id.Location = New System.Drawing.Point(132, 132)
         Me.lbrf_shift_id.Name = "lbrf_shift_id"
         Me.lbrf_shift_id.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lbrf_shift_id.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_shift_id.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_shift_id.StyleController = Me.lci_master
         Me.lbrf_shift_id.TabIndex = 31
         '
@@ -373,7 +375,7 @@ Partial Class FWOLaborFeedback
         Me.lbrf_activity_type_id.Location = New System.Drawing.Point(132, 84)
         Me.lbrf_activity_type_id.Name = "lbrf_activity_type_id"
         Me.lbrf_activity_type_id.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lbrf_activity_type_id.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_activity_type_id.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_activity_type_id.StyleController = Me.lci_master
         Me.lbrf_activity_type_id.TabIndex = 30
         '
@@ -382,102 +384,101 @@ Partial Class FWOLaborFeedback
         Me.lbrf_qc_out_reason_id.Location = New System.Drawing.Point(132, 156)
         Me.lbrf_qc_out_reason_id.Name = "lbrf_qc_out_reason_id"
         Me.lbrf_qc_out_reason_id.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lbrf_qc_out_reason_id.Size = New System.Drawing.Size(752, 20)
+        Me.lbrf_qc_out_reason_id.Size = New System.Drawing.Size(769, 20)
         Me.lbrf_qc_out_reason_id.StyleController = Me.lci_master
         Me.lbrf_qc_out_reason_id.TabIndex = 28
         '
         'lbrf_qc_in_reason_id
         '
-        Me.lbrf_qc_in_reason_id.Location = New System.Drawing.Point(570, 132)
+        Me.lbrf_qc_in_reason_id.Location = New System.Drawing.Point(578, 132)
         Me.lbrf_qc_in_reason_id.Name = "lbrf_qc_in_reason_id"
         Me.lbrf_qc_in_reason_id.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lbrf_qc_in_reason_id.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_qc_in_reason_id.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_qc_in_reason_id.StyleController = Me.lci_master
         Me.lbrf_qc_in_reason_id.TabIndex = 27
         '
         'lbrf_down_stop
         '
         Me.lbrf_down_stop.EditValue = Nothing
-        Me.lbrf_down_stop.Location = New System.Drawing.Point(570, 228)
+        Me.lbrf_down_stop.Location = New System.Drawing.Point(578, 276)
         Me.lbrf_down_stop.Name = "lbrf_down_stop"
         Me.lbrf_down_stop.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.lbrf_down_stop.Properties.Mask.EditMask = "G"
         Me.lbrf_down_stop.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.lbrf_down_stop.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.lbrf_down_stop.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_down_stop.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_down_stop.StyleController = Me.lci_master
         Me.lbrf_down_stop.TabIndex = 26
         '
         'lbrf_down_start
         '
         Me.lbrf_down_start.EditValue = Nothing
-        Me.lbrf_down_start.Location = New System.Drawing.Point(132, 228)
+        Me.lbrf_down_start.Location = New System.Drawing.Point(132, 276)
         Me.lbrf_down_start.Name = "lbrf_down_start"
         Me.lbrf_down_start.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.lbrf_down_start.Properties.Mask.EditMask = "G"
         Me.lbrf_down_start.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.lbrf_down_start.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.lbrf_down_start.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_down_start.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_down_start.StyleController = Me.lci_master
         Me.lbrf_down_start.TabIndex = 25
         '
         'lbrf_qty_reject
         '
-        Me.lbrf_qty_reject.Enabled = False
-        Me.lbrf_qty_reject.Location = New System.Drawing.Point(570, 108)
+        Me.lbrf_qty_reject.Location = New System.Drawing.Point(578, 108)
         Me.lbrf_qty_reject.Name = "lbrf_qty_reject"
-        Me.lbrf_qty_reject.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_qty_reject.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_qty_reject.StyleController = Me.lci_master
         Me.lbrf_qty_reject.TabIndex = 24
         '
         'lbrf_date
         '
         Me.lbrf_date.EditValue = Nothing
-        Me.lbrf_date.Location = New System.Drawing.Point(570, 12)
+        Me.lbrf_date.Location = New System.Drawing.Point(578, 12)
         Me.lbrf_date.Name = "lbrf_date"
         Me.lbrf_date.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.lbrf_date.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.lbrf_date.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_date.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_date.StyleController = Me.lci_master
         Me.lbrf_date.TabIndex = 22
         '
         'lbrf_down_reason_id
         '
-        Me.lbrf_down_reason_id.Location = New System.Drawing.Point(570, 252)
+        Me.lbrf_down_reason_id.Location = New System.Drawing.Point(578, 300)
         Me.lbrf_down_reason_id.Name = "lbrf_down_reason_id"
         Me.lbrf_down_reason_id.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lbrf_down_reason_id.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_down_reason_id.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_down_reason_id.StyleController = Me.lci_master
         Me.lbrf_down_reason_id.TabIndex = 20
         '
         'lbrf_elapsed_down
         '
         Me.lbrf_elapsed_down.Enabled = False
-        Me.lbrf_elapsed_down.Location = New System.Drawing.Point(132, 252)
+        Me.lbrf_elapsed_down.Location = New System.Drawing.Point(132, 300)
         Me.lbrf_elapsed_down.Name = "lbrf_elapsed_down"
         Me.lbrf_elapsed_down.Properties.Mask.EditMask = "n"
         Me.lbrf_elapsed_down.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.lbrf_elapsed_down.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.lbrf_elapsed_down.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_elapsed_down.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_elapsed_down.StyleController = Me.lci_master
         Me.lbrf_elapsed_down.TabIndex = 19
         '
         'lbrf_elapsed_run
         '
         Me.lbrf_elapsed_run.Enabled = False
-        Me.lbrf_elapsed_run.Location = New System.Drawing.Point(736, 204)
+        Me.lbrf_elapsed_run.Location = New System.Drawing.Point(132, 252)
         Me.lbrf_elapsed_run.Name = "lbrf_elapsed_run"
         Me.lbrf_elapsed_run.Properties.Mask.EditMask = "n"
         Me.lbrf_elapsed_run.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.lbrf_elapsed_run.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.lbrf_elapsed_run.Size = New System.Drawing.Size(148, 20)
+        Me.lbrf_elapsed_run.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_elapsed_run.StyleController = Me.lci_master
         Me.lbrf_elapsed_run.TabIndex = 18
         '
         'lbrf_stop_run
         '
         Me.lbrf_stop_run.EditValue = Nothing
-        Me.lbrf_stop_run.Location = New System.Drawing.Point(435, 204)
+        Me.lbrf_stop_run.Location = New System.Drawing.Point(578, 228)
         Me.lbrf_stop_run.Name = "lbrf_stop_run"
         Me.lbrf_stop_run.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.lbrf_stop_run.Properties.DisplayFormat.FormatString = "G"
@@ -488,14 +489,14 @@ Partial Class FWOLaborFeedback
         Me.lbrf_stop_run.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_stop_run.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_stop_run.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.lbrf_stop_run.Size = New System.Drawing.Size(177, 20)
+        Me.lbrf_stop_run.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_stop_run.StyleController = Me.lci_master
         Me.lbrf_stop_run.TabIndex = 17
         '
         'lbrf_start_run
         '
         Me.lbrf_start_run.EditValue = Nothing
-        Me.lbrf_start_run.Location = New System.Drawing.Point(132, 204)
+        Me.lbrf_start_run.Location = New System.Drawing.Point(132, 228)
         Me.lbrf_start_run.Name = "lbrf_start_run"
         Me.lbrf_start_run.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.lbrf_start_run.Properties.DisplayFormat.FormatString = "G"
@@ -506,26 +507,26 @@ Partial Class FWOLaborFeedback
         Me.lbrf_start_run.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_start_run.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_start_run.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.lbrf_start_run.Size = New System.Drawing.Size(179, 20)
+        Me.lbrf_start_run.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_start_run.StyleController = Me.lci_master
         Me.lbrf_start_run.TabIndex = 16
         '
         'lbrf_elapsed_setup
         '
         Me.lbrf_elapsed_setup.Enabled = False
-        Me.lbrf_elapsed_setup.Location = New System.Drawing.Point(736, 180)
+        Me.lbrf_elapsed_setup.Location = New System.Drawing.Point(132, 204)
         Me.lbrf_elapsed_setup.Name = "lbrf_elapsed_setup"
         Me.lbrf_elapsed_setup.Properties.Mask.EditMask = "n"
         Me.lbrf_elapsed_setup.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.lbrf_elapsed_setup.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.lbrf_elapsed_setup.Size = New System.Drawing.Size(148, 20)
+        Me.lbrf_elapsed_setup.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_elapsed_setup.StyleController = Me.lci_master
         Me.lbrf_elapsed_setup.TabIndex = 15
         '
         'lbrf_stop_setup
         '
         Me.lbrf_stop_setup.EditValue = Nothing
-        Me.lbrf_stop_setup.Location = New System.Drawing.Point(435, 180)
+        Me.lbrf_stop_setup.Location = New System.Drawing.Point(578, 180)
         Me.lbrf_stop_setup.Name = "lbrf_stop_setup"
         Me.lbrf_stop_setup.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.lbrf_stop_setup.Properties.DisplayFormat.FormatString = "G"
@@ -536,7 +537,7 @@ Partial Class FWOLaborFeedback
         Me.lbrf_stop_setup.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_stop_setup.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_stop_setup.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.lbrf_stop_setup.Size = New System.Drawing.Size(177, 20)
+        Me.lbrf_stop_setup.Size = New System.Drawing.Size(323, 20)
         Me.lbrf_stop_setup.StyleController = Me.lci_master
         Me.lbrf_stop_setup.TabIndex = 14
         '
@@ -554,16 +555,16 @@ Partial Class FWOLaborFeedback
         Me.lbrf_start_setup.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_start_setup.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.[True]
         Me.lbrf_start_setup.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.lbrf_start_setup.Size = New System.Drawing.Size(179, 20)
+        Me.lbrf_start_setup.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_start_setup.StyleController = Me.lci_master
         Me.lbrf_start_setup.TabIndex = 13
         '
         'wc_desc
         '
-        Me.wc_desc.Location = New System.Drawing.Point(570, 36)
+        Me.wc_desc.Location = New System.Drawing.Point(578, 36)
         Me.wc_desc.Name = "wc_desc"
         Me.wc_desc.Properties.ReadOnly = True
-        Me.wc_desc.Size = New System.Drawing.Size(314, 20)
+        Me.wc_desc.Size = New System.Drawing.Size(323, 20)
         Me.wc_desc.StyleController = Me.lci_master
         Me.wc_desc.TabIndex = 12
         '
@@ -573,15 +574,15 @@ Partial Class FWOLaborFeedback
         Me.lbrf_wodr_uid.Name = "lbrf_wodr_uid"
         Me.lbrf_wodr_uid.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.lbrf_wodr_uid.Properties.ReadOnly = True
-        Me.lbrf_wodr_uid.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_wodr_uid.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_wodr_uid.StyleController = Me.lci_master
         Me.lbrf_wodr_uid.TabIndex = 11
         '
         'lbrf_remarks
         '
-        Me.lbrf_remarks.Location = New System.Drawing.Point(132, 276)
+        Me.lbrf_remarks.Location = New System.Drawing.Point(132, 324)
         Me.lbrf_remarks.Name = "lbrf_remarks"
-        Me.lbrf_remarks.Size = New System.Drawing.Size(752, 20)
+        Me.lbrf_remarks.Size = New System.Drawing.Size(769, 20)
         Me.lbrf_remarks.StyleController = Me.lci_master
         Me.lbrf_remarks.TabIndex = 9
         '
@@ -596,7 +597,7 @@ Partial Class FWOLaborFeedback
         Me.lbrf_qty_complete.Properties.Mask.EditMask = "n"
         Me.lbrf_qty_complete.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.lbrf_qty_complete.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.lbrf_qty_complete.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_qty_complete.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_qty_complete.StyleController = Me.lci_master
         Me.lbrf_qty_complete.TabIndex = 8
         '
@@ -605,17 +606,17 @@ Partial Class FWOLaborFeedback
         Me.lbrf_en_id.Location = New System.Drawing.Point(132, 12)
         Me.lbrf_en_id.Name = "lbrf_en_id"
         Me.lbrf_en_id.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lbrf_en_id.Size = New System.Drawing.Size(314, 20)
+        Me.lbrf_en_id.Size = New System.Drawing.Size(322, 20)
         Me.lbrf_en_id.StyleController = Me.lci_master
         Me.lbrf_en_id.TabIndex = 4
         '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.CustomizationFormText = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem6, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem7, Me.LayoutControlItem17, Me.LayoutControlItem15, Me.LayoutControlItem16, Me.LayoutControlItem18, Me.LayoutControlItem19, Me.LayoutControlItem21, Me.EmptySpaceItem2, Me.LayoutControlItem22, Me.LayoutControlItem23, Me.LayoutControlItem24, Me.LayoutControlItem20, Me.EmptySpaceItem3, Me.LayoutControlItem25, Me.LayoutControlItem26, Me.LayoutControlItem4, Me.LayoutControlItem12})
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem6, Me.EmptySpaceItem1, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem12, Me.LayoutControlItem13, Me.EmptySpaceItem4, Me.LayoutControlItem14, Me.LayoutControlItem7, Me.LayoutControlItem17, Me.LayoutControlItem15, Me.LayoutControlItem16, Me.LayoutControlItem18, Me.LayoutControlItem19, Me.LayoutControlItem21, Me.EmptySpaceItem2, Me.LayoutControlItem22, Me.LayoutControlItem23, Me.LayoutControlItem24, Me.LayoutControlItem20, Me.EmptySpaceItem3, Me.LayoutControlItem25, Me.LayoutControlItem26})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(896, 332)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(913, 508)
         Me.LayoutControlGroup1.Text = "LayoutControlGroup1"
         Me.LayoutControlGroup1.TextVisible = False
         '
@@ -625,7 +626,7 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem1.CustomizationFormText = "Entity"
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem1.Text = "Entity"
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -635,7 +636,7 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem8.CustomizationFormText = "Work Order"
         Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem8.Text = "Work Order"
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -643,9 +644,9 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem9.Control = Me.wc_desc
         Me.LayoutControlItem9.CustomizationFormText = "Operation"
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(438, 24)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(446, 24)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem9.Text = "Work Center"
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -655,7 +656,7 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem5.CustomizationFormText = "Quantity Complete"
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem5.Text = "Quantity Complete"
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -665,7 +666,7 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem2.CustomizationFormText = "Setup Start"
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 168)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(303, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem2.Text = "Setup Start"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -673,29 +674,49 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem3.Control = Me.lbrf_stop_setup
         Me.LayoutControlItem3.CustomizationFormText = "Setup End"
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(303, 168)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(446, 168)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(301, 24)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem3.Text = "Setup Stop"
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(117, 13)
+        '
+        'LayoutControlItem4
+        '
+        Me.LayoutControlItem4.Control = Me.lbrf_elapsed_setup
+        Me.LayoutControlItem4.CustomizationFormText = "LayoutControlItem4"
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 192)
+        Me.LayoutControlItem4.Name = "LayoutControlItem4"
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(446, 24)
+        Me.LayoutControlItem4.Text = "Setup Elapsed"
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(117, 13)
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.lbrf_remarks
         Me.LayoutControlItem6.CustomizationFormText = "Description"
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 264)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 312)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(876, 24)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(893, 24)
         Me.LayoutControlItem6.Text = "Remark"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(117, 13)
+        '
+        'EmptySpaceItem1
+        '
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.CustomizationFormText = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(336, 192)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(336, 24)
+        Me.EmptySpaceItem1.Text = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.lbrf_start_run
         Me.LayoutControlItem10.CustomizationFormText = "Run Start"
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 192)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 216)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(303, 24)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem10.Text = "Run Start"
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -703,40 +724,59 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem11.Control = Me.lbrf_stop_run
         Me.LayoutControlItem11.CustomizationFormText = "Run Stop"
-        Me.LayoutControlItem11.Location = New System.Drawing.Point(303, 192)
+        Me.LayoutControlItem11.Location = New System.Drawing.Point(446, 216)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(301, 24)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem11.Text = "Run Stop"
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(117, 13)
+        '
+        'LayoutControlItem12
+        '
+        Me.LayoutControlItem12.Control = Me.lbrf_elapsed_run
+        Me.LayoutControlItem12.CustomizationFormText = "Run Elapsed"
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 240)
+        Me.LayoutControlItem12.Name = "LayoutControlItem12"
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(446, 24)
+        Me.LayoutControlItem12.Text = "Run Elapsed"
+        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(117, 13)
         '
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.lbrf_elapsed_down
         Me.LayoutControlItem13.CustomizationFormText = "Down Time"
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 240)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 288)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem13.Text = "Down Time"
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(117, 13)
+        '
+        'EmptySpaceItem4
+        '
+        Me.EmptySpaceItem4.AllowHotTrack = False
+        Me.EmptySpaceItem4.CustomizationFormText = "EmptySpaceItem4"
+        Me.EmptySpaceItem4.Location = New System.Drawing.Point(336, 240)
+        Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(336, 24)
+        Me.EmptySpaceItem4.Text = "EmptySpaceItem4"
+        Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.Control = Me.lbrf_down_reason_id
         Me.LayoutControlItem14.CustomizationFormText = "Down Reason"
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(438, 240)
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(446, 288)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem14.Text = "Down Reason"
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(117, 13)
-        Me.LayoutControlItem14.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.lbrf_date
         Me.LayoutControlItem7.CustomizationFormText = "Date"
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(438, 0)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(446, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem7.Text = "Date"
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -744,9 +784,9 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem17.Control = Me.lbrf_qty_reject
         Me.LayoutControlItem17.CustomizationFormText = "Quantity Reject"
-        Me.LayoutControlItem17.Location = New System.Drawing.Point(438, 96)
+        Me.LayoutControlItem17.Location = New System.Drawing.Point(446, 96)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem17.Text = "Quantity Reject"
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -754,34 +794,31 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem15.Control = Me.lbrf_down_start
         Me.LayoutControlItem15.CustomizationFormText = "Down Start"
-        Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 216)
+        Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 264)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem15.Text = "Down Start"
         Me.LayoutControlItem15.TextSize = New System.Drawing.Size(117, 13)
-        Me.LayoutControlItem15.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
         'LayoutControlItem16
         '
         Me.LayoutControlItem16.Control = Me.lbrf_down_stop
         Me.LayoutControlItem16.CustomizationFormText = "Down Stop"
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(438, 216)
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(446, 264)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem16.Text = "Down Stop"
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(117, 13)
-        Me.LayoutControlItem16.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
         'LayoutControlItem18
         '
         Me.LayoutControlItem18.Control = Me.lbrf_qc_in_reason_id
         Me.LayoutControlItem18.CustomizationFormText = "Reject Reason Incoming"
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(438, 120)
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(446, 120)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem18.Text = "Reject Reason Incoming"
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(117, 13)
-        Me.LayoutControlItem18.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
         'LayoutControlItem19
         '
@@ -789,10 +826,9 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem19.CustomizationFormText = "Reject Reason Outgoing"
         Me.LayoutControlItem19.Location = New System.Drawing.Point(0, 144)
         Me.LayoutControlItem19.Name = "LayoutControlItem19"
-        Me.LayoutControlItem19.Size = New System.Drawing.Size(876, 24)
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(893, 24)
         Me.LayoutControlItem19.Text = "Reject Reason Outgoing"
         Me.LayoutControlItem19.TextSize = New System.Drawing.Size(117, 13)
-        Me.LayoutControlItem19.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
         'LayoutControlItem21
         '
@@ -800,7 +836,7 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem21.CustomizationFormText = "Activity"
         Me.LayoutControlItem21.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem21.Name = "LayoutControlItem21"
-        Me.LayoutControlItem21.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem21.Text = "Activity"
         Me.LayoutControlItem21.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -808,9 +844,9 @@ Partial Class FWOLaborFeedback
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
         Me.EmptySpaceItem2.CustomizationFormText = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(753, 72)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(567, 72)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(140, 24)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(105, 24)
         Me.EmptySpaceItem2.Text = "EmptySpaceItem2"
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -820,7 +856,7 @@ Partial Class FWOLaborFeedback
         Me.LayoutControlItem22.CustomizationFormText = "Shift"
         Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 120)
         Me.LayoutControlItem22.Name = "LayoutControlItem22"
-        Me.LayoutControlItem22.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(446, 24)
         Me.LayoutControlItem22.Text = "Shift"
         Me.LayoutControlItem22.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -828,9 +864,9 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem23.Control = Me.lbrf_qty_conversion
         Me.LayoutControlItem23.CustomizationFormText = "Conversion"
-        Me.LayoutControlItem23.Location = New System.Drawing.Point(438, 72)
+        Me.LayoutControlItem23.Location = New System.Drawing.Point(446, 72)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(301, 24)
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(307, 24)
         Me.LayoutControlItem23.Text = "Conversion"
         Me.LayoutControlItem23.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -838,9 +874,9 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem24.Control = Me.gc_person_edit
         Me.LayoutControlItem24.CustomizationFormText = "Person"
-        Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 288)
+        Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 336)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
-        Me.LayoutControlItem24.Size = New System.Drawing.Size(292, 24)
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(298, 152)
         Me.LayoutControlItem24.Text = "Person"
         Me.LayoutControlItem24.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -848,9 +884,9 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem20.Control = Me.lbrf_mch_id
         Me.LayoutControlItem20.CustomizationFormText = "Machine"
-        Me.LayoutControlItem20.Location = New System.Drawing.Point(438, 48)
+        Me.LayoutControlItem20.Location = New System.Drawing.Point(446, 48)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(438, 24)
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(447, 24)
         Me.LayoutControlItem20.Text = "Machine"
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -860,7 +896,7 @@ Partial Class FWOLaborFeedback
         Me.EmptySpaceItem3.CustomizationFormText = "EmptySpaceItem3"
         Me.EmptySpaceItem3.Location = New System.Drawing.Point(0, 48)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(446, 24)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(336, 24)
         Me.EmptySpaceItem3.Text = "EmptySpaceItem3"
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -868,9 +904,9 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem25.Control = Me.gc_reject_edit
         Me.LayoutControlItem25.CustomizationFormText = "Reject"
-        Me.LayoutControlItem25.Location = New System.Drawing.Point(584, 288)
+        Me.LayoutControlItem25.Location = New System.Drawing.Point(596, 336)
         Me.LayoutControlItem25.Name = "LayoutControlItem25"
-        Me.LayoutControlItem25.Size = New System.Drawing.Size(292, 24)
+        Me.LayoutControlItem25.Size = New System.Drawing.Size(297, 152)
         Me.LayoutControlItem25.Text = "Reject"
         Me.LayoutControlItem25.TextSize = New System.Drawing.Size(117, 13)
         '
@@ -878,31 +914,11 @@ Partial Class FWOLaborFeedback
         '
         Me.LayoutControlItem26.Control = Me.gc_downtime_edit
         Me.LayoutControlItem26.CustomizationFormText = "Downtime"
-        Me.LayoutControlItem26.Location = New System.Drawing.Point(292, 288)
+        Me.LayoutControlItem26.Location = New System.Drawing.Point(298, 336)
         Me.LayoutControlItem26.Name = "LayoutControlItem26"
-        Me.LayoutControlItem26.Size = New System.Drawing.Size(292, 24)
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(298, 152)
         Me.LayoutControlItem26.Text = "Downtime"
         Me.LayoutControlItem26.TextSize = New System.Drawing.Size(117, 13)
-        '
-        'LayoutControlItem4
-        '
-        Me.LayoutControlItem4.Control = Me.lbrf_elapsed_setup
-        Me.LayoutControlItem4.CustomizationFormText = "LayoutControlItem4"
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(604, 168)
-        Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(272, 24)
-        Me.LayoutControlItem4.Text = "Setup Elapsed"
-        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(117, 13)
-        '
-        'LayoutControlItem12
-        '
-        Me.LayoutControlItem12.Control = Me.lbrf_elapsed_run
-        Me.LayoutControlItem12.CustomizationFormText = "Run Elapsed"
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(604, 192)
-        Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(272, 24)
-        Me.LayoutControlItem12.Text = "Run Elapsed"
-        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(117, 13)
         '
         'StyleController1
         '
@@ -966,20 +982,32 @@ Partial Class FWOLaborFeedback
         '
         'DockManager1
         '
+        Me.DockManager1.AutoHideContainers.AddRange(New DevExpress.XtraBars.Docking.AutoHideContainer() {Me.hideContainerBottom})
         Me.DockManager1.Form = Me
-        Me.DockManager1.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.DockPanel1})
         Me.DockManager1.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl"})
+        '
+        'hideContainerBottom
+        '
+        Me.hideContainerBottom.BackColor = System.Drawing.SystemColors.Control
+        Me.hideContainerBottom.Controls.Add(Me.DockPanel1)
+        Me.hideContainerBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.hideContainerBottom.Location = New System.Drawing.Point(0, 611)
+        Me.hideContainerBottom.Name = "hideContainerBottom"
+        Me.hideContainerBottom.Size = New System.Drawing.Size(925, 19)
         '
         'DockPanel1
         '
         Me.DockPanel1.Controls.Add(Me.DockPanel1_Container)
         Me.DockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom
         Me.DockPanel1.ID = New System.Guid("7df89328-79f8-4b66-9427-14e3c4500237")
-        Me.DockPanel1.Location = New System.Drawing.Point(0, 430)
+        Me.DockPanel1.Location = New System.Drawing.Point(0, 0)
         Me.DockPanel1.Name = "DockPanel1"
         Me.DockPanel1.OriginalSize = New System.Drawing.Size(925, 200)
+        Me.DockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Bottom
+        Me.DockPanel1.SavedIndex = 0
         Me.DockPanel1.Size = New System.Drawing.Size(925, 200)
         Me.DockPanel1.Text = "Detail"
+        Me.DockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
         'DockPanel1_Container
         '
@@ -1107,10 +1135,10 @@ Partial Class FWOLaborFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(925, 630)
-        Me.Controls.Add(Me.DockPanel1)
+        Me.Controls.Add(Me.hideContainerBottom)
         Me.Name = "FWOLaborFeedback"
         Me.Text = "Work Order Labor Feedback"
-        Me.Controls.SetChildIndex(Me.DockPanel1, 0)
+        Me.Controls.SetChildIndex(Me.hideContainerBottom, 0)
         Me.Controls.SetChildIndex(Me.scc_master, 0)
         Me.xtp_data.ResumeLayout(False)
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1170,10 +1198,14 @@ Partial Class FWOLaborFeedback
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1190,8 +1222,6 @@ Partial Class FWOLaborFeedback
         CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StyleController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pr_txttglakhir.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pr_txttglakhir.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1199,6 +1229,7 @@ Partial Class FWOLaborFeedback
         CType(Me.pr_txttglawal.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pr_entity.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.hideContainerBottom.ResumeLayout(False)
         Me.DockPanel1.ResumeLayout(False)
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.xtc_detail, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1244,6 +1275,7 @@ Partial Class FWOLaborFeedback
     Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents lbrf_elapsed_setup As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents lbrf_elapsed_run As DevExpress.XtraEditors.TextEdit
     Friend WithEvents lbrf_stop_run As DevExpress.XtraEditors.DateEdit
     Friend WithEvents lbrf_start_run As DevExpress.XtraEditors.DateEdit
@@ -1252,6 +1284,7 @@ Partial Class FWOLaborFeedback
     Friend WithEvents LayoutControlItem12 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents lbrf_elapsed_down As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem13 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem4 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents lbrf_down_reason_id As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
     Public WithEvents wc_desc As DevExpress.XtraEditors.TextEdit
@@ -1299,6 +1332,7 @@ Partial Class FWOLaborFeedback
     Friend WithEvents gc_reject As DevExpress.XtraGrid.GridControl
     Friend WithEvents gv_reject As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents xtp_person As DevExpress.XtraTab.XtraTabPage
+    Friend WithEvents hideContainerBottom As DevExpress.XtraBars.Docking.AutoHideContainer
     Friend WithEvents gc_downtime_edit As DevExpress.XtraGrid.GridControl
     Friend WithEvents gv_downtime_edit As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents LayoutControlItem26 As DevExpress.XtraLayout.LayoutControlItem

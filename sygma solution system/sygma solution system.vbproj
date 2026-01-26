@@ -786,6 +786,12 @@
     <Compile Include="manufacture\Product Structure\FRoutingStrucTree.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="manufacture\Routing\FWOLaborFeedbackBackup.designer.vb">
+      <DependentUpon>FWOLaborFeedbackBackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manufacture\Routing\FWOLaborFeedbackBackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="manufacture\Routing\FRoutingReport.designer.vb">
       <DependentUpon>FRoutingReport.vb</DependentUpon>
     </Compile>
@@ -5660,6 +5666,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manufacture\Product Structure\FRoutingStrucTree.resx">
       <DependentUpon>FRoutingStrucTree.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manufacture\Routing\FWOLaborFeedbackBackup.resx">
+      <DependentUpon>FWOLaborFeedbackBackup.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="manufacture\Routing\FRoutingReport.resx">
