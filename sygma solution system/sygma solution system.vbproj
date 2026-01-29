@@ -816,6 +816,12 @@
     <Compile Include="manufacture\shopfloor\FDownTimeCategory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="manufacture\shopfloor\FRejectReason.designer.vb">
+      <DependentUpon>FRejectReason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manufacture\shopfloor\FRejectReason.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="manufacture\WO\FWorkOrderReportEntityPivot.Designer.vb">
       <DependentUpon>FWorkOrderReportEntityPivot.vb</DependentUpon>
     </Compile>
@@ -4533,6 +4539,12 @@
     <Compile Include="zpendukung\XtraReport2.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="zsearch\FDownReaseonSearch.designer.vb">
+      <DependentUpon>FDownReaseonSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zsearch\FDownReaseonSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="zsearch\FPayOutSearch.Designer.vb">
       <DependentUpon>FPayOutSearch.vb</DependentUpon>
     </Compile>
@@ -4561,6 +4573,12 @@
       <DependentUpon>FPeriodeSearch.vb</DependentUpon>
     </Compile>
     <Compile Include="zsearch\FPeriodeSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zsearch\FRejectReaseonSearch.designer.vb">
+      <DependentUpon>FRejectReaseonSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zsearch\FRejectReaseonSearch.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="zsearch\FUkuranBahanSearch.designer.vb">
@@ -5687,6 +5705,9 @@
     <EmbeddedResource Include="manufacture\shopfloor\FDownTimeCategory.resx">
       <DependentUpon>FDownTimeCategory.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manufacture\shopfloor\FRejectReason.resx">
+      <DependentUpon>FRejectReason.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manufacture\WO\FWorkOrderReportEntityPivot.resx">
       <DependentUpon>FWorkOrderReportEntityPivot.vb</DependentUpon>
@@ -8149,6 +8170,9 @@
     <EmbeddedResource Include="zpendukung\XtraReport2.resx">
       <DependentUpon>XtraReport2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="zsearch\FDownReaseonSearch.resx">
+      <DependentUpon>FDownReaseonSearch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="zsearch\FPayOutSearch.resx">
       <DependentUpon>FPayOutSearch.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -8168,6 +8192,9 @@
     <EmbeddedResource Include="zsearch\FPeriodeSearch.resx">
       <DependentUpon>FPeriodeSearch.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zsearch\FRejectReaseonSearch.resx">
+      <DependentUpon>FRejectReaseonSearch.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="zsearch\FUkuranBahanSearch.resx">
       <DependentUpon>FUkuranBahanSearch.vb</DependentUpon>

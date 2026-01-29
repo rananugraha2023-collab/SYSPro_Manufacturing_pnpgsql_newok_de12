@@ -3196,6 +3196,40 @@ Public Class function_data
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
+        ElseIf par_type = "wc_mstr_null" Then
+            Try
+                Using objcb As New master_new.WDABasepgsql("", "")
+                    With objcb
+
+                        .SQL = "select wc_id, wc_desc from wc_mstr" _
+                              & " where wc_dom_id = " & master_new.ClsVar.sdom_id _
+                              & " " _
+                              & " and wc_active ~~* 'y' union select null as wc_id , '-' as wc_desc order by wc_desc"
+
+                        .InitializeCommand()
+                        .FillDataSet(ds_bantu, "fpsign_mstr")
+                        dt_bantu = ds_bantu.Tables(0)
+                    End With
+                End Using
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        ElseIf par_type = "qc_type" Then
+            Try
+                Using objcb As New master_new.WDABasepgsql("", "")
+                    With objcb
+                        .SQL = "SELECT 'I' as type_code, 'QC IN' as type_desc " _
+                            & " union " _
+                            & " SELECT 'O' as type_code, 'QC OUT' as type_desc "
+
+                        .InitializeCommand()
+                        .FillDataSet(ds_bantu, "pt_ls")
+                        dt_bantu = ds_bantu.Tables(0)
+                    End With
+                End Using
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
         ElseIf par_type = "ptnr_mstr_cust" Then
             Try
                 Using objcb As New master_new.WDABasepgsql("", "")

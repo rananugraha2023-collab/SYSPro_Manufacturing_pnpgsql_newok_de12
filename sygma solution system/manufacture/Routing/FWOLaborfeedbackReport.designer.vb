@@ -19,21 +19,29 @@ Partial Class FWOLaborfeedbackReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.pr_txttglakhir = New DevExpress.XtraEditors.DateEdit
-        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl
-        Me.pr_txttglawal = New DevExpress.XtraEditors.DateEdit
-        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl
-        Me.gc_master = New DevExpress.XtraGrid.GridControl
-        Me.gv_master = New DevExpress.XtraGrid.Views.Grid.GridView
+        Me.components = New System.ComponentModel.Container()
+        Me.pr_txttglakhir = New DevExpress.XtraEditors.DateEdit()
+        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
+        Me.pr_txttglawal = New DevExpress.XtraEditors.DateEdit()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.gc_master = New DevExpress.XtraGrid.GridControl()
+        Me.gv_master = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.StyleController1 = New DevExpress.XtraEditors.StyleController(Me.components)
-        Me.lci_master = New DevExpress.XtraLayout.LayoutControl
-        Me.be_so_code = New DevExpress.XtraEditors.ButtonEdit
-        Me.ce_close_transaction = New DevExpress.XtraEditors.CheckEdit
-        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem
-        Me.LayoutControlItem26 = New DevExpress.XtraLayout.LayoutControlItem
-        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup
+        Me.lci_master = New DevExpress.XtraLayout.LayoutControl()
+        Me.be_so_code = New DevExpress.XtraEditors.ButtonEdit()
+        Me.ce_close_transaction = New DevExpress.XtraEditors.CheckEdit()
+        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem26 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
+        Me.xtp_report = New DevExpress.XtraTab.XtraTabControl()
+        Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage()
+        Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage()
+        Me.gc_down_time = New DevExpress.XtraGrid.GridControl()
+        Me.gv_down_time = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.XtraTabPage3 = New DevExpress.XtraTab.XtraTabPage()
+        Me.gc_reject = New DevExpress.XtraGrid.GridControl()
+        Me.gv_reject = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.xtp_data.SuspendLayout()
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scc_master.SuspendLayout()
@@ -60,12 +68,21 @@ Partial Class FWOLaborfeedbackReport
         CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.xtp_report, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.xtp_report.SuspendLayout()
+        Me.XtraTabPage1.SuspendLayout()
+        Me.XtraTabPage2.SuspendLayout()
+        CType(Me.gc_down_time, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gv_down_time, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.XtraTabPage3.SuspendLayout()
+        CType(Me.gc_reject, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gv_reject, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'xtp_data
         '
-        Me.xtp_data.Controls.Add(Me.gc_master)
-        Me.xtp_data.Size = New System.Drawing.Size(992, 714)
+        Me.xtp_data.Controls.Add(Me.xtp_report)
+        Me.xtp_data.Size = New System.Drawing.Size(992, 715)
         '
         'scc_master
         '
@@ -78,17 +95,17 @@ Partial Class FWOLaborfeedbackReport
         '
         'xtp_edit
         '
-        Me.xtp_edit.Size = New System.Drawing.Size(553, 365)
+        Me.xtp_edit.Size = New System.Drawing.Size(553, 400)
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.lci_master)
-        Me.Panel1.Size = New System.Drawing.Size(543, 320)
+        Me.Panel1.Size = New System.Drawing.Size(543, 355)
         '
         'xtc_master
         '
         Me.xtc_master.ShowTabHeader = DevExpress.Utils.DefaultBoolean.[False]
-        Me.xtc_master.Size = New System.Drawing.Size(994, 715)
+        Me.xtc_master.Size = New System.Drawing.Size(994, 716)
         '
         'pr_txttglakhir
         '
@@ -97,7 +114,7 @@ Partial Class FWOLaborfeedbackReport
         Me.pr_txttglakhir.Name = "pr_txttglakhir"
         Me.pr_txttglakhir.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.pr_txttglakhir.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
-        Me.pr_txttglakhir.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+        Me.pr_txttglakhir.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.pr_txttglakhir.Size = New System.Drawing.Size(100, 20)
         Me.pr_txttglakhir.TabIndex = 19
         '
@@ -116,7 +133,7 @@ Partial Class FWOLaborfeedbackReport
         Me.pr_txttglawal.Name = "pr_txttglawal"
         Me.pr_txttglawal.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.pr_txttglawal.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
-        Me.pr_txttglawal.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+        Me.pr_txttglawal.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.pr_txttglawal.Size = New System.Drawing.Size(100, 20)
         Me.pr_txttglawal.TabIndex = 17
         '
@@ -131,10 +148,10 @@ Partial Class FWOLaborfeedbackReport
         'gc_master
         '
         Me.gc_master.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gc_master.Location = New System.Drawing.Point(5, 5)
+        Me.gc_master.Location = New System.Drawing.Point(0, 0)
         Me.gc_master.MainView = Me.gv_master
         Me.gc_master.Name = "gc_master"
-        Me.gc_master.Size = New System.Drawing.Size(982, 704)
+        Me.gc_master.Size = New System.Drawing.Size(976, 677)
         Me.gc_master.TabIndex = 4
         Me.gc_master.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_master})
         '
@@ -142,6 +159,7 @@ Partial Class FWOLaborfeedbackReport
         '
         Me.gv_master.GridControl = Me.gc_master
         Me.gv_master.Name = "gv_master"
+        Me.gv_master.OptionsView.ColumnAutoWidth = False
         '
         'StyleController1
         '
@@ -157,7 +175,7 @@ Partial Class FWOLaborfeedbackReport
         Me.lci_master.Location = New System.Drawing.Point(0, 0)
         Me.lci_master.Name = "lci_master"
         Me.lci_master.Root = Me.LayoutControlGroup1
-        Me.lci_master.Size = New System.Drawing.Size(543, 320)
+        Me.lci_master.Size = New System.Drawing.Size(543, 355)
         Me.lci_master.StyleController = Me.StyleController1
         Me.lci_master.TabIndex = 3
         Me.lci_master.Text = "LayoutControl1"
@@ -166,7 +184,7 @@ Partial Class FWOLaborfeedbackReport
         '
         Me.be_so_code.Location = New System.Drawing.Point(124, 72)
         Me.be_so_code.Name = "be_so_code"
-        Me.be_so_code.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+        Me.be_so_code.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.be_so_code.Properties.ReadOnly = True
         Me.be_so_code.Size = New System.Drawing.Size(360, 20)
         Me.be_so_code.StyleController = Me.lci_master
@@ -209,7 +227,7 @@ Partial Class FWOLaborfeedbackReport
         Me.LayoutControlGroup1.CustomizationFormText = "LayoutControlGroup1"
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(543, 320)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(543, 355)
         Me.LayoutControlGroup1.Text = "Root"
         Me.LayoutControlGroup1.TextVisible = False
         '
@@ -217,6 +235,69 @@ Partial Class FWOLaborfeedbackReport
         '
         Me.DockManager1.Form = Me
         Me.DockManager1.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl"})
+        '
+        'xtp_report
+        '
+        Me.xtp_report.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.xtp_report.Location = New System.Drawing.Point(5, 5)
+        Me.xtp_report.Name = "xtp_report"
+        Me.xtp_report.SelectedTabPage = Me.XtraTabPage1
+        Me.xtp_report.Size = New System.Drawing.Size(982, 705)
+        Me.xtp_report.TabIndex = 5
+        Me.xtp_report.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2, Me.XtraTabPage3})
+        '
+        'XtraTabPage1
+        '
+        Me.XtraTabPage1.Controls.Add(Me.gc_master)
+        Me.XtraTabPage1.Name = "XtraTabPage1"
+        Me.XtraTabPage1.Size = New System.Drawing.Size(976, 677)
+        Me.XtraTabPage1.Text = "Data Detail Person"
+        '
+        'XtraTabPage2
+        '
+        Me.XtraTabPage2.Controls.Add(Me.gc_down_time)
+        Me.XtraTabPage2.Name = "XtraTabPage2"
+        Me.XtraTabPage2.Size = New System.Drawing.Size(976, 677)
+        Me.XtraTabPage2.Text = "Data Down Time"
+        '
+        'gc_down_time
+        '
+        Me.gc_down_time.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gc_down_time.Location = New System.Drawing.Point(0, 0)
+        Me.gc_down_time.MainView = Me.gv_down_time
+        Me.gc_down_time.Name = "gc_down_time"
+        Me.gc_down_time.Size = New System.Drawing.Size(976, 677)
+        Me.gc_down_time.TabIndex = 5
+        Me.gc_down_time.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_down_time})
+        '
+        'gv_down_time
+        '
+        Me.gv_down_time.GridControl = Me.gc_down_time
+        Me.gv_down_time.Name = "gv_down_time"
+        Me.gv_down_time.OptionsView.ColumnAutoWidth = False
+        '
+        'XtraTabPage3
+        '
+        Me.XtraTabPage3.Controls.Add(Me.gc_reject)
+        Me.XtraTabPage3.Name = "XtraTabPage3"
+        Me.XtraTabPage3.Size = New System.Drawing.Size(976, 677)
+        Me.XtraTabPage3.Text = "Data Reject"
+        '
+        'gc_reject
+        '
+        Me.gc_reject.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gc_reject.Location = New System.Drawing.Point(0, 0)
+        Me.gc_reject.MainView = Me.gv_reject
+        Me.gc_reject.Name = "gc_reject"
+        Me.gc_reject.Size = New System.Drawing.Size(976, 677)
+        Me.gc_reject.TabIndex = 5
+        Me.gc_reject.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_reject})
+        '
+        'gv_reject
+        '
+        Me.gv_reject.GridControl = Me.gc_reject
+        Me.gv_reject.Name = "gv_reject"
+        Me.gv_reject.OptionsView.ColumnAutoWidth = False
         '
         'FWOLaborfeedbackReport
         '
@@ -250,6 +331,15 @@ Partial Class FWOLaborfeedbackReport
         CType(Me.LayoutControlItem26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.xtp_report, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.xtp_report.ResumeLayout(False)
+        Me.XtraTabPage1.ResumeLayout(False)
+        Me.XtraTabPage2.ResumeLayout(False)
+        CType(Me.gc_down_time, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gv_down_time, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.XtraTabPage3.ResumeLayout(False)
+        CType(Me.gc_reject, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gv_reject, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -267,5 +357,13 @@ Partial Class FWOLaborfeedbackReport
     Friend WithEvents be_so_code As DevExpress.XtraEditors.ButtonEdit
     Friend WithEvents LayoutControlItem26 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents xtp_report As DevExpress.XtraTab.XtraTabControl
+    Friend WithEvents XtraTabPage1 As DevExpress.XtraTab.XtraTabPage
+    Friend WithEvents XtraTabPage2 As DevExpress.XtraTab.XtraTabPage
+    Friend WithEvents gc_down_time As DevExpress.XtraGrid.GridControl
+    Friend WithEvents gv_down_time As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents XtraTabPage3 As DevExpress.XtraTab.XtraTabPage
+    Friend WithEvents gc_reject As DevExpress.XtraGrid.GridControl
+    Friend WithEvents gv_reject As DevExpress.XtraGrid.Views.Grid.GridView
 
 End Class

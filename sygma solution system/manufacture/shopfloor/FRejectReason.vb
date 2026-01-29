@@ -1,72 +1,80 @@
 ﻿Imports npgsql
 Imports master_new.ModFunction
 
-Public Class FActivityMaster
-
-    Dim _mch_oid As String
+Public Class FRejectReason
+    Dim _si_oid As String
     Public dt_bantu As DataTable
     Public func_data As New function_data
     Public func_coll As New function_collection
 
-    Private Sub FPartnerGroup_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub FSite_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         form_first_load()
     End Sub
 
     Public Overrides Sub load_cb()
         dt_bantu = New DataTable
-        dt_bantu = (func_data.load_data("entity", ""))
-        mch_en_id.Properties.DataSource = dt_bantu
-        mch_en_id.Properties.DisplayMember = dt_bantu.Columns("en_desc").ToString
-        mch_en_id.Properties.ValueMember = dt_bantu.Columns("en_id").ToString
-        mch_en_id.ItemIndex = 0
+        dt_bantu = (func_data.load_data("wc_mstr_null", "0"))
+        qc_wc_id.Properties.DataSource = dt_bantu
+        qc_wc_id.Properties.DisplayMember = dt_bantu.Columns("wc_desc").ToString
+        qc_wc_id.Properties.ValueMember = dt_bantu.Columns("wc_id").ToString
+        qc_wc_id.ItemIndex = 0
+
+        dt_bantu = New DataTable
+        dt_bantu = (func_data.load_data("qc_type", "0"))
+        qc_type.Properties.DataSource = dt_bantu
+        qc_type.Properties.DisplayMember = dt_bantu.Columns("type_desc").ToString
+        qc_type.Properties.ValueMember = dt_bantu.Columns("type_code").ToString
+        qc_type.ItemIndex = 0
     End Sub
 
     Public Overrides Sub format_grid()
-        add_column_copy(gv_master, "Entity", "en_desc", DevExpress.Utils.HorzAlignment.Default)
-        add_column_copy(gv_master, "Code", "mch_code", DevExpress.Utils.HorzAlignment.Default)
-        add_column_copy(gv_master, "Name", "mch_name", DevExpress.Utils.HorzAlignment.Default)
-        add_column_copy(gv_master, "Description", "mch_desc", DevExpress.Utils.HorzAlignment.Default)
-        add_column_copy(gv_master, "Is Active", "mch_active", DevExpress.Utils.HorzAlignment.Default)
-        add_column_copy(gv_master, "User Create", "mch_add_by", DevExpress.Utils.HorzAlignment.Default)
-        add_column_copy(gv_master, "Date Create", "mch_add_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
-        add_column_copy(gv_master, "User Update", "mch_upd_by", DevExpress.Utils.HorzAlignment.Default)
-        add_column_copy(gv_master, "Date Update", "mch_upd_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_master, "Work Center", "wc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "ID", "qc_id", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "Description", "qc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "Type", "qc_type_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "Is Active", "qc_active", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "User Create", "qc_add_by", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "Date Create", "qc_add_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_master, "User Update", "qc_upd_by", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "Date Update", "qc_upd_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
     End Sub
 
     Public Overrides Function get_sequel() As String
-        get_sequel = "Select  " _
-            & "  a.mch_oid, " _
-            & "  a.mch_en_id, " _
-            & "  b.en_desc, " _
-            & "  a.mch_code, " _
-            & "  a.mch_name, " _
-            & "  a.mch_desc, " _
-            & "  a.mch_active, " _
-            & "  a.mch_add_by, " _
-            & "  a.mch_add_date, " _
-            & "  a.mch_upd_by, " _
-            & "  a.mch_upd_date " _
-            & "FROM " _
-            & "  Public.mch_mstr a " _
-            & "  INNER JOIN Public.en_mstr b On (a.mch_en_id = b.en_id)" _
-            & " where mch_en_id in (select user_en_id from tconfuserentity " _
-            & " where userid = " + master_new.ClsVar.sUserID.ToString + ")"
+
+
+        get_sequel = "Select q.qc_oid, " _
+                & "                q.qc_id, " _
+                & "                q.qc_desc, " _
+                & "                q.qc_add_by, " _
+                & "                q.qc_add_date, " _
+                & "                q.qc_upd_by, " _
+                & "                q.qc_upd_date, " _
+                & "                q.qc_active, " _
+                & "                q.qc_type, case when qc_type = 'I' then 'QC IN' else 'QC OUT' end as qc_type_desc, " _
+                & "                q.qc_wc_id, " _
+                & "                w.wc_desc " _
+                & "            FROM public.qc_reason_mstr q " _
+                & "            Left Join public.wc_mstr w ON q.qc_wc_id = w.wc_id " _
+                & "            WHERE q.qc_active = 'Y' " _
+                & "            ORDER BY qc_type, q.qc_desc"
 
         Return get_sequel
     End Function
 
     Public Overrides Sub insert_data_awal()
-        mch_en_id.Focus()
-        mch_en_id.ItemIndex = 0
-        mch_code.Text = ""
-        mch_name.Text = ""
-        mch_desc.Text = ""
-        mch_active.EditValue = False
+        qc_wc_id.Focus()
+        qc_wc_id.ItemIndex = 0
+        qc_type.ItemIndex = 0
+        qc_desc.Text = ""
+        qc_active.EditValue = True
     End Sub
 
     Public Overrides Function insert() As Boolean
-        Dim _mch_oid As Guid
-        _mch_oid = Guid.NewGuid
+
+        Dim _id As Integer
+        _id = func_coll.GetID("qc_reason_mstr", "qc_id")
+
+
         Dim ssqls As New ArrayList
 
         Try
@@ -79,37 +87,29 @@ Public Class FActivityMaster
                         .Command.Transaction = sqlTran
 
                         .Command.CommandType = CommandType.Text
-                        .Command.CommandText = "INSERT INTO  " _
-                                            & "  public.mch_mstr " _
-                                            & "( " _
-                                            & "  mch_oid, " _
-                                            & "  mch_dom_id, " _
-                                            & "  mch_en_id, " _
-                                            & "  mch_add_by, " _
-                                            & "  mch_add_date, " _
-                                            & "  mch_id, " _
-                                            & "  mch_code, " _
-                                            & "  mch_name, " _
-                                            & "  mch_desc, " _
-                                            & "  mch_active, " _
-                                            & "  mch_dt " _
-                                            & ")  " _
-                                            & "VALUES ( " _
-                                            & SetSetring(_mch_oid.ToString) & ",  " _
-                                            & SetInteger(master_new.ClsVar.sdom_id) & ",  " _
-                                            & SetInteger(mch_en_id.EditValue) & ",  " _
-                                            & SetSetring(master_new.ClsVar.sNama) & ",  " _
-                                            & "" & SetDateNTime(master_new.PGSqlConn.CekTanggal) & "" & ",  " _
-                                            & SetInteger(func_coll.GetID("mch_mstr", mch_en_id.GetColumnValue("en_code"), "mch_id", "mch_en_id", mch_en_id.EditValue.ToString)) & ",  " _
-                                            & SetSetring(mch_code.Text) & ",  " _
-                                            & SetSetring(mch_name.Text) & ",  " _
-                                            & SetSetring(mch_desc.Text) & ",  " _
-                                            & SetBitYN(mch_active.EditValue) & ",  " _
-                                            & "" & SetDateNTime(master_new.PGSqlConn.CekTanggal) & "" & "  " _
-                                            & ");"
+                        .Command.CommandText = "INSERT INTO public.qc_reason_mstr (" & _
+                                 "qc_oid, qc_id, qc_desc, qc_add_by, qc_add_date, " & _
+                                 "qc_active, qc_type, qc_wc_id) " & _
+                                 "VALUES (" & _
+                                 SetSetring(Guid.NewGuid.ToString) & ", " & _
+                                 SetInteger(_id) & ", " & _
+                                 SetSetring(qc_desc.Text) & ", " & _
+                                 SetSetring(master_new.ClsVar.sNama) & ", " & _
+                                 SetDateNTime(master_new.PGSqlConn.CekTanggal) & ", " & _
+                                 SetBitYN(qc_active.EditValue) & ", " & _
+                                 SetSetring(qc_type.EditValue) & ", " & _
+                                 SetInteger(qc_wc_id.EditValue) & _
+                                 ")"
+
                         ssqls.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
                         .Command.Parameters.Clear()
+
+                        .Command.CommandText = insert_log("Insert reject reason " & qc_desc.EditValue)
+                        ssqls.Add(.Command.CommandText)
+                        .Command.ExecuteNonQuery()
+                        .Command.Parameters.Clear()
+
 
                         If master_new.PGSqlConn.status_sync = True Then
                             For Each Data As String In master_new.PGSqlConn.FinsertSQL2Array(ssqls)
@@ -119,11 +119,10 @@ Public Class FActivityMaster
                                 .Command.Parameters.Clear()
                             Next
                         End If
-
                         sqlTran.Commit()
 
                         after_success()
-                        set_row(Trim(mch_code.Text), "mch_code")
+                        set_row(Trim(_id), "qc_id")
                         insert = True
                     Catch ex As NpgsqlException
                         sqlTran.Rollback()
@@ -145,14 +144,13 @@ Public Class FActivityMaster
             row = BindingContext(ds.Tables(0)).Position
 
             With ds.Tables(0).Rows(row)
-                _mch_oid = .Item("mch_oid").ToString
-                mch_en_id.EditValue = .Item("mch_en_id")
-                mch_code.Text = .Item("mch_code")
-                mch_name.Text = .Item("mch_name")
-                mch_desc.Text = .Item("mch_desc")
-                mch_active.EditValue = IIf(.Item("mch_active") = "Y", True, False)
+                qc_wc_id.EditValue = .Item("qc_wc_id")
+                qc_type.EditValue = .Item("qc_type")
+                qc_desc.EditValue = .Item("qc_desc")
+                qc_desc.Tag = .Item("qc_oid").ToString
+                qc_active.EditValue = SetBitYNB(.Item("qc_active"))
             End With
-            mch_en_id.Focus()
+            qc_wc_id.Focus()
             edit_data = True
         End If
     End Function
@@ -171,22 +169,21 @@ Public Class FActivityMaster
                         .Command.Transaction = sqlTran
 
                         .Command.CommandType = CommandType.Text
-                        .Command.CommandText = "UPDATE  " _
-                                            & "  public.mch_mstr   " _
-                                            & "SET  " _
-                                            & "  mch_dom_id = " & SetInteger(master_new.ClsVar.sdom_id) & ",  " _
-                                            & "  mch_en_id = " & SetInteger(mch_en_id.EditValue) & ",  " _
-                                            & "  mch_upd_by = " & SetSetring(master_new.ClsVar.sNama) & ",  " _
-                                            & "  mch_upd_date = " & SetDateNTime(master_new.PGSqlConn.CekTanggal) & ",  " _
-                                            & "  mch_code = " & SetSetring(mch_code.Text) & ",  " _
-                                            & "  mch_name = " & SetSetring(mch_name.Text) & ",  " _
-                                            & "  mch_desc = " & SetSetring(mch_desc.Text) & ",  " _
-                                            & "  mch_active = " & SetBitYN(mch_active.EditValue) & ",  " _
-                                            & "  mch_dt = " & SetDateNTime(master_new.PGSqlConn.CekTanggal) & "  " _
-                                            & "  " _
-                                            & "WHERE  " _
-                                            & "  mch_oid = " & SetSetring(_mch_oid.ToString) & " "
+                        .Command.CommandText = "UPDATE public.qc_reason_mstr " & _
+                             "SET " & _
+                             "qc_desc = " & SetSetring(qc_desc.EditValue) & ", " & _
+                             "qc_upd_by = " & SetSetring(master_new.ClsVar.sNama) & ", " & _
+                             "qc_upd_date = " & SetDateNTime(master_new.PGSqlConn.CekTanggal) & ", " & _
+                             "qc_active = " & SetBitYN(qc_active.EditValue) & ", " & _
+                             "qc_type = " & SetSetring(qc_type.EditValue.ToString) & ", " & _
+                             "qc_wc_id = " & SetInteger(qc_wc_id.EditValue) & " " & _
+                             "WHERE qc_oid = " & SetSetring(qc_desc.Tag.ToString)
 
+                        ssqls.Add(.Command.CommandText)
+                        .Command.ExecuteNonQuery()
+                        .Command.Parameters.Clear()
+
+                        .Command.CommandText = insert_log("update reject reason " & qc_desc.EditValue)
                         ssqls.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
                         .Command.Parameters.Clear()
@@ -199,11 +196,10 @@ Public Class FActivityMaster
                                 .Command.Parameters.Clear()
                             Next
                         End If
-
                         sqlTran.Commit()
 
                         after_success()
-                        set_row(Trim(mch_code.Text), "mch_code")
+                        set_row(Trim(qc_desc.EditValue), "qc_desc")
                         edit = True
                     Catch ex As NpgsqlException
                         sqlTran.Rollback()
@@ -232,6 +228,7 @@ Public Class FActivityMaster
         If MessageBox.Show("Yakin " + master_new.ClsVar.sNama + " Hapus Data Ini..?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = DialogResult.No Then
             Exit Function
         End If
+
         Dim ssqls As New ArrayList
 
         If before_delete() = True Then
@@ -253,7 +250,12 @@ Public Class FActivityMaster
                             .Command.Transaction = sqlTran
 
                             .Command.CommandType = CommandType.Text
-                            .Command.CommandText = "delete from mch_mstr where mch_oid = '" + ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("mch_oid").ToString + "'"
+                            .Command.CommandText = "delete from qc_reason_mstr where qc_oid = '" + ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("qc_oid").ToString + "'"
+                            ssqls.Add(.Command.CommandText)
+                            .Command.ExecuteNonQuery()
+                            .Command.Parameters.Clear()
+
+                            .Command.CommandText = insert_log("Delete reject reason " & ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("qc_desc").ToString)
                             ssqls.Add(.Command.CommandText)
                             .Command.ExecuteNonQuery()
                             .Command.Parameters.Clear()
@@ -266,7 +268,6 @@ Public Class FActivityMaster
                                     .Command.Parameters.Clear()
                                 Next
                             End If
-
                             sqlTran.Commit()
 
                             help_load_data(True)
@@ -284,4 +285,5 @@ Public Class FActivityMaster
 
         Return delete_data
     End Function
+
 End Class

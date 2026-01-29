@@ -1,5 +1,6 @@
 ﻿Imports npgsql
 Imports master_new.ModFunction
+Imports master_new.PGSqlConn
 
 Public Class FWOLaborfeedbackReport
     Public dt_bantu As DataTable
@@ -23,6 +24,7 @@ Public Class FWOLaborfeedbackReport
         add_column_copy(gv_master, "Work Order Code", "wo_code", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_master, "Partnumber", "pt_desc1", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_master, "Work Center", "wc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_master, "Machine", "mch_name", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_master, "Qty Conversion", "lbrf_qty_conversion", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
         add_column_copy(gv_master, "Activity", "lbrfa_desc", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_master, "Shift", "shift_name", DevExpress.Utils.HorzAlignment.Default)
@@ -52,6 +54,80 @@ Public Class FWOLaborfeedbackReport
         add_column_copy(gv_master, "Person Name", "lbrfp_name", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_master, "Person Name (Old Data)", "lbrf_person", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_master, "Group", "lbrfp_group", DevExpress.Utils.HorzAlignment.Default)
+
+
+
+        add_column_copy(gv_down_time, "Entity", "en_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Transaction Number", "lbrf_code", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Work Order Code", "wo_code", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Partnumber", "pt_desc1", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Work Center", "wc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Machine", "mch_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Qty Conversion", "lbrf_qty_conversion", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_down_time, "Activity", "lbrfa_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Shift", "shift_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Date", "lbrf_date", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Qty Complete", "lbrf_qty_complete", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_down_time, "Qty Reject", "lbrf_qty_reject", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_down_time, "Reason Reject Incoming", "qc_desc_in", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Reason Reject Outgoing", "qc_desc_out", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Setup Start", "lbrf_start_setup", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Setup Stop", "lbrf_stop_setup", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Setup Elapsed", "lbrf_elapsed_setup", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_down_time, "Run Start", "lbrf_start_run", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Run Stop", "lbrf_stop_run", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Run Elapsed", "lbrf_elapsed_run", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_down_time, "Run Start", "lbrf_down_start", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Run Stop", "lbrf_down_stop", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Run Elapsed", "lbrf_elapsed_down", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_down_time, "Down Time Reason", "reason_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Remarks", "lbrf_remarks", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "User Create", "lbrf_add_by", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Date Create", "lbrf_add_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "User Update", "lbrf_upd_by", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Date Update", "lbrf_upd_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+
+        add_column_copy(gv_down_time, "Down Start", "lbrfd_down_start", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Down Stop", "lbrfd_down_stop", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_down_time, "Down Elapsed", "lbrfd_elapsed_down", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n", DevExpress.Data.SummaryItemType.Sum, "SUM={0:n}")
+        add_column_copy(gv_down_time, "Reason", "reason_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_down_time, "Remarks", "lbrfd_down_remarks", DevExpress.Utils.HorzAlignment.Default)
+
+        add_column_copy(gv_reject, "Entity", "en_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Transaction Number", "lbrf_code", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Work Order Code", "wo_code", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Partnumber", "pt_desc1", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Work Center", "wc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Machine", "mch_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Qty Conversion", "lbrf_qty_conversion", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_reject, "Activity", "lbrfa_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Shift", "shift_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Date", "lbrf_date", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Qty Complete", "lbrf_qty_complete", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_reject, "Qty Reject", "lbrf_qty_reject", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_reject, "Reason Reject Incoming", "qc_desc_in", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Reason Reject Outgoing", "qc_desc_out", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Setup Start", "lbrf_start_setup", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_reject, "Setup Stop", "lbrf_stop_setup", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_reject, "Setup Elapsed", "lbrf_elapsed_setup", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_reject, "Run Start", "lbrf_start_run", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_reject, "Run Stop", "lbrf_stop_run", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_reject, "Run Elapsed", "lbrf_elapsed_run", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_reject, "Run Start", "lbrf_down_start", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_reject, "Run Stop", "lbrf_down_stop", DevExpress.Utils.HorzAlignment.Default, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_reject, "Run Elapsed", "lbrf_elapsed_down", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_reject, "Down Time Reason", "reason_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Remarks", "lbrf_remarks", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "User Create", "lbrf_add_by", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Date Create", "lbrf_add_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_reject, "User Update", "lbrf_upd_by", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Date Update", "lbrf_upd_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+
+       
+        add_column_copy(gv_reject, "Qty Reject", "lbrfd_qty_reject", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n", DevExpress.Data.SummaryItemType.Sum, "SUM={0:n}")
+        add_column_copy(gv_reject, "Reason", "qc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Type", "type_desc", DevExpress.Utils.HorzAlignment.Default)
+
     End Sub
 
     Public Overrides Function get_sequel() As String
@@ -87,7 +163,7 @@ Public Class FWOLaborfeedbackReport
             & "  l.lbrfd_lbrf_oid, " _
             & "  l.lbrfd_lbrfp_id, " _
             & "  m.lbrfp_name, " _
-            & "  m.lbrfp_group " _
+            & "  m.lbrfp_group, lbrf_mch_id, mch_name " _
                 & " FROM " _
                 & "  public.lbrf_mstr a " _
                 & "  INNER JOIN public.en_mstr b ON (a.lbrf_en_id = b.en_id) " _
@@ -102,6 +178,7 @@ Public Class FWOLaborfeedbackReport
                 & "  LEFT outer JOIN public.code_mstr j ON (a.lbrf_shift_id = j.code_id) " _
                 & "  LEFT outer JOIN  public.lbrfd_det_person l ON (a.lbrf_oid = l.lbrfd_lbrf_oid) " _
                & "  LEFT outer JOIN public.lbrfp_person m ON (l.lbrfd_lbrfp_id = m.lbrfp_id) " _
+               & "  LEFT outer JOIN public.mch_mstr n ON (a.lbrf_mch_id = n.mch_id) " _
                 & " WHERE " _
                 & "  a.lbrf_date BETWEEN " & SetDate(pr_txttglawal.DateTime) & " AND " & SetDate(pr_txttglakhir.DateTime) & " " _
                 & " and lbrf_en_id IN (select user_en_id from tconfuserentity " _
@@ -111,6 +188,223 @@ Public Class FWOLaborfeedbackReport
 
 
         Return get_sequel
+    End Function
+
+    Public Overrides Function get_gv() As Object
+        Return gv_master
+    End Function
+
+    Public Overrides Sub form_first_load()
+        'create_table()
+        'help_load_data(False)
+        load_cb()
+        on_load()
+        format_grid()
+        add_handler_numeric()
+        load_Columns()
+
+        spv_master = scc_master.PanelVisibility
+        xtc_master.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False
+        xtp_edit.PageVisible = False
+
+
+        'gv = gv_master
+
+        '========= setting grid style
+        'fmm.bsi_gridstyle.Caption = "Grid : " + master_new.ClsVar.sGridStyle
+        ' style_grid(gv, master_new.ClsVar.sGridStyle)
+        'gv.BestFitColumns()
+        'style_grid_detail()
+        'style_grid(get_gv(), master_new.ClsVar.sGridStyle)
+        'style_grid_detail()
+        '============================
+        'gc = gc_master
+
+        'gc.UseEmbeddedNavigator = True
+        'format_embeddednavigator(gc)
+
+        'gv.OptionsView.ColumnAutoWidth = False
+        'gv.OptionsView.ShowAutoFilterRow = True
+        'gv.OptionsView.ShowFooter = True
+        'gv.OptionsView.ShowGroupedColumns = True
+        'gv.GroupSummary.Add(DevExpress.Data.SummaryItemType.Count, "groupsummary")
+        'gv.OptionsBehavior.AllowIncrementalSearch = True
+        'gv.OptionsSelection.MultiSelect = True
+
+        'AddHandler gv.FocusedRowChanged, AddressOf relation_detail
+        'AddHandler gv.ColumnFilterChanged, AddressOf relation_detail
+        '================================================================================================
+
+        '================================================================================================
+        'load layout
+        'Dim nama_file, path As String
+        'path = "c:\syspro\layout\"
+        'nama_file = Me.Name + "_" + master_new.ClsVar.sUserID.ToString + ".xml"
+        'Dim status_file As String = DevExpress.Utils.FilesHelper.FindingFileName(path, nama_file, False)
+        'If status_file <> "" Then
+        '    Dim layout As DevExpress.XtraLayout.LayoutControl
+        '    layout = get_layout()
+        '    layout.RestoreLayoutFromXml(path + nama_file)
+        'End If
+        ''================================================================================================
+
+        'change_lang()
+    End Sub
+
+    Public Overrides Sub help_load_data(par As Boolean)
+        'MyBase.help_load_data(par)
+        Try
+            Dim ssql As String
+            Dim dt_report As New DataTable
+
+            If xtp_report.SelectedTabPageIndex = 0 Then
+                dt_report = GetTableData(get_sequel)
+                gc_master.DataSource = dt_report
+                gv_master.BestFitColumns()
+            ElseIf xtp_report.SelectedTabPageIndex = 1 Then
+                ssql = "SELECT  " _
+                & "  a.lbrf_oid,lbrf_code,lbrf_person, " _
+                & "  a.lbrf_dom_id, " _
+                & "  a.lbrf_en_id, " _
+                & "  b.en_desc, " _
+                & "  a.lbrf_wodr_uid, " _
+                & "  d.wo_code,wodr_wc_id, " _
+                & "  f.wc_desc, " _
+                & "  e.code_name as reason_name, " _
+                & "  j.code_name as shift_name, " _
+                & "  a.lbrf_qty_complete, " _
+                & "  a.lbrf_qty_reject, " _
+                & "  a.lbrf_date, " _
+                & "  a.lbrf_start_setup, " _
+                & "  a.lbrf_stop_setup, " _
+                & "  a.lbrf_elapsed_setup, " _
+                & "  a.lbrf_start_run, " _
+                & "  a.lbrf_stop_run, " _
+                & "  a.lbrf_elapsed_run, " _
+                & "  a.lbrf_down_start, " _
+                & "  a.lbrf_down_stop, " _
+                & "  a.lbrf_elapsed_down,lbrf_qty_conversion, " _
+                & "  a.lbrf_down_reason_id, " _
+                & "  h.qc_desc as qc_desc_in, " _
+                & "  g.qc_desc as qc_desc_out, " _
+                & "  a.lbrf_qc_out_reason_id,pt_desc1, " _
+                & "  a.lbrf_qc_in_reason_id, " _
+                & "  a.lbrf_remarks,lbrf_add_by,lbrf_add_date,lbrf_upd_by,lbrf_upd_date,lbrf_activity_type_id,lbrfa_desc , " _
+                  & "  l.lbrfd_oid, " _
+            & "  l.lbrfd_lbrf_oid, " _
+            & "  l.lbrfd_elapsed_down, " _
+            & "  m.code_name as reason_desc, " _
+            & "  l.lbrfd_down_start, lbrfd_down_stop, lbrfd_down_remarks, lbrf_mch_id, mch_name  " _
+                & " FROM " _
+                & "  public.lbrf_mstr a " _
+                & "  INNER JOIN public.en_mstr b ON (a.lbrf_en_id = b.en_id) " _
+                & "  INNER JOIN public.wodr_routing c ON (a.lbrf_wodr_uid = c.wodr_uid) " _
+                & "  INNER JOIN public.wo_mstr d ON (c.wodr_wo_oid = d.wo_oid) " _
+                 & "  INNER JOIN public.pt_mstr k ON (d.wo_pt_id = k.pt_id) " _
+                & "  LEFT outer JOIN public.code_mstr e ON (a.lbrf_down_reason_id = e.code_id) " _
+                & "  LEFT outer JOIN public.wc_mstr f ON (c.wodr_wc_id = f.wc_id) " _
+                & "  LEFT outer JOIN public.qc_reason_mstr g ON  (a.lbrf_qc_out_reason_id = g.qc_id) " _
+                & "  LEFT outer JOIN public.qc_reason_mstr h ON (a.lbrf_qc_in_reason_id = h.qc_id) " _
+                & "  LEFT outer JOIN public.lbrfa_activity i ON (a.lbrf_activity_type_id = i.lbrfa_id) " _
+                & "  LEFT outer JOIN public.code_mstr j ON (a.lbrf_shift_id = j.code_id) " _
+                & "  LEFT outer JOIN public.mch_mstr n ON (a.lbrf_mch_id = n.mch_id) " _
+                & "  inner JOIN  public.lbrfd_det_down l ON (a.lbrf_oid = l.lbrfd_lbrf_oid) " _
+               & "  inner JOIN public.code_mstr m ON (l.lbrfd_down_reason_id = m.code_id) " _
+                & " WHERE " _
+                & "  a.lbrf_date BETWEEN " & SetDate(pr_txttglawal.DateTime) & " AND " & SetDate(pr_txttglakhir.DateTime) & " " _
+                & " and lbrf_en_id IN (select user_en_id from tconfuserentity " _
+                                       & " where userid = " + master_new.ClsVar.sUserID.ToString + ") " _
+                & " ORDER BY " _
+                & "  a.lbrf_date"
+
+                dt_report = GetTableData(ssql)
+                gc_down_time.DataSource = dt_report
+                gv_down_time.BestFitColumns()
+
+            ElseIf xtp_report.SelectedTabPageIndex = 2 Then
+                ssql = "SELECT  " _
+                & "  a.lbrf_oid,lbrf_code,lbrf_person, " _
+                & "  a.lbrf_dom_id, " _
+                & "  a.lbrf_en_id, " _
+                & "  b.en_desc, " _
+                & "  a.lbrf_wodr_uid, " _
+                & "  d.wo_code,wodr_wc_id, " _
+                & "  f.wc_desc, " _
+                & "  e.code_name as reason_name, " _
+                & "  j.code_name as shift_name, " _
+                & "  a.lbrf_qty_complete, " _
+                & "  a.lbrf_qty_reject, " _
+                & "  a.lbrf_date, " _
+                & "  a.lbrf_start_setup, " _
+                & "  a.lbrf_stop_setup, " _
+                & "  a.lbrf_elapsed_setup, " _
+                & "  a.lbrf_start_run, " _
+                & "  a.lbrf_stop_run, " _
+                & "  a.lbrf_elapsed_run, " _
+                & "  a.lbrf_down_start, " _
+                & "  a.lbrf_down_stop, " _
+                & "  a.lbrf_elapsed_down,lbrf_qty_conversion, " _
+                & "  a.lbrf_down_reason_id, " _
+                & "  a.lbrf_qc_out_reason_id,pt_desc1, " _
+                & "  a.lbrf_qc_in_reason_id, " _
+                & "  a.lbrf_remarks,lbrf_add_by,lbrf_add_date,lbrf_upd_by,lbrf_upd_date,lbrf_activity_type_id,lbrfa_desc , " _
+                  & "  l.lbrfd_oid, " _
+            & "  l.lbrfd_lbrf_oid, " _
+            & "  l.lbrfd_qty_reject, lbrf_mch_id, mch_name , " _
+            & "  m.qc_desc, m.qc_type as lbrfd_reject_type, case when m.qc_type='I' then 'QC IN' else 'QC OUT' end as type_desc " _
+                & " FROM " _
+                & "  public.lbrf_mstr a " _
+                & "  INNER JOIN public.en_mstr b ON (a.lbrf_en_id = b.en_id) " _
+                & "  INNER JOIN public.wodr_routing c ON (a.lbrf_wodr_uid = c.wodr_uid) " _
+                & "  INNER JOIN public.wo_mstr d ON (c.wodr_wo_oid = d.wo_oid) " _
+                 & "  INNER JOIN public.pt_mstr k ON (d.wo_pt_id = k.pt_id) " _
+                & "  LEFT outer JOIN public.code_mstr e ON (a.lbrf_down_reason_id = e.code_id) " _
+                & "  LEFT outer JOIN public.wc_mstr f ON (c.wodr_wc_id = f.wc_id) " _
+                & "  LEFT outer JOIN public.lbrfa_activity i ON (a.lbrf_activity_type_id = i.lbrfa_id) " _
+                & "  LEFT outer JOIN public.code_mstr j ON (a.lbrf_shift_id = j.code_id) " _
+                & "  left outer JOIN  public.lbrfd_det_reject l ON (a.lbrf_oid = l.lbrfd_lbrf_oid) " _
+               & "  left outer JOIN public.qc_reason_mstr m ON (l.lbrfd_reason_id = m.qc_id) " _
+               & "  LEFT outer JOIN public.mch_mstr n ON (a.lbrf_mch_id = n.mch_id) " _
+                & " WHERE " _
+                & " coalesce(lbrf_qty_reject,0) > 0 and  a.lbrf_date BETWEEN " & SetDate(pr_txttglawal.DateTime) & " AND " & SetDate(pr_txttglakhir.DateTime) & " " _
+                & " and lbrf_en_id IN (select user_en_id from tconfuserentity " _
+                                       & " where userid = " + master_new.ClsVar.sUserID.ToString + ") " _
+                & " ORDER BY " _
+                & "  a.lbrf_date"
+
+                dt_report = GetTableData(ssql)
+                gc_reject.DataSource = dt_report
+                gv_reject.BestFitColumns()
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Public Overrides Function export_data() As Boolean
+        Dim fileName As String = ShowSaveFileDialog("Microsoft Excel Document", "Microsoft Excel|*.xls")
+        Dim obj As Object
+        If fileName <> "" Then
+            'obj = get_gv()
+            'If TypeOf obj Is DevExpress.XtraGrid.Views.Grid.GridView Then
+            '    ExportTo(obj, New ExportXlsProvider(fileName))
+            'ElseIf TypeOf obj Is DevExpress.XtraPivotGrid.PivotGridControl Then
+            '    obj.ExportToXls(fileName)
+            'End If
+
+            If xtp_report.SelectedTabPageIndex = 0 Then
+                gv_master.ExportToXls(fileName)
+            ElseIf xtp_report.SelectedTabPageIndex = 1 Then
+                gv_down_time.ExportToXls(fileName)
+            ElseIf xtp_report.SelectedTabPageIndex = 2 Then
+                gv_reject.ExportToXls(fileName)
+            End If
+
+
+            OpenFile(fileName)
+        End If
     End Function
 
 End Class

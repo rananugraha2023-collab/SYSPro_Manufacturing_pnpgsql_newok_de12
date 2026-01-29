@@ -163,6 +163,61 @@ Public Class MasterWork
         conf_col(gv.Name, par_fn, True)
     End Sub
 
+    Public Overridable Sub add_column_edit_datetime(ByVal gv As DevExpress.XtraGrid.Views.Grid.GridView, _
+                                                ByVal par_caption As String, _
+                                                ByVal par_fn As String, _
+                                                ByVal par_align As DevExpress.Utils.HorzAlignment, _
+                                                ByVal formatType As DevExpress.Utils.FormatType, _
+                                                ByVal formatString As String)
+        Dim column As New DevExpress.XtraGrid.Columns.GridColumn()
+
+        gv.Columns.Add(column)
+        column.Caption = par_caption
+        column.FieldName = par_fn
+        column.Name = par_fn
+        column.Visible = True
+        column.OptionsColumn.AllowEdit = True
+        column.OptionsColumn.AllowIncrementalSearch = True
+        column.AppearanceCell.TextOptions.HAlignment = par_align
+
+        ' === 1. Atur Display Format (tampilan di grid) ===
+        column.DisplayFormat.FormatType = formatType
+        column.DisplayFormat.FormatString = formatString
+
+        ' === 2. Buat RepositoryItemDateEdit dengan support DETIK ===
+        Dim dateEdit As New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
+
+        ' Format display & edit
+        dateEdit.DisplayFormat.FormatType = formatType
+        dateEdit.DisplayFormat.FormatString = formatString
+        dateEdit.EditFormat.FormatType = formatType
+        dateEdit.EditFormat.FormatString = formatString
+
+        ' === KRUSIAL: Aktifkan mode waktu penuh (jam:menit:detik) ===
+        'dateEdit.VistaDisplayMode = DevExpress.XtraEditors.VistaDisplayMode.DateAndTime ' Tampilkan tanggal + waktu
+        dateEdit.VistaEditTime = True ' Aktifkan input waktu di dropdown calendar
+
+        ' === KRUSIAL: Mask untuk input manual (opsional tapi direkomendasikan) ===
+        dateEdit.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime
+        dateEdit.Mask.EditMask = formatString ' Contoh: "dd/MM/yyyy HH:mm:ss"
+        dateEdit.Mask.UseMaskAsDisplayFormat = True
+
+        ' === KRUSIAL: TimeEditStyle untuk input detik via spin editor ===
+        'dateEdit.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons ' Tampilkan spin buttons untuk jam/menit/detik
+
+        ' === Opsional: Sesuaikan culture (hindari error parsing) ===
+        dateEdit.Mask.Culture = New System.Globalization.CultureInfo("id-ID") ' Sesuaikan dengan locale Anda
+
+        ' === 3. Tambahkan ke RepositoryItems GridControl ===
+        gv.GridControl.RepositoryItems.Add(dateEdit)
+
+        ' === 4. Assign editor ke kolom ===
+        column.ColumnEdit = dateEdit
+
+        ' Konfigurasi tambahan (sesuai kebutuhan project Anda)
+        conf_col(gv.Name, par_fn, True)
+    End Sub
+
     Public Overridable Sub add_column_edit(ByVal gv As DevExpress.XtraGrid.Views.Grid.GridView, ByVal par_caption As String, _
                                            ByVal par_fn As String, ByVal par_align As DevExpress.Utils.HorzAlignment, _
                                            ByVal formatType As DevExpress.Utils.FormatType, ByVal formatString As String, _

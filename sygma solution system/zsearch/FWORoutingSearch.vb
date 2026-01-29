@@ -75,10 +75,15 @@ Public Class FWORoutingSearch
         Dim sSQL As String
         Dim dt2 As New DataTable
         If tipe = "mch_mstr" Then
+            'sSQL = "select mch_id, mch_code, mch_desc, mch_name from mch_mstr WHERE " _
+            '             & " mch_dpt_id=" & SetInteger(par_wc_id) _
+            '        & " union select null as mch_id, '-' as mch_code , '-' as mch_desc, '-' as mch_name " _
+            '             & " order by mch_code desc, mch_name, mch_desc "
+
             sSQL = "select mch_id, mch_code, mch_desc, mch_name from mch_mstr WHERE " _
-                         & " mch_dpt_id=" & SetInteger(par_wc_id) _
-                    & " union select null as mch_id, '-' as mch_code , '-' as mch_desc, '-' as mch_name " _
-                         & " order by mch_code desc, mch_name, mch_desc "
+                       & " 1=1 " _
+                  & " union select null as mch_id, '-' as mch_code , '-' as mch_desc, '-' as mch_name " _
+                       & " order by mch_code desc, mch_name, mch_desc "
 
             dt2 = GetTableData(sSQL)
 

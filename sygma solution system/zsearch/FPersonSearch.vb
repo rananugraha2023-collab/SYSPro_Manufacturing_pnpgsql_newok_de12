@@ -74,9 +74,12 @@ Public Class FPersonSearch
                 For Each dr As DataRow In ds.Tables(0).Rows
                     If dr("pilih") = True Then
                         If x = 0 Then
-                            fobject.gv_person_edit.SetRowCellValue(_row, "lbrfd_lbrfp_id", ds.Tables(0).Rows(_row_gv).Item("lbrfp_id"))
-                            fobject.gv_person_edit.SetRowCellValue(_row, "lbrfp_name", ds.Tables(0).Rows(_row_gv).Item("lbrfp_name"))
-                            fobject.gv_person_edit.SetRowCellValue(_row, "lbrfp_group", ds.Tables(0).Rows(_row_gv).Item("lbrfp_group"))
+                            fobject.gv_person_edit.SetRowCellValue(_row, "lbrfd_lbrfp_id", dr("lbrfp_id"))
+                            fobject.gv_person_edit.SetRowCellValue(_row, "lbrfp_name", SetString(dr("lbrfp_name")))
+                            fobject.gv_person_edit.SetRowCellValue(_row, "lbrfp_group", SetString(dr("lbrfp_group")))
+                            'fobject.gv_person_edit.PostEditor()
+                            'fobject.gv_person_edit.CloseEditor()
+                            'fobject.gv_person_edit.UpdateCurrentRow()
                             fobject.gv_person_edit.BestFitColumns()
                             fobject.dt_edit.AcceptChanges()
                         Else

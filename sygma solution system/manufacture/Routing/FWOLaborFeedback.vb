@@ -1,15 +1,14 @@
-﻿Imports npgsql
+﻿Imports Npgsql
 Imports master_new.ModFunction
 Imports master_new.PGSqlConn
 Imports DevExpress.XtraEditors.Controls
-
 
 Public Class FWOLaborFeedback
     Public dt_bantu As DataTable
     Public func_data As New function_data
     Public func_coll As New function_collection
     Dim _oid_mstr As String
-    Public dt_edit As New DataTable
+    Public dt_edit, dt_edit_reject, dt_edit_down As New DataTable
     Dim sSQL As String
     Public ds_edit, ds_edit_shipment, ds_edit_dist As New DataSet
     Dim sSQLs As New ArrayList
@@ -37,7 +36,12 @@ Public Class FWOLaborFeedback
         lbrf_en_id.Properties.ValueMember = dt_bantu.Columns("en_id").ToString
         lbrf_en_id.ItemIndex = 0
 
-
+        dt_bantu = New DataTable
+        dt_bantu = (func_data.load_en_mstr_mstr())
+        lbrf_en_id.Properties.DataSource = dt_bantu
+        lbrf_en_id.Properties.DisplayMember = dt_bantu.Columns("en_desc").ToString
+        lbrf_en_id.Properties.ValueMember = dt_bantu.Columns("en_id").ToString
+        lbrf_en_id.ItemIndex = 0
 
     End Sub
 
@@ -75,6 +79,45 @@ Public Class FWOLaborFeedback
         add_column_copy(gv_master, "User Update", "lbrf_upd_by", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_master, "Date Update", "lbrf_upd_date", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
 
+        add_column(gv_downtime, "lbrfd_lbrf_oid", False)
+        add_column(gv_downtime, "lbrfd_down_reason_id", False)
+        add_column_copy(gv_downtime, "Reason Code", "code_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_downtime, "Start", "lbrfd_down_start", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_downtime, "Stop", "lbrfd_down_stop", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_downtime, "Duration", "lbrfd_elapsed_down", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_copy(gv_downtime, "Remarks", "lbrfd_down_remarks", DevExpress.Utils.HorzAlignment.Default)
+
+        add_column(gv_downtime_edit, "lbrfd_lbrf_oid", False)
+        add_column(gv_downtime_edit, "lbrfd_down_reason_id", False)
+        add_column(gv_downtime_edit, "Reason Code", "code_name", DevExpress.Utils.HorzAlignment.Default)
+        add_column_edit_datetime(gv_downtime_edit, "Start", "lbrfd_down_start", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_edit_datetime(gv_downtime_edit, "Stop", "lbrfd_down_stop", DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.FormatType.DateTime, "G")
+        add_column_copy(gv_downtime_edit, "Duration", "lbrfd_elapsed_down", DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.FormatType.Numeric, "n")
+        add_column_edit(gv_downtime_edit, "Remarks", "lbrfd_down_remarks", DevExpress.Utils.HorzAlignment.Default)
+
+        add_column(gv_reject, "lbrfd_lbrf_oid", False)
+        add_column(gv_reject, "lbrfd_reason_id", "lbrfd_reason_id", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Reason Code", "qc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Qty Reject", "lbrfd_qty_reject", DevExpress.Utils.HorzAlignment.Default)
+        add_column_copy(gv_reject, "Type", "type_desc", DevExpress.Utils.HorzAlignment.Default)
+
+        add_column(gv_reject_edit, "lbrfd_lbrf_oid", False)
+        add_column(gv_reject_edit, "lbrfd_reason_id", False)
+        'add_column(gv_reject_edit, "Type", "lbrfd_reject_type", DevExpress.Utils.HorzAlignment.Default)
+        add_column_edit(gv_reject_edit, "Type", "lbrfd_reject_type", DevExpress.Utils.HorzAlignment.Default, init_le_repo("qc_type"))
+        'add_column(gv_reject_edit, "Reason Code", "qc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column(gv_reject_edit, "Reason Code", "qc_desc", DevExpress.Utils.HorzAlignment.Default)
+        add_column_edit(gv_reject_edit, "Qty Reject", "lbrfd_qty_reject", DevExpress.Utils.HorzAlignment.Default)
+
+
+        'add_column(gv_reject, "lbrfd_lbrf_oid", False)
+        'add_column_copy(gv_reject, "Person Name", "lbrfp_name", DevExpress.Utils.HorzAlignment.Default)
+        'add_column_copy(gv_reject, "Group", "lbrfp_group", DevExpress.Utils.HorzAlignment.Default)
+
+        'add_column(gv_reject_edit, "lbrfd_lbrfp_id", False)
+        'add_column(gv_reject_edit, "Person Name", "lbrfp_name", DevExpress.Utils.HorzAlignment.Default)
+        'add_column_copy(gv_reject_edit, "Group", "lbrfp_group", DevExpress.Utils.HorzAlignment.Default)
+
         add_column(gv_person_detail, "lbrfd_lbrfp_id", False)
         add_column_copy(gv_person_detail, "Person Name", "lbrfp_name", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_person_detail, "Group", "lbrfp_group", DevExpress.Utils.HorzAlignment.Default)
@@ -83,6 +126,11 @@ Public Class FWOLaborFeedback
         add_column(gv_person_edit, "Person Name", "lbrfp_name", DevExpress.Utils.HorzAlignment.Default)
         add_column_copy(gv_person_edit, "Group", "lbrfp_group", DevExpress.Utils.HorzAlignment.Default)
 
+        ' === TAMBAHAN BARU: Mengaktifkan Fitur Add Line (Append) ===
+        gv_person_edit.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom
+        gv_downtime_edit.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom
+        gv_reject_edit.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom
+        ' ===========================================================
 
     End Sub
 
@@ -121,7 +169,7 @@ Public Class FWOLaborFeedback
                 & "  INNER JOIN public.en_mstr b ON (a.lbrf_en_id = b.en_id) " _
                 & "  INNER JOIN public.wodr_routing c ON (a.lbrf_wodr_uid = c.wodr_uid) " _
                 & "  INNER JOIN public.wo_mstr d ON (c.wodr_wo_oid = d.wo_oid) " _
-                 & "  INNER JOIN public.pt_mstr k ON (d.wo_pt_id = k.pt_id) " _
+                & "  INNER JOIN public.pt_mstr k ON (d.wo_pt_id = k.pt_id) " _
                 & "  LEFT outer JOIN public.code_mstr e ON (a.lbrf_down_reason_id = e.code_id) " _
                 & "  LEFT outer JOIN public.wc_mstr f ON (c.wodr_wc_id = f.wc_id) " _
                 & "  LEFT outer JOIN public.qc_reason_mstr g ON  (a.lbrf_qc_out_reason_id = g.qc_id) " _
@@ -135,11 +183,8 @@ Public Class FWOLaborFeedback
                 & " ORDER BY " _
                 & "  a.lbrf_date"
 
-
         Return get_sequel
     End Function
-
-  
 
     Public Overrides Sub insert_data_awal()
 
@@ -171,8 +216,9 @@ Public Class FWOLaborFeedback
         lbrf_qc_in_reason_id.ItemIndex = 0
         lbrf_qc_out_reason_id.ItemIndex = 0
         lbrf_qty_conversion.EditValue = 0
-        lbrf_mch_id.EditValue = 0
+        lbrf_mch_id.ItemIndex = 0
 
+        ' --- A. GRID PERSON ---
         sSQL = "SELECT  " _
             & "  a.lbrfd_oid, " _
             & "  a.lbrfd_lbrf_oid, " _
@@ -188,8 +234,65 @@ Public Class FWOLaborFeedback
         dt_edit = GetTableData(sSQL)
         gc_person_edit.DataSource = dt_edit
 
+        ' === TAMBAHAN BARU: Inisialisasi Grid Downtime & Reject agar bisa di-isi ===
+
+        ' --- B. GRID DOWNTIME ---
+        sSQL = "SELECT lbrfd_oid, lbrfd_lbrf_oid, lbrfd_down_reason_id, " & _
+               "'' as code_name, " & _
+               "lbrfd_down_start, lbrfd_down_stop, lbrfd_elapsed_down " & _
+               "FROM public.lbrfd_det_down WHERE lbrfd_lbrf_oid is null"
+        Dim dt_down As DataTable = GetTableData(sSQL)
+        gc_downtime_edit.DataSource = dt_down
+
+        ' --- C. GRID REJECT ---
+
+        sSQL = "SELECT  " _
+            & "  a.lbrfd_oid, " _
+            & "  a.lbrfd_lbrf_oid, " _
+            & "  a.lbrfd_reason_id, " _
+            & "  a.lbrfd_qty_reject, " _
+            & "  a.lbrfd_reject_type, " _
+            & "  b.qc_desc, " _
+            & "  b.qc_type " _
+            & "FROM " _
+            & "  public.lbrfd_det_reject a " _
+            & "  INNER JOIN public.qc_reason_mstr b ON (a.lbrfd_reason_id = b.qc_id)  " _
+            & "  AND (a.lbrfd_reject_type = b.qc_type) " _
+            & "WHERE " _
+            & "  a.lbrfd_lbrf_oid is null"
+
+        Dim dt_reject As DataTable = GetTableData(sSQL)
+        gc_reject_edit.DataSource = dt_reject
+        ' ========================================================================
+
         DockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden
     End Sub
+
+    ' === TAMBAHAN BARU: Handle InitNewRow untuk Append ===
+    Private Sub gv_person_edit_InitNewRow(sender As Object, e As DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs) Handles gv_person_edit.InitNewRow
+        Dim view As DevExpress.XtraGrid.Views.Grid.GridView = CType(sender, DevExpress.XtraGrid.Views.Grid.GridView)
+        view.SetRowCellValue(e.RowHandle, "lbrfd_oid", Guid.NewGuid.ToString())
+        view.SetRowCellValue(e.RowHandle, "lbrfd_lbrf_oid", _oid_mstr)
+        view.SetRowCellValue(e.RowHandle, "lbrfp_name", "")
+    End Sub
+
+    Private Sub gv_downtime_edit_InitNewRow(sender As Object, e As DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs) Handles gv_downtime_edit.InitNewRow
+        Dim view As DevExpress.XtraGrid.Views.Grid.GridView = CType(sender, DevExpress.XtraGrid.Views.Grid.GridView)
+        view.SetRowCellValue(e.RowHandle, "lbrfd_oid", Guid.NewGuid.ToString())
+        view.SetRowCellValue(e.RowHandle, "lbrfd_lbrf_oid", _oid_mstr)
+        view.SetRowCellValue(e.RowHandle, "lbrfd_down_start", Now)
+        view.SetRowCellValue(e.RowHandle, "lbrfd_down_stop", Now)
+        view.SetRowCellValue(e.RowHandle, "lbrfd_elapsed_down", 0)
+    End Sub
+
+    Private Sub gv_reject_edit_InitNewRow(sender As Object, e As DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs) Handles gv_reject_edit.InitNewRow
+        Dim view As DevExpress.XtraGrid.Views.Grid.GridView = CType(sender, DevExpress.XtraGrid.Views.Grid.GridView)
+        view.SetRowCellValue(e.RowHandle, "lbrfd_oid", Guid.NewGuid.ToString())
+        view.SetRowCellValue(e.RowHandle, "qc_desc", "")
+        view.SetRowCellValue(e.RowHandle, "lbrfd_lbrf_oid", _oid_mstr)
+        view.SetRowCellValue(e.RowHandle, "lbrfd_qty_reject", 0)
+    End Sub
+    ' ======================================================
 
     Public Overrides Function insert() As Boolean
         hitung()
@@ -204,72 +307,66 @@ Public Class FWOLaborFeedback
                     Try
                         .Command = .Connection.CreateCommand
                         .Command.Transaction = sqlTran
-                        'Dim _code As String
-                        'func_coll.get_transaction_number("LB", lbrf_en_id.GetColumnValue("en_code"), "lbrf_mstr", "lbrf_code", lbrf_date.DateTime)
+
                         Dim _code As String
-                        '_code = func_coll.get_transaction_number("LB", lbrf_en_id.GetColumnValue("en_code"), "lbrf_mstr", "lbrf_code", lbrf_date.DateTime)
-
-
                         _code = master_new.PGSqlConn.GetNewNumberYM("lbrf_mstr", "lbrf_code", 5, "LB" _
                             & lbrf_en_id.GetColumnValue("en_code") & (master_new.PGSqlConn.CekTanggal.Date.ToString("yyMM")) & master_new.ClsVar.sServerCode)
 
-
-
                         .Command.CommandType = CommandType.Text
                         .Command.CommandText = "INSERT INTO  " _
-                                    & "  public.lbrf_mstr " _
-                                    & "( " _
-                                    & "  lbrf_oid,lbrf_code, " _
-                                    & "  lbrf_dom_id, " _
-                                    & "  lbrf_en_id, " _
-                                    & "  lbrf_wodr_uid, " _
-                                    & "  lbrf_qty_complete, " _
-                                    & "  lbrf_qty_reject, " _
-                                    & "  lbrf_date, " _
-                                    & "  lbrf_start_setup, " _
-                                    & "  lbrf_stop_setup, " _
-                                    & "  lbrf_elapsed_setup, " _
-                                    & "  lbrf_start_run, " _
-                                    & "  lbrf_stop_run, " _
-                                    & "  lbrf_elapsed_run, " _
-                                    & "  lbrf_down_start, " _
-                                    & "  lbrf_down_stop, " _
-                                    & "  lbrf_elapsed_down, " _
-                                    & "  lbrf_down_reason_id,lbrf_mch_id, " _
-                                    & "  lbrf_remarks,lbrf_qc_in_reason_id,lbrf_qc_out_reason_id,lbrf_person,lbrf_activity_type_id,lbrf_shift_id,lbrf_qty_conversion, " _
-                                    & "  lbrf_add_by, " _
-                                    & "  lbrf_add_date " _
-                                    & ")  " _
-                                    & "VALUES ( " _
-                                    & SetSetring(_oid_mstr.ToString) & ",  " _
-                                    & SetSetring(_code) & ",  " _
-                                    & SetInteger(master_new.ClsVar.sdom_id) & ",  " _
-                                    & SetInteger(lbrf_en_id.EditValue) & ",  " _
-                                    & SetSetring(lbrf_wodr_uid.Tag.ToString) & ",  " _
-                                    & SetDec(lbrf_qty_complete.EditValue) & ",  " _
-                                    & SetDec(lbrf_qty_reject.EditValue) & ",  " _
-                                    & SetDate(lbrf_date.EditValue) & ",  " _
-                                    & SetDateNTime(lbrf_start_setup.EditValue) & ",  " _
-                                    & SetDateNTime(lbrf_stop_setup.EditValue) & ",  " _
-                                    & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
-                                    & SetDateNTime(lbrf_start_run.EditValue) & ",  " _
-                                    & SetDateNTime(lbrf_stop_run.EditValue) & ",  " _
-                                    & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
-                                    & SetDateNTime(lbrf_down_start.EditValue) & ",  " _
-                                    & SetDateNTime(lbrf_down_stop.EditValue) & ",  " _
-                                    & SetDec(lbrf_elapsed_down.EditValue) & ",  " _
-                                    & SetInteger(lbrf_down_reason_id.EditValue) & ",  " _
-                                    & SetInteger(lbrf_mch_id.EditValue) & ",  " _
-                                    & SetSetring(lbrf_remarks.EditValue) & ",  " _
-                                    & SetInteger(lbrf_qc_in_reason_id.EditValue) & ",  " _
-                                    & SetInteger(lbrf_qc_out_reason_id.EditValue) & ",  " _
-                                    & SetSetring("") & ",  " _
-                                    & SetInteger(lbrf_activity_type_id.EditValue) & ",  " _
-                                    & SetInteger(lbrf_shift_id.EditValue) & ",  " _
-                                    & SetDec(lbrf_qty_conversion.EditValue) & ",  " _
-                                    & SetSetring(master_new.ClsVar.sNama) & ",  " _
-                                    & SetDateNTime(master_new.PGSqlConn.CekTanggal) & "  " _
-                                    & ")"
+                                            & "  public.lbrf_mstr " _
+                                            & "( " _
+                                            & "  lbrf_oid,lbrf_code, " _
+                                            & "  lbrf_dom_id, " _
+                                            & "  lbrf_en_id, " _
+                                            & "  lbrf_wodr_uid, " _
+                                            & "  lbrf_qty_complete, " _
+                                            & "  lbrf_qty_reject, " _
+                                            & "  lbrf_date, " _
+                                            & "  lbrf_start_setup, " _
+                                            & "  lbrf_stop_setup, " _
+                                            & "  lbrf_elapsed_setup, " _
+                                            & "  lbrf_start_run, " _
+                                            & "  lbrf_stop_run, " _
+                                            & "  lbrf_elapsed_run, " _
+                                            & "  lbrf_down_start, " _
+                                            & "  lbrf_down_stop, " _
+                                            & "  lbrf_elapsed_down, " _
+                                            & "  lbrf_down_reason_id,lbrf_mch_id, " _
+                                            & "  lbrf_remarks,lbrf_qc_in_reason_id,lbrf_qc_out_reason_id,lbrf_person,lbrf_activity_type_id,lbrf_shift_id,lbrf_qty_conversion, " _
+                                            & "  lbrf_add_by, " _
+                                            & "  lbrf_add_date " _
+                                            & ")  " _
+                                            & "VALUES ( " _
+                                            & SetSetring(_oid_mstr.ToString) & ",  " _
+                                            & SetSetring(_code) & ",  " _
+                                            & SetInteger(master_new.ClsVar.sdom_id) & ",  " _
+                                            & SetInteger(lbrf_en_id.EditValue) & ",  " _
+                                            & SetSetring(lbrf_wodr_uid.Tag.ToString) & ",  " _
+                                            & SetDec(lbrf_qty_complete.EditValue) & ",  " _
+                                            & SetDec(lbrf_qty_reject.EditValue) & ",  " _
+                                            & SetDate(lbrf_date.EditValue) & ",  " _
+                                            & SetDateNTime(lbrf_start_setup.EditValue) & ",  " _
+                                            & SetDateNTime(lbrf_stop_setup.EditValue) & ",  " _
+                                            & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
+                                            & SetDateNTime(lbrf_start_run.EditValue) & ",  " _
+                                            & SetDateNTime(lbrf_stop_run.EditValue) & ",  " _
+                                            & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
+                                            & SetDateNTime(lbrf_down_start.EditValue) & ",  " _
+                                            & SetDateNTime(lbrf_down_stop.EditValue) & ",  " _
+                                            & SetDec(lbrf_elapsed_down.EditValue) & ",  " _
+                                            & SetInteger(lbrf_down_reason_id.EditValue) & ",  " _
+                                            & SetInteger(lbrf_mch_id.EditValue) & ",  " _
+                                            & SetSetring(lbrf_remarks.EditValue) & ",  " _
+                                            & SetInteger(lbrf_qc_in_reason_id.EditValue) & ",  " _
+                                            & SetInteger(lbrf_qc_out_reason_id.EditValue) & ",  " _
+                                            & SetSetring("") & ",  " _
+                                            & SetInteger(lbrf_activity_type_id.EditValue) & ",  " _
+                                            & SetInteger(lbrf_shift_id.EditValue) & ",  " _
+                                            & SetDec(lbrf_qty_conversion.EditValue) & ",  " _
+                                            & SetSetring(master_new.ClsVar.sNama) & ",  " _
+                                            & SetDateNTime(master_new.PGSqlConn.CekTanggal) & "  " _
+                                            & ")"
 
                         sSQLs.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
@@ -278,15 +375,15 @@ Public Class FWOLaborFeedback
                         'update wr_routing
                         .Command.CommandType = CommandType.Text
                         .Command.CommandText = "UPDATE  " _
-                                    & "  public.wodr_routing   " _
-                                    & "SET  " _
-                                    & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) + " & SetDec(lbrf_qty_complete.EditValue) & ",  " _
-                                    & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) + " & SetDec(lbrf_qty_reject.EditValue) & ",  " _
-                                    & "  wodr_run = coalesce(wodr_run,0) + " & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
-                                    & "  wodr_setup = coalesce(wodr_setup,0) + " & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
-                                    & "  wodr_down = coalesce(wodr_down,0) + " & SetDec(lbrf_elapsed_down.EditValue) & "  " _
-                                    & "WHERE  " _
-                                    & "  wodr_uid = " & SetSetring(lbrf_wodr_uid.Tag.ToString) & " "
+                                            & "  public.wodr_routing    " _
+                                            & "SET  " _
+                                            & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) + " & SetDec(lbrf_qty_complete.EditValue) & ",  " _
+                                            & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) + " & SetDec(lbrf_qty_reject.EditValue) & ",  " _
+                                            & "  wodr_run = coalesce(wodr_run,0) + " & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
+                                            & "  wodr_setup = coalesce(wodr_setup,0) + " & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
+                                            & "  wodr_down = coalesce(wodr_down,0) + " & SetDec(lbrf_elapsed_down.EditValue) & "  " _
+                                            & "WHERE  " _
+                                            & "  wodr_uid = " & SetSetring(lbrf_wodr_uid.Tag.ToString) & " "
 
                         sSQLs.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
@@ -300,6 +397,7 @@ Public Class FWOLaborFeedback
                         .Command.ExecuteNonQuery()
                         .Command.Parameters.Clear()
 
+                        ' --- 1. INSERT PERSON DETAIL ---
                         For Each dr As DataRow In dt_edit.Rows
                             .Command.CommandType = CommandType.Text
                             .Command.CommandText = "INSERT INTO  " _
@@ -318,7 +416,43 @@ Public Class FWOLaborFeedback
                             sSQLs.Add(.Command.CommandText)
                             .Command.ExecuteNonQuery()
                             .Command.Parameters.Clear()
+                        Next
 
+                        ' --- 2. INSERT DOWNTIME DETAIL (TAMBAHAN BARU) ---
+                        Dim dt_downtime As DataTable = CType(gc_downtime_edit.DataSource, DataTable)
+                        For Each dr As DataRow In dt_downtime.Rows
+                            .Command.CommandType = CommandType.Text
+                            .Command.CommandText = "INSERT INTO public.lbrfd_det_down " _
+                                & "(lbrfd_oid, lbrfd_lbrf_oid, lbrfd_down_reason_id, lbrfd_down_start, lbrfd_down_stop, lbrfd_elapsed_down) " _
+                                & "VALUES ( " _
+                                & SetSetring(Guid.NewGuid.ToString) & ", " _
+                                & SetSetring(_oid_mstr.ToString) & ", " _
+                                & SetInteger(dr("lbrfd_down_reason_id")) & ", " _
+                                & SetDateNTime(dr("lbrfd_down_start")) & ", " _
+                                & SetDateNTime(dr("lbrfd_down_stop")) & ", " _
+                                & SetDec(dr("lbrfd_elapsed_down")) & " " _
+                                & ")"
+                            sSQLs.Add(.Command.CommandText)
+                            .Command.ExecuteNonQuery()
+                            .Command.Parameters.Clear()
+                        Next
+
+                        ' --- 3. INSERT REJECT DETAIL (TAMBAHAN BARU) ---
+                        Dim dt_reject As DataTable = CType(gc_reject_edit.DataSource, DataTable)
+                        For Each dr As DataRow In dt_reject.Rows
+                            .Command.CommandType = CommandType.Text
+                            .Command.CommandText = "INSERT INTO public.lbrfd_det_reject " _
+                                & "(lbrfd_oid, lbrfd_lbrf_oid, lbrfd_reason_id, lbrfd_qty_reject, lbrfd_reject_type) " _
+                                & "VALUES ( " _
+                                & SetSetring(Guid.NewGuid.ToString) & ", " _
+                                & SetSetring(_oid_mstr.ToString) & ", " _
+                                & SetInteger(dr("lbrfd_reason_id")) & ", " _
+                                & SetDec(dr("lbrfd_qty_reject")) & ", " _
+                                & SetSetring(dr("lbrfd_reject_type")) & " " _
+                                & ")"
+                            sSQLs.Add(.Command.CommandText)
+                            .Command.ExecuteNonQuery()
+                            .Command.Parameters.Clear()
                         Next
 
                         If master_new.PGSqlConn.status_sync = True Then
@@ -346,6 +480,33 @@ Public Class FWOLaborFeedback
             MessageBox.Show(ex.Message)
         End Try
         Return insert
+    End Function
+
+    'Private Function get_bk_ac_id(ByVal par_bk_id As Integer) As Integer
+    '    get_bk_ac_id = -1
+    '    Try
+    '        Using objcek As New master_new.CustomCommand
+    '            With objcek
+    '                '.Command.Open()
+    '                '.Command.CommandType = CommandType.Text
+    '                .Command.CommandText = "select bk_ac_id from bk_mstr where bk_id = " + par_bk_id.ToString
+    '                .InitializeCommand()
+    '                .DataReader = .ExecuteReader
+    '                While .DataReader.Read
+    '                    get_bk_ac_id = .DataReader("bk_ac_id")
+    '                End While
+    '            End With
+    '        End Using
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message)
+    '        Exit Function
+    '    End Try
+    '    Return get_bk_ac_id
+    'End Function
+
+    Public Overrides Function cancel_data() As Boolean
+        Return MyBase.cancel_data()
+        DockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible
     End Function
 
     Public Overrides Function edit_data() As Boolean
@@ -409,7 +570,47 @@ Public Class FWOLaborFeedback
                 gc_person_edit.DataSource = dt_edit
                 gv_person_edit.BestFitColumns()
 
+                sSQL = "SELECT  " _
+                    & "  down.lbrfd_oid, " _
+                    & "  down.lbrfd_lbrf_oid, " _
+                    & "  down.lbrfd_down_reason_id, " _
+                    & "  code.code_name, " _
+                    & "  code.code_desc, " _
+                    & "  down.lbrfd_down_start, " _
+                    & "  down.lbrfd_down_stop, " _
+                    & "  down.lbrfd_elapsed_down, " _
+                    & "  down.lbrfd_down_remarks " _
+                    & "FROM " _
+                    & "  public.lbrfd_det_down down " _
+                    & "  INNER JOIN public.code_mstr code ON (down.lbrfd_down_reason_id = code.code_id) " _
+                    & "WHERE " _
+                    & "  down.lbrfd_lbrf_oid = '" & ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("lbrf_oid").ToString & "' " _
+                    & "ORDER BY " _
+                    & "  down.lbrfd_down_start"
 
+                dt_edit_down = GetTableData(sSQL)
+                gc_downtime_edit.DataSource = dt_edit_down
+                gv_downtime_edit.BestFitColumns()
+
+              
+
+                sSQL = "SELECT  " _
+                    & "  reject.lbrfd_oid, " _
+                    & "  reject.lbrfd_lbrf_oid, " _
+                    & "  reject.lbrfd_reason_id, " _
+                    & "  reject.lbrfd_qty_reject, " _
+                    & "  qc_type as lbrfd_reject_type, case when qc_type='I' then 'QC IN' else 'QC OUT' end as type_desc, " _
+                    & "  reason.qc_desc " _
+                    & "FROM " _
+                    & "  public.lbrfd_det_reject reject " _
+                    & "  INNER JOIN public.qc_reason_mstr reason ON (reject.lbrfd_reason_id = reason.qc_id) " _
+                    & "WHERE " _
+                    & "  reject.lbrfd_lbrf_oid ='" & ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("lbrf_oid").ToString & "'"
+
+
+                dt_edit_reject = GetTableData(sSQL)
+                gc_reject_edit.DataSource = dt_edit_reject
+                gv_reject_edit.BestFitColumns()
             End With
 
             edit_data = True
@@ -419,6 +620,7 @@ Public Class FWOLaborFeedback
     Public Overrides Function edit()
         edit = True
         sSQLs.Clear()
+        hitung()
         Try
             Using objinsert As New master_new.WDABasepgsql("", "")
                 With objinsert
@@ -431,7 +633,6 @@ Public Class FWOLaborFeedback
                         'Delete lbrfd_det_person
                         .Command.CommandType = CommandType.Text
                         .Command.CommandText = "delete from lbrfd_det_person where lbrfd_lbrf_oid = " & SetSetring(_oid_mstr) & " "
-                        '.Command.CommandText = "delete from lbrfd_det_person where coalesce((select count(*) as jml from lbrfd_det_person where lbrfd_lbrf_oid=" & SetSetring(_oid_mstr) & "),0) = 0  "
                         sSQLs.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
                         .Command.Parameters.Clear()
@@ -439,39 +640,37 @@ Public Class FWOLaborFeedback
 
                         .Command.CommandType = CommandType.Text
                         .Command.CommandText = "UPDATE  " _
-                                   & "  public.lbrf_mstr   " _
-                                   & "SET  " _
-                                   & "  lbrf_en_id = " & SetInteger(lbrf_en_id.EditValue) & ",  " _
-                                   & "  lbrf_upd_by = " & SetSetring(master_new.ClsVar.sNama) & ",  " _
-                                   & "  lbrf_upd_date = " & "current_timestamp" & ",  " _
-                                   & "  lbrf_wodr_uid = " & SetSetring(lbrf_wodr_uid.Tag) & ",  " _
-                                   & "  lbrf_date = " & SetDate(lbrf_date.DateTime) & ",  " _
-                                   & "  lbrf_qty_complete = " & SetDec(lbrf_qty_complete.EditValue) & ",  " _
-                                   & "  lbrf_qty_reject = " & SetDec(lbrf_qty_reject.EditValue) & ",  " _
-                                   & "  lbrf_qty_conversion = " & SetDec(lbrf_qty_conversion.EditValue) & ",  " _
-                                   & "  lbrf_start_setup = " & SetDateNTime(lbrf_start_setup.EditValue) & ",  " _
-                                   & "  lbrf_stop_setup = " & SetDateNTime(lbrf_stop_setup.EditValue) & ",  " _
-                                   & "  lbrf_elapsed_setup = " & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
-                                   & "  lbrf_start_run = " & SetDateNTime(lbrf_start_run.EditValue) & ",  " _
-                                   & "  lbrf_stop_run = " & SetDateNTime(lbrf_stop_run.EditValue) & ",  " _
-                                   & "  lbrf_elapsed_run = " & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
-                                   & "  lbrf_down_start = " & SetDateNTime(lbrf_down_start.EditValue) & ",  " _
-                                   & "  lbrf_down_stop = " & SetDateNTime(lbrf_down_stop.EditValue) & ",  " _
-                                   & "  lbrf_elapsed_down = " & SetDec(lbrf_elapsed_down.EditValue) & ",  " _
-                                   & "  lbrf_down_reason_id = " & SetInteger(lbrf_down_reason_id.EditValue) & ",  " _
-                                   & "  lbrf_qc_out_reason_id = " & SetInteger(lbrf_qc_out_reason_id.EditValue) & ",  " _
-                                   & "  lbrf_activity_type_id = " & SetInteger(lbrf_activity_type_id.EditValue) & ",  " _
-                                   & "  lbrf_shift_id = " & SetInteger(lbrf_shift_id.EditValue) & ",  " _
-                                   & "  lbrf_remarks = " & SetSetring(lbrf_remarks.Text) & ",  " _
-                                   & "  lbrf_mch_id = " & SetSetring(lbrf_mch_id.EditValue) & "  " _
-                                   & "WHERE  " _
-                                   & "  lbrf_oid = " & SetSetring(_oid_mstr) & " "
+                                           & "  public.lbrf_mstr   " _
+                                           & "SET  " _
+                                           & "  lbrf_en_id = " & SetInteger(lbrf_en_id.EditValue) & ",  " _
+                                           & "  lbrf_upd_by = " & SetSetring(master_new.ClsVar.sNama) & ",  " _
+                                           & "  lbrf_upd_date = " & "current_timestamp" & ",  " _
+                                           & "  lbrf_wodr_uid = " & SetSetring(lbrf_wodr_uid.Tag) & ",  " _
+                                           & "  lbrf_date = " & SetDate(lbrf_date.DateTime) & ",  " _
+                                           & "  lbrf_qty_complete = " & SetDec(lbrf_qty_complete.EditValue) & ",  " _
+                                           & "  lbrf_qty_reject = " & SetDec(lbrf_qty_reject.EditValue) & ",  " _
+                                           & "  lbrf_qty_conversion = " & SetDec(lbrf_qty_conversion.EditValue) & ",  " _
+                                           & "  lbrf_start_setup = " & SetDateNTime(lbrf_start_setup.EditValue) & ",  " _
+                                           & "  lbrf_stop_setup = " & SetDateNTime(lbrf_stop_setup.EditValue) & ",  " _
+                                           & "  lbrf_elapsed_setup = " & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
+                                           & "  lbrf_start_run = " & SetDateNTime(lbrf_start_run.EditValue) & ",  " _
+                                           & "  lbrf_stop_run = " & SetDateNTime(lbrf_stop_run.EditValue) & ",  " _
+                                           & "  lbrf_elapsed_run = " & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
+                                           & "  lbrf_down_start = " & SetDateNTime(lbrf_down_start.EditValue) & ",  " _
+                                           & "  lbrf_down_stop = " & SetDateNTime(lbrf_down_stop.EditValue) & ",  " _
+                                           & "  lbrf_elapsed_down = " & SetDec(lbrf_elapsed_down.EditValue) & ",  " _
+                                           & "  lbrf_down_reason_id = " & SetInteger(lbrf_down_reason_id.EditValue) & ",  " _
+                                           & "  lbrf_qc_out_reason_id = " & SetInteger(lbrf_qc_out_reason_id.EditValue) & ",  " _
+                                           & "  lbrf_activity_type_id = " & SetInteger(lbrf_activity_type_id.EditValue) & ",  " _
+                                           & "  lbrf_shift_id = " & SetInteger(lbrf_shift_id.EditValue) & ",  " _
+                                           & "  lbrf_remarks = " & SetSetring(lbrf_remarks.Text) & ",  " _
+                                           & "  lbrf_mch_id = " & SetSetring(lbrf_mch_id.EditValue) & "  " _
+                                           & "WHERE  " _
+                                           & "  lbrf_oid = " & SetSetring(_oid_mstr) & " "
 
                         sSQLs.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
                         .Command.Parameters.Clear()
-
-
 
                         'For i = 0 To ds_edit.Tables(0).Rows.Count - 1
                         For Each dr As DataRow In dt_edit.Rows
@@ -495,49 +694,82 @@ Public Class FWOLaborFeedback
 
                         Next
 
-                        'update wr_routing
-                        'update person by rans 20240918
-                        '.Command.CommandType = CommandType.Text
-                        '.Command.CommandText = "UPDATE  " _
-                        '              & "  public.lbrfd_det_person   " _
-                        '              & "SET  " _
-                        '              & "  lbrfd_lbrfp_id = coalesce(wodr_qty_complete,0) + " & SetDec(lbrf_qty_complete.EditValue) & ",  " _
-                        '              & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) + " & SetDec(lbrf_qty_reject.EditValue) & ",  " _
-                        '              & "  wodr_run = coalesce(wodr_run,0) + " & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
-                        '              & "  wodr_setup = coalesce(wodr_setup,0) + " & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
-                        '              & "  wodr_down = coalesce(wodr_down,0) + " & SetDec(lbrf_elapsed_down.EditValue) & "  " _
-                        '              & "WHERE  " _
-                        '              & "  wodr_uid = " & SetSetring(lbrf_wodr_uid.Tag) & " "
+                        .Command.CommandType = CommandType.Text
+                        .Command.CommandText = "delete from lbrfd_det_down where lbrfd_lbrf_oid = " & SetSetring(_oid_mstr) & " "
+                        sSQLs.Add(.Command.CommandText)
+                        .Command.ExecuteNonQuery()
+                        .Command.Parameters.Clear()
 
-                        'sSQLs.Add(.Command.CommandText)
-                        '.Command.ExecuteNonQuery()
-                        '.Command.Parameters.Clear()
 
-                        '& "  public.lbrfd_det_person " _
-                        '& "( " _
-                        '& "  lbrfd_oid, " _
-                        '& "  lbrfd_lbrf_oid, " _
-                        '& "  lbrfd_lbrfp_id " _
-                        '& ")  " _
-                        '& "VALUES ( " _
-                        '& SetSetring(Guid.NewGuid.ToString) & ",  " _
-                        '& SetSetring(_oid_mstr.ToString) & ",  " _
-                        '& SetInteger(dr("lbrfd_lbrfp_id")) & " " _
-                        '& ")"
+                        For Each dr As DataRow In dt_edit_down.Rows
+                            .Command.CommandType = CommandType.Text
+                            .Command.CommandText = "INSERT INTO  " _
+                                & "  public.lbrfd_det_down " _
+                                & "( " _
+                                & "  lbrfd_oid, " _
+                                & "  lbrfd_lbrf_oid, " _
+                                & "  lbrfd_down_reason_id, lbrfd_elapsed_down, lbrfd_down_start, lbrfd_down_stop, lbrfd_down_remarks " _
+                                & ")  " _
+                                & "VALUES ( " _
+                                & SetSetring(Guid.NewGuid.ToString) & ",  " _
+                                & SetSetring(_oid_mstr.ToString) & ",  " _
+                                & SetInteger(dr("lbrfd_down_reason_id")) & ", " _
+                                & SetDec(dr("lbrfd_elapsed_down")) & ", " _
+                                & SetDateNTime(dr("lbrfd_down_start")) & ", " _
+                                & SetDateNTime(dr("lbrfd_down_stop")) & ", " _
+                                & SetSetring(dr("lbrfd_down_remarks")) & " " _
+                                & ")"
+
+                            sSQLs.Add(.Command.CommandText)
+                            .Command.ExecuteNonQuery()
+                            .Command.Parameters.Clear()
+
+                        Next
+
+                        .Command.CommandType = CommandType.Text
+                        .Command.CommandText = "delete from lbrfd_det_reject where lbrfd_lbrf_oid = " & SetSetring(_oid_mstr) & " "
+                        sSQLs.Add(.Command.CommandText)
+                        .Command.ExecuteNonQuery()
+                        .Command.Parameters.Clear()
+
+
+                        For Each dr As DataRow In dt_edit_reject.Rows
+                            .Command.CommandType = CommandType.Text
+                            .Command.CommandText = "INSERT INTO  " _
+                                & "  public.lbrfd_det_reject " _
+                                & "( " _
+                                & "  lbrfd_oid, " _
+                                & "  lbrfd_lbrf_oid, " _
+                                & "  lbrfd_reason_id, lbrfd_qty_reject, lbrfd_reject_type " _
+                                & ")  " _
+                                & "VALUES ( " _
+                                & SetSetring(Guid.NewGuid.ToString) & ",  " _
+                                & SetSetring(_oid_mstr.ToString) & ",  " _
+                                & SetInteger(dr("lbrfd_reason_id")) & ", " _
+                                & SetDec(dr("lbrfd_qty_reject")) & ", " _
+                                & SetSetring(dr("lbrfd_reject_type")) & " " _
+                                & ")"
+
+                            sSQLs.Add(.Command.CommandText)
+                            .Command.ExecuteNonQuery()
+                            .Command.Parameters.Clear()
+
+                        Next
+
 
                         'update wr_routing penyesuaian awal
                         Dim _row As Integer = BindingContext(ds.Tables(0)).Position
                         .Command.CommandType = CommandType.Text
                         .Command.CommandText = "UPDATE  " _
-                                    & "  public.wodr_routing   " _
-                                    & "SET  " _
-                                    & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_complete")) & ",  " _
-                                    & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_reject")) & ",  " _
-                                    & "  wodr_run = coalesce(wodr_run,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_run")) & ",  " _
-                                    & "  wodr_setup = coalesce(wodr_setup,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_setup")) & ",  " _
-                                    & "  wodr_down = coalesce(wodr_down,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_down")) & "  " _
-                                    & "WHERE  " _
-                                    & "  wodr_uid = " & SetSetring(ds.Tables(0).Rows(_row).Item("lbrf_wodr_uid").ToString) & " "
+                                            & "  public.wodr_routing    " _
+                                            & "SET  " _
+                                            & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_complete")) & ",  " _
+                                            & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_reject")) & ",  " _
+                                            & "  wodr_run = coalesce(wodr_run,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_run")) & ",  " _
+                                            & "  wodr_setup = coalesce(wodr_setup,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_setup")) & ",  " _
+                                            & "  wodr_down = coalesce(wodr_down,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_down")) & "  " _
+                                            & "WHERE  " _
+                                            & "  wodr_uid = " & SetSetring(ds.Tables(0).Rows(_row).Item("lbrf_wodr_uid").ToString) & " "
 
                         sSQLs.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
@@ -546,15 +778,15 @@ Public Class FWOLaborFeedback
                         'update wr_routing
                         .Command.CommandType = CommandType.Text
                         .Command.CommandText = "UPDATE  " _
-                                      & "  public.wodr_routing   " _
-                                      & "SET  " _
-                                      & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) + " & SetDec(lbrf_qty_complete.EditValue) & ",  " _
-                                      & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) + " & SetDec(lbrf_qty_reject.EditValue) & ",  " _
-                                      & "  wodr_run = coalesce(wodr_run,0) + " & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
-                                      & "  wodr_setup = coalesce(wodr_setup,0) + " & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
-                                      & "  wodr_down = coalesce(wodr_down,0) + " & SetDec(lbrf_elapsed_down.EditValue) & "  " _
-                                      & "WHERE  " _
-                                      & "  wodr_uid = " & SetSetring(lbrf_wodr_uid.Tag) & " "
+                                            & "  public.wodr_routing    " _
+                                            & "SET  " _
+                                            & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) + " & SetDec(lbrf_qty_complete.EditValue) & ",  " _
+                                            & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) + " & SetDec(lbrf_qty_reject.EditValue) & ",  " _
+                                            & "  wodr_run = coalesce(wodr_run,0) + " & SetDec(lbrf_elapsed_run.EditValue) & ",  " _
+                                            & "  wodr_setup = coalesce(wodr_setup,0) + " & SetDec(lbrf_elapsed_setup.EditValue) & ",  " _
+                                            & "  wodr_down = coalesce(wodr_down,0) + " & SetDec(lbrf_elapsed_down.EditValue) & "  " _
+                                            & "WHERE  " _
+                                            & "  wodr_uid = " & SetSetring(lbrf_wodr_uid.Tag) & " "
 
                         sSQLs.Add(.Command.CommandText)
                         .Command.ExecuteNonQuery()
@@ -623,15 +855,15 @@ Public Class FWOLaborFeedback
                             Dim _row As Integer = BindingContext(ds.Tables(0)).Position
                             .Command.CommandType = CommandType.Text
                             .Command.CommandText = "UPDATE  " _
-                                   & "  public.wodr_routing   " _
-                                   & "SET  " _
-                                   & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_complete")) & ",  " _
-                                   & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_reject")) & ",  " _
-                                   & "  wodr_run = coalesce(wodr_run,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_run")) & ",  " _
-                                   & "  wodr_setup = coalesce(wodr_setup,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_setup")) & ",  " _
-                                   & "  wodr_down = coalesce(wodr_down,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_down")) & "  " _
-                                   & "WHERE  " _
-                                   & "  wodr_uid = " & SetSetring(ds.Tables(0).Rows(_row).Item("lbrf_wodr_uid")) & " "
+                                       & "  public.wodr_routing    " _
+                                       & "SET  " _
+                                       & "  wodr_qty_complete = coalesce(wodr_qty_complete,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_complete")) & ",  " _
+                                       & "  wodr_qty_reject = coalesce(wodr_qty_reject,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_qty_reject")) & ",  " _
+                                       & "  wodr_run = coalesce(wodr_run,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_run")) & ",  " _
+                                       & "  wodr_setup = coalesce(wodr_setup,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_setup")) & ",  " _
+                                       & "  wodr_down = coalesce(wodr_down,0) - " & SetDec(ds.Tables(0).Rows(_row).Item("lbrf_elapsed_down")) & "  " _
+                                       & "WHERE  " _
+                                       & "  wodr_uid = " & SetSetring(ds.Tables(0).Rows(_row).Item("lbrf_wodr_uid")) & " "
 
                             sSQLs.Add(.Command.CommandText)
                             .Command.ExecuteNonQuery()
@@ -679,15 +911,6 @@ Public Class FWOLaborFeedback
 
         Dim sSQL As String
         Try
-            'sSQL = "select count (*) as jml from wr_route where coalesce(wr_qty_feedback,0) + " _
-            '    & SetDec(lbrf_qty_complete.EditValue) & " > coalesce(wr_qty_wo) and wr_oid='" & lbrf_wodr_uid.Tag & "'"
-
-            'If master_new.PGSqlConn.GetRowInfo(sSQL)(0) > 0 Then
-            '    Box("Qty feedback over than qty WO")
-            '    Return False
-            '    Exit Function
-            'End If
-
             If lbrf_wodr_uid.Tag = "" Then
                 Box("WO Code can't blank")
                 Return False
@@ -735,7 +958,24 @@ Public Class FWOLaborFeedback
                 lbrf_elapsed_down.EditValue = _jam
             End If
 
+            dt_edit.AcceptChanges()
+            dt_edit_down.AcceptChanges()
+            dt_edit_reject.AcceptChanges()
 
+            Dim _qty_reject As Double = 0
+            For Each dr As DataRow In dt_edit_reject.Rows
+                _qty_reject = _qty_reject + SetNumber(dr("lbrfd_qty_reject"))
+            Next
+
+
+            Dim _qty_down As Double = 0
+            For Each dr As DataRow In dt_edit_down.Rows
+                'dr("lbrfd_elapsed_down") = 0
+                _qty_down = _qty_down + SetNumber(dr("lbrfd_elapsed_down"))
+            Next
+
+            lbrf_qty_reject.EditValue = _qty_reject
+            lbrf_elapsed_down.EditValue = _qty_down
         Catch ex As Exception
 
             Pesan(Err)
@@ -781,22 +1021,61 @@ Public Class FWOLaborFeedback
         frm.ShowDialog()
     End Sub
 
-
     Private Sub lbrf_start_setup_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles lbrf_start_setup.EditValueChanged, lbrf_stop_setup.EditValueChanged, lbrf_start_run.EditValueChanged, lbrf_stop_run.EditValueChanged, lbrf_down_start.EditValueChanged, lbrf_down_stop.EditValueChanged
         hitung()
     End Sub
 
     Private Sub gv_person_edit_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles gv_person_edit.DoubleClick
-        Dim _col As String = gv_person_edit.FocusedColumn.Name
-        Dim _row As Integer = gv_person_edit.FocusedRowHandle
+        Try
+            Dim _col As String = gv_person_edit.FocusedColumn.Name
+            Dim _row As Integer = gv_person_edit.FocusedRowHandle
 
-        Dim frm As New FPersonSearch
-        frm.set_win(Me)
-        frm._row = _row
-        frm.type_form = True
-        frm.ShowDialog()
+            If _col = "lbrfp_name" Then
+                Dim frm As New FPersonSearch
+                frm.set_win(Me)
+                frm._row = _row
+                frm.type_form = True
+                frm.ShowDialog()
+            End If
 
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 
+    Private Sub gv_downtime_edit_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles gv_downtime_edit.DoubleClick
+        Try
+            Dim _col As String = gv_downtime_edit.FocusedColumn.FieldName
+            Dim _row As Integer = gv_downtime_edit.FocusedRowHandle
+
+            If _col = "code_name" Then
+                Dim frm As New FDownReaseonSearch
+                frm.set_win(Me)
+                frm._row = _row
+                frm.type_form = True
+                frm.ShowDialog()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub gv_reject_edit_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles gv_reject_edit.DoubleClick
+        Try
+            Dim _col As String = gv_reject_edit.FocusedColumn.Name
+            Dim _row As Integer = gv_reject_edit.FocusedRowHandle
+            If _col = "qc_desc" Then
+                Dim frm As New FRejectReaseonSearch
+                frm.set_win(Me)
+                frm._row = _row
+                frm._type = gv_reject_edit.GetRowCellValue(_row, "lbrfd_reject_type")
+                frm.type_form = True
+                frm.ShowDialog()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub gv_master_SelectionChanged(ByVal sender As Object, ByVal e As DevExpress.Data.SelectionChangedEventArgs) Handles gv_master.SelectionChanged
@@ -825,5 +1104,89 @@ Public Class FWOLaborFeedback
         gc_person_detail.DataSource = GetTableData(sSQL)
         gv_person_detail.BestFitColumns()
 
+       
+        sSQL = "SELECT  " _
+            & "  down.lbrfd_oid, " _
+            & "  down.lbrfd_lbrf_oid, " _
+            & "  down.lbrfd_down_reason_id, " _
+            & "  code.code_name, " _
+            & "  code.code_desc, " _
+            & "  down.lbrfd_down_start, " _
+            & "  down.lbrfd_down_stop, " _
+            & "  down.lbrfd_elapsed_down, " _
+            & "  down.lbrfd_down_remarks " _
+            & "FROM " _
+            & "  public.lbrfd_det_down down " _
+            & "  INNER JOIN public.code_mstr code ON (down.lbrfd_down_reason_id = code.code_id) " _
+            & "WHERE " _
+            & "  down.lbrfd_lbrf_oid = '" & ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("lbrf_oid").ToString & "' " _
+            & "ORDER BY " _
+            & "  down.lbrfd_down_start"
+
+        'dt_edit = GetTableData(sSQL)
+        gc_downtime.DataSource = GetTableData(sSQL)
+        gv_downtime.BestFitColumns()
+
+        'sSQL = "SELECT  " _
+        '   & "  a.lbrfd_oid, " _
+        '   & "  a.lbrfd_lbrf_oid, " _
+        '   & "  a.lbrfd_lbrfp_id, " _
+        '   & "  b.lbrfp_name, " _
+        '   & "  b.lbrfp_group " _
+        '   & "FROM " _
+        '   & "  public.lbrfd_det_person a " _
+        '   & "  INNER JOIN public.lbrfp_person b ON (a.lbrfd_lbrfp_id = b.lbrfp_id) " _
+        '   & "WHERE " _
+        '   & "  a.lbrfd_lbrf_oid ='" & ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("lbrf_oid").ToString & "'"
+
+        sSQL = "SELECT  " _
+            & "  reject.lbrfd_oid, " _
+            & "  reject.lbrfd_lbrf_oid, " _
+            & "  reject.lbrfd_reason_id, " _
+            & "  reject.lbrfd_qty_reject, " _
+            & "  qc_type as lbrfd_reject_type, case when qc_type='I' then 'QC IN' else 'QC OUT' end as type_desc, " _
+            & "  reason.qc_desc " _
+            & "FROM " _
+            & "  public.lbrfd_det_reject reject " _
+            & "  INNER JOIN public.qc_reason_mstr reason ON (reject.lbrfd_reason_id = reason.qc_id) " _
+            & "WHERE " _
+            & "  reject.lbrfd_lbrf_oid ='" & ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("lbrf_oid").ToString & "'"
+
+
+        'dt_edit = GetTableData(sSQL)
+        gc_reject.DataSource = GetTableData(sSQL)
+        gv_reject.BestFitColumns()
+
+        DockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible
+    End Sub
+
+    Private Sub gv_downtime_edit_CellValueChanged(sender As Object, e As DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs) Handles gv_downtime_edit.CellValueChanged
+        ' Hanya proses jika kolom yang berubah adalah lbrfd_down_stop
+        If (e.Column.FieldName = "lbrfd_down_stop" Or e.Column.FieldName = "lbrfd_down_start") AndAlso e.RowHandle >= 0 Then
+            Try
+                ' Ambil nilai start & stop dari row yang sama
+                Dim startVal As Object = gv_downtime_edit.GetRowCellValue(e.RowHandle, "lbrfd_down_start")
+                Dim stopVal As Object = gv_downtime_edit.GetRowCellValue(e.RowHandle, "lbrfd_down_stop")
+
+                ' Validasi data
+                If Not IsDBNull(startVal) AndAlso Not IsDBNull(stopVal) _
+                   AndAlso TypeOf startVal Is DateTime AndAlso TypeOf stopVal Is DateTime Then
+
+                    Dim startTime As DateTime = Convert.ToDateTime(startVal)
+                    Dim stopTime As DateTime = Convert.ToDateTime(stopVal)
+
+                    ' Hitung selisih dalam jam (desimal)
+                    If stopTime > startTime Then
+                        Dim elapsedHours As Double = (stopTime - startTime).TotalHours
+                        gv_downtime_edit.SetRowCellValue(e.RowHandle, "lbrfd_elapsed_down", elapsedHours)
+                    Else
+                        gv_downtime_edit.SetRowCellValue(e.RowHandle, "lbrfd_elapsed_down", 0)
+                    End If
+                End If
+            Catch ex As Exception
+                ' Optional: Log error
+                Console.WriteLine("Error hitung elapsed: " & ex.Message)
+            End Try
+        End If
     End Sub
 End Class

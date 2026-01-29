@@ -1564,6 +1564,30 @@ Module ModFunctionSpecial
 
                 End With
 
+            ElseIf par_tipe = "qc_type" Then
+                sSQL = "select 'I' as id,'QC IN' as value union select 'O' as id,'QC OUT' as value order by id desc"
+
+                Dim dt As New DataTable
+                dt = GetTableData(sSQL)
+
+                With RepositoryItemLookUpEdit1
+
+                    If .Columns.VisibleCount = 0 Then
+                        .Columns.Add(New LookUpColumnInfo("id", "Kode", 20))
+                        .Columns.Add(New LookUpColumnInfo("value", "Nilai", 20))
+                    End If
+
+                    .DataSource = dt
+                    .DisplayMember = dt.Columns("value").ToString
+                    .ValueMember = dt.Columns("id").ToString
+
+                    .BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup
+                    .BestFit()
+                    .DropDownRows = 8
+                    .PopupWidth = 300
+
+                End With
+
             ElseIf par_tipe = "city" Then
                 sSQL = "SELECT  " _
                    & "  a.city_name " _
