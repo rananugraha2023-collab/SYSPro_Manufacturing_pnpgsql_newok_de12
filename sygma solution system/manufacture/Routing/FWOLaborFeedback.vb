@@ -239,10 +239,12 @@ Public Class FWOLaborFeedback
         ' --- B. GRID DOWNTIME ---
         sSQL = "SELECT lbrfd_oid, lbrfd_lbrf_oid, lbrfd_down_reason_id, " & _
                "'' as code_name, " & _
-               "lbrfd_down_start, lbrfd_down_stop, lbrfd_elapsed_down " & _
+               "lbrfd_down_start, lbrfd_down_stop, lbrfd_elapsed_down ,lbrfd_down_remarks " & _
                "FROM public.lbrfd_det_down WHERE lbrfd_lbrf_oid is null"
-        Dim dt_down As DataTable = GetTableData(sSQL)
-        gc_downtime_edit.DataSource = dt_down
+        'Dim dt_down As DataTable = GetTableData(sSQL)
+
+        dt_edit_down = GetTableData(sSQL)
+        gc_downtime_edit.DataSource = dt_edit_down
 
         ' --- C. GRID REJECT ---
 
@@ -261,8 +263,9 @@ Public Class FWOLaborFeedback
             & "WHERE " _
             & "  a.lbrfd_lbrf_oid is null"
 
-        Dim dt_reject As DataTable = GetTableData(sSQL)
-        gc_reject_edit.DataSource = dt_reject
+        'Dim dt_reject As DataTable = GetTableData(sSQL)
+        dt_edit_reject = GetTableData(sSQL)
+        gc_reject_edit.DataSource = dt_edit_reject
         ' ========================================================================
 
         DockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden
@@ -423,14 +426,15 @@ Public Class FWOLaborFeedback
                         For Each dr As DataRow In dt_downtime.Rows
                             .Command.CommandType = CommandType.Text
                             .Command.CommandText = "INSERT INTO public.lbrfd_det_down " _
-                                & "(lbrfd_oid, lbrfd_lbrf_oid, lbrfd_down_reason_id, lbrfd_down_start, lbrfd_down_stop, lbrfd_elapsed_down) " _
+                                & "(lbrfd_oid, lbrfd_lbrf_oid, lbrfd_down_reason_id, lbrfd_down_start, lbrfd_down_stop, lbrfd_elapsed_down,lbrfd_down_remarks) " _
                                 & "VALUES ( " _
                                 & SetSetring(Guid.NewGuid.ToString) & ", " _
                                 & SetSetring(_oid_mstr.ToString) & ", " _
                                 & SetInteger(dr("lbrfd_down_reason_id")) & ", " _
                                 & SetDateNTime(dr("lbrfd_down_start")) & ", " _
                                 & SetDateNTime(dr("lbrfd_down_stop")) & ", " _
-                                & SetDec(dr("lbrfd_elapsed_down")) & " " _
+                                & SetDec(dr("lbrfd_elapsed_down")) & " ," _
+                                & SetSetring(dr("lbrfd_down_remarks")) & " " _
                                 & ")"
                             sSQLs.Add(.Command.CommandText)
                             .Command.ExecuteNonQuery()
@@ -967,6 +971,10 @@ Public Class FWOLaborFeedback
                 _qty_reject = _qty_reject + SetNumber(dr("lbrfd_qty_reject"))
             Next
 
+            For i As Integer = 0 To gv_downtime_edit.RowCount - 2
+                hitung_down(i)
+            Next
+            dt_edit_down.AcceptChanges()
 
             Dim _qty_down As Double = 0
             For Each dr As DataRow In dt_edit_down.Rows
@@ -982,6 +990,36 @@ Public Class FWOLaborFeedback
         End Try
     End Sub
 
+
+    Private Sub hitung_down(par_index As Integer)
+        ' Hanya proses jika kolom yang berubah adalah lbrfd_down_stop
+        'If (e.Column.FieldName = "lbrfd_down_stop" Or e.Column.FieldName = "lbrfd_down_start") AndAlso e.RowHandle >= 0 Then
+        Try
+            ' Ambil nilai start & stop dari row yang sama
+            Dim startVal As Object = gv_downtime_edit.GetRowCellValue(par_index, "lbrfd_down_start")
+            Dim stopVal As Object = gv_downtime_edit.GetRowCellValue(par_index, "lbrfd_down_stop")
+
+            ' Validasi data
+            If Not IsDBNull(startVal) AndAlso Not IsDBNull(stopVal) _
+               AndAlso TypeOf startVal Is DateTime AndAlso TypeOf stopVal Is DateTime Then
+
+                Dim startTime As DateTime = Convert.ToDateTime(startVal)
+                Dim stopTime As DateTime = Convert.ToDateTime(stopVal)
+
+                ' Hitung selisih dalam jam (desimal)
+                If stopTime > startTime Then
+                    Dim elapsedHours As Double = (stopTime - startTime).TotalHours
+                    gv_downtime_edit.SetRowCellValue(par_index, "lbrfd_elapsed_down", elapsedHours)
+                Else
+                    gv_downtime_edit.SetRowCellValue(par_index, "lbrfd_elapsed_down", 0)
+                End If
+            End If
+        Catch ex As Exception
+            ' Optional: Log error
+            Console.WriteLine("Error hitung elapsed: " & ex.Message)
+        End Try
+        'End If
+    End Sub
 
     Private Sub calc_elapsed()
         If Not lbrf_start_run.EditValue Is Nothing And Not lbrf_stop_run.EditValue Is Nothing Then

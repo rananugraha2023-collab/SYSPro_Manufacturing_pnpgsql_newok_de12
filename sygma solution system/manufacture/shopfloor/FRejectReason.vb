@@ -55,7 +55,7 @@ Public Class FRejectReason
                 & "                w.wc_desc " _
                 & "            FROM public.qc_reason_mstr q " _
                 & "            Left Join public.wc_mstr w ON q.qc_wc_id = w.wc_id " _
-                & "            WHERE q.qc_active = 'Y' " _
+                & "            WHERE 1=1 " _
                 & "            ORDER BY qc_type, q.qc_desc"
 
         Return get_sequel

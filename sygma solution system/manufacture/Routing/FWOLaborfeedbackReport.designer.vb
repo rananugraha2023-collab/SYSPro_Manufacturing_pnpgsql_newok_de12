@@ -160,6 +160,7 @@ Partial Class FWOLaborfeedbackReport
         Me.gv_master.GridControl = Me.gc_master
         Me.gv_master.Name = "gv_master"
         Me.gv_master.OptionsView.ColumnAutoWidth = False
+        Me.gv_master.OptionsView.ShowAutoFilterRow = True
         '
         'StyleController1
         '
@@ -275,6 +276,7 @@ Partial Class FWOLaborfeedbackReport
         Me.gv_down_time.GridControl = Me.gc_down_time
         Me.gv_down_time.Name = "gv_down_time"
         Me.gv_down_time.OptionsView.ColumnAutoWidth = False
+        Me.gv_down_time.OptionsView.ShowAutoFilterRow = True
         '
         'XtraTabPage3
         '
@@ -298,6 +300,7 @@ Partial Class FWOLaborfeedbackReport
         Me.gv_reject.GridControl = Me.gc_reject
         Me.gv_reject.Name = "gv_reject"
         Me.gv_reject.OptionsView.ColumnAutoWidth = False
+        Me.gv_reject.OptionsView.ShowAutoFilterRow = True
         '
         'FWOLaborfeedbackReport
         '
