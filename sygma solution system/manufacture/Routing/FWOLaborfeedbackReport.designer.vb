@@ -42,6 +42,9 @@ Partial Class FWOLaborfeedbackReport
         Me.XtraTabPage3 = New DevExpress.XtraTab.XtraTabPage()
         Me.gc_reject = New DevExpress.XtraGrid.GridControl()
         Me.gv_reject = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.XtraTabPage4 = New DevExpress.XtraTab.XtraTabPage()
+        Me.gc_lb = New DevExpress.XtraGrid.GridControl()
+        Me.gv_lb = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.xtp_data.SuspendLayout()
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scc_master.SuspendLayout()
@@ -77,6 +80,9 @@ Partial Class FWOLaborfeedbackReport
         Me.XtraTabPage3.SuspendLayout()
         CType(Me.gc_reject, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gv_reject, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.XtraTabPage4.SuspendLayout()
+        CType(Me.gc_lb, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gv_lb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'xtp_data
@@ -245,7 +251,7 @@ Partial Class FWOLaborfeedbackReport
         Me.xtp_report.SelectedTabPage = Me.XtraTabPage1
         Me.xtp_report.Size = New System.Drawing.Size(982, 705)
         Me.xtp_report.TabIndex = 5
-        Me.xtp_report.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2, Me.XtraTabPage3})
+        Me.xtp_report.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2, Me.XtraTabPage3, Me.XtraTabPage4})
         '
         'XtraTabPage1
         '
@@ -258,7 +264,7 @@ Partial Class FWOLaborfeedbackReport
         '
         Me.XtraTabPage2.Controls.Add(Me.gc_down_time)
         Me.XtraTabPage2.Name = "XtraTabPage2"
-        Me.XtraTabPage2.Size = New System.Drawing.Size(976, 677)
+        Me.XtraTabPage2.Size = New System.Drawing.Size(537, 362)
         Me.XtraTabPage2.Text = "Data Down Time"
         '
         'gc_down_time
@@ -267,7 +273,7 @@ Partial Class FWOLaborfeedbackReport
         Me.gc_down_time.Location = New System.Drawing.Point(0, 0)
         Me.gc_down_time.MainView = Me.gv_down_time
         Me.gc_down_time.Name = "gc_down_time"
-        Me.gc_down_time.Size = New System.Drawing.Size(976, 677)
+        Me.gc_down_time.Size = New System.Drawing.Size(537, 362)
         Me.gc_down_time.TabIndex = 5
         Me.gc_down_time.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_down_time})
         '
@@ -301,6 +307,30 @@ Partial Class FWOLaborfeedbackReport
         Me.gv_reject.Name = "gv_reject"
         Me.gv_reject.OptionsView.ColumnAutoWidth = False
         Me.gv_reject.OptionsView.ShowAutoFilterRow = True
+        '
+        'XtraTabPage4
+        '
+        Me.XtraTabPage4.Controls.Add(Me.gc_lb)
+        Me.XtraTabPage4.Name = "XtraTabPage4"
+        Me.XtraTabPage4.Size = New System.Drawing.Size(976, 677)
+        Me.XtraTabPage4.Text = "Data Laborfeedback"
+        '
+        'gc_lb
+        '
+        Me.gc_lb.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gc_lb.Location = New System.Drawing.Point(0, 0)
+        Me.gc_lb.MainView = Me.gv_lb
+        Me.gc_lb.Name = "gc_lb"
+        Me.gc_lb.Size = New System.Drawing.Size(976, 677)
+        Me.gc_lb.TabIndex = 5
+        Me.gc_lb.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_lb})
+        '
+        'gv_lb
+        '
+        Me.gv_lb.GridControl = Me.gc_lb
+        Me.gv_lb.Name = "gv_lb"
+        Me.gv_lb.OptionsView.ColumnAutoWidth = False
+        Me.gv_lb.OptionsView.ShowAutoFilterRow = True
         '
         'FWOLaborfeedbackReport
         '
@@ -343,6 +373,9 @@ Partial Class FWOLaborfeedbackReport
         Me.XtraTabPage3.ResumeLayout(False)
         CType(Me.gc_reject, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gv_reject, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.XtraTabPage4.ResumeLayout(False)
+        CType(Me.gc_lb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gv_lb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -368,5 +401,8 @@ Partial Class FWOLaborfeedbackReport
     Friend WithEvents XtraTabPage3 As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents gc_reject As DevExpress.XtraGrid.GridControl
     Friend WithEvents gv_reject As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents XtraTabPage4 As DevExpress.XtraTab.XtraTabPage
+    Friend WithEvents gc_lb As DevExpress.XtraGrid.GridControl
+    Friend WithEvents gv_lb As DevExpress.XtraGrid.Views.Grid.GridView
 
 End Class

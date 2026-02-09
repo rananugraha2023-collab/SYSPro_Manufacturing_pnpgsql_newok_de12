@@ -19,72 +19,73 @@ Partial Class FPurchaseOrderApproval
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPurchaseOrderApproval))
-        Me.pr_txttglakhir = New DevExpress.XtraEditors.DateEdit
-        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl
-        Me.pr_txttglawal = New DevExpress.XtraEditors.DateEdit
-        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl
-        Me.xtc_master = New DevExpress.XtraTab.XtraTabControl
-        Me.xtp_os = New DevExpress.XtraTab.XtraTabPage
-        Me.gc_os = New DevExpress.XtraGrid.GridControl
-        Me.gv_os = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.col_select = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.RepositoryItemCheckEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-        Me.xtp_all = New DevExpress.XtraTab.XtraTabPage
-        Me.gc_all = New DevExpress.XtraGrid.GridControl
-        Me.gv_all = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.RepositoryItemCheckEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+        Me.pr_txttglakhir = New DevExpress.XtraEditors.DateEdit()
+        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
+        Me.pr_txttglawal = New DevExpress.XtraEditors.DateEdit()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.xtc_master = New DevExpress.XtraTab.XtraTabControl()
+        Me.xtp_os = New DevExpress.XtraTab.XtraTabPage()
+        Me.gc_os = New DevExpress.XtraGrid.GridControl()
+        Me.gv_os = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.col_select = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemCheckEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
+        Me.xtp_all = New DevExpress.XtraTab.XtraTabPage()
+        Me.gc_all = New DevExpress.XtraGrid.GridControl()
+        Me.gv_all = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemCheckEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
-        Me.dp_detail = New DevExpress.XtraBars.Docking.DockPanel
-        Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer
-        Me.xtc_detail = New DevExpress.XtraTab.XtraTabControl
-        Me.xtp_next_process = New DevExpress.XtraTab.XtraTabPage
-        Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl
-        Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage
-        Me.layout_approval = New DevExpress.XtraLayout.LayoutControl
-        Me.nud_hold_day = New System.Windows.Forms.NumericUpDown
-        Me.te_remark = New DevExpress.XtraEditors.TextEdit
-        Me.le_wfs_status = New DevExpress.XtraEditors.LookUpEdit
-        Me.sb_process = New DevExpress.XtraEditors.SimpleButton
-        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem
-        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem
-        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem
-        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem
-        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem
-        Me.EmptySpaceItem3 = New DevExpress.XtraLayout.EmptySpaceItem
-        Me.lci_hold_day = New DevExpress.XtraLayout.LayoutControlItem
-        Me.EmptySpaceItem4 = New DevExpress.XtraLayout.EmptySpaceItem
-        Me.EmptySpaceItem5 = New DevExpress.XtraLayout.EmptySpaceItem
+        Me.dp_detail = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.xtc_detail = New DevExpress.XtraTab.XtraTabControl()
+        Me.xtp_next_process = New DevExpress.XtraTab.XtraTabPage()
+        Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl()
+        Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage()
+        Me.layout_approval = New DevExpress.XtraLayout.LayoutControl()
+        Me.nud_hold_day = New System.Windows.Forms.NumericUpDown()
+        Me.te_remark = New DevExpress.XtraEditors.TextEdit()
+        Me.le_wfs_status = New DevExpress.XtraEditors.LookUpEdit()
+        Me.sb_process = New DevExpress.XtraEditors.SimpleButton()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem3 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.lci_hold_day = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem4 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.EmptySpaceItem5 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.StyleController1 = New DevExpress.XtraEditors.StyleController(Me.components)
-        Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage
-        Me.SplitContainerControl3 = New DevExpress.XtraEditors.SplitContainerControl
-        Me.gc_detail = New DevExpress.XtraGrid.GridControl
-        Me.gv_detail = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.xtp_work_flow = New DevExpress.XtraTab.XtraTabPage
-        Me.gc_wf1 = New DevExpress.XtraGrid.GridControl
-        Me.gv_wf1 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.xtp_mail = New DevExpress.XtraTab.XtraTabPage
-        Me.gc_email = New DevExpress.XtraGrid.GridControl
-        Me.gv_email = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.xtp_data_detail = New DevExpress.XtraTab.XtraTabPage
-        Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl
-        Me.xtp_user_approve = New DevExpress.XtraTab.XtraTabPage
-        Me.scc_user_approval = New DevExpress.XtraEditors.SplitContainerControl
-        Me.gc_wf_1 = New DevExpress.XtraGrid.GridControl
-        Me.gv_wf_1 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.xtp_email = New DevExpress.XtraTab.XtraTabPage
-        Me.SplitContainerControl2 = New DevExpress.XtraEditors.SplitContainerControl
-        Me.gc_email_1 = New DevExpress.XtraGrid.GridControl
-        Me.gv_email_1 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl
-        Me.le_entity = New DevExpress.XtraEditors.LookUpEdit
-        Me.gv_wf = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.GridView4 = New DevExpress.XtraGrid.Views.Grid.GridView
+        Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage()
+        Me.SplitContainerControl3 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.gc_detail = New DevExpress.XtraGrid.GridControl()
+        Me.gv_detail = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.xtp_work_flow = New DevExpress.XtraTab.XtraTabPage()
+        Me.gc_wf1 = New DevExpress.XtraGrid.GridControl()
+        Me.gv_wf1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.xtp_mail = New DevExpress.XtraTab.XtraTabPage()
+        Me.gc_email = New DevExpress.XtraGrid.GridControl()
+        Me.gv_email = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.xtp_data_detail = New DevExpress.XtraTab.XtraTabPage()
+        Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.xtp_user_approve = New DevExpress.XtraTab.XtraTabPage()
+        Me.scc_user_approval = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.gc_wf_1 = New DevExpress.XtraGrid.GridControl()
+        Me.gv_wf_1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.xtp_email = New DevExpress.XtraTab.XtraTabPage()
+        Me.SplitContainerControl2 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.gc_email_1 = New DevExpress.XtraGrid.GridControl()
+        Me.gv_email_1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
+        Me.le_entity = New DevExpress.XtraEditors.LookUpEdit()
+        Me.gv_wf = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridView4 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.CeAll = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.scc_master, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scc_master.SuspendLayout()
         CType(Me._rpt, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -159,10 +160,12 @@ Partial Class FPurchaseOrderApproval
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CeAll.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'scc_master
         '
+        Me.scc_master.Panel1.Controls.Add(Me.CeAll)
         Me.scc_master.Panel1.Controls.Add(Me.LabelControl3)
         Me.scc_master.Panel1.Controls.Add(Me.le_entity)
         Me.scc_master.Panel1.Controls.Add(Me.pr_txttglakhir)
@@ -170,7 +173,7 @@ Partial Class FPurchaseOrderApproval
         Me.scc_master.Panel1.Controls.Add(Me.pr_txttglawal)
         Me.scc_master.Panel1.Controls.Add(Me.LabelControl1)
         Me.scc_master.Panel2.Controls.Add(Me.xtc_master)
-        Me.scc_master.Size = New System.Drawing.Size(643, 233)
+        Me.scc_master.Size = New System.Drawing.Size(1046, 233)
         Me.scc_master.SplitterPosition = 28
         '
         'pr_txttglakhir
@@ -180,7 +183,7 @@ Partial Class FPurchaseOrderApproval
         Me.pr_txttglakhir.Location = New System.Drawing.Point(479, 3)
         Me.pr_txttglakhir.Name = "pr_txttglakhir"
         Me.pr_txttglakhir.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.pr_txttglakhir.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+        Me.pr_txttglakhir.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.pr_txttglakhir.Size = New System.Drawing.Size(100, 20)
         Me.pr_txttglakhir.TabIndex = 15
         '
@@ -199,7 +202,7 @@ Partial Class FPurchaseOrderApproval
         Me.pr_txttglawal.Location = New System.Drawing.Point(319, 3)
         Me.pr_txttglawal.Name = "pr_txttglawal"
         Me.pr_txttglawal.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.pr_txttglawal.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+        Me.pr_txttglawal.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.pr_txttglawal.Size = New System.Drawing.Size(100, 20)
         Me.pr_txttglawal.TabIndex = 13
         '
@@ -219,7 +222,7 @@ Partial Class FPurchaseOrderApproval
         Me.xtc_master.Name = "xtc_master"
         Me.xtc_master.PaintStyleName = "PropertyView"
         Me.xtc_master.SelectedTabPage = Me.xtp_os
-        Me.xtc_master.Size = New System.Drawing.Size(643, 199)
+        Me.xtc_master.Size = New System.Drawing.Size(1046, 200)
         Me.xtc_master.TabIndex = 2
         Me.xtc_master.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.xtp_os, Me.xtp_all})
         '
@@ -227,7 +230,7 @@ Partial Class FPurchaseOrderApproval
         '
         Me.xtp_os.Controls.Add(Me.gc_os)
         Me.xtp_os.Name = "xtp_os"
-        Me.xtp_os.Size = New System.Drawing.Size(641, 178)
+        Me.xtp_os.Size = New System.Drawing.Size(1044, 179)
         Me.xtp_os.Text = "Out Standing Data"
         '
         'gc_os
@@ -237,7 +240,7 @@ Partial Class FPurchaseOrderApproval
         Me.gc_os.MainView = Me.gv_os
         Me.gc_os.Name = "gc_os"
         Me.gc_os.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1})
-        Me.gc_os.Size = New System.Drawing.Size(641, 178)
+        Me.gc_os.Size = New System.Drawing.Size(1044, 179)
         Me.gc_os.TabIndex = 1
         Me.gc_os.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_os})
         '
@@ -265,7 +268,7 @@ Partial Class FPurchaseOrderApproval
         '
         Me.xtp_all.Controls.Add(Me.gc_all)
         Me.xtp_all.Name = "xtp_all"
-        Me.xtp_all.Size = New System.Drawing.Size(641, 178)
+        Me.xtp_all.Size = New System.Drawing.Size(553, 379)
         Me.xtp_all.Text = "All Data"
         '
         'gc_all
@@ -275,7 +278,7 @@ Partial Class FPurchaseOrderApproval
         Me.gc_all.MainView = Me.gv_all
         Me.gc_all.Name = "gc_all"
         Me.gc_all.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit2})
-        Me.gc_all.Size = New System.Drawing.Size(641, 178)
+        Me.gc_all.Size = New System.Drawing.Size(553, 379)
         Me.gc_all.TabIndex = 2
         Me.gc_all.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_all})
         '
@@ -313,15 +316,15 @@ Partial Class FPurchaseOrderApproval
         Me.dp_detail.Location = New System.Drawing.Point(0, 233)
         Me.dp_detail.Name = "dp_detail"
         Me.dp_detail.OriginalSize = New System.Drawing.Size(200, 200)
-        Me.dp_detail.Size = New System.Drawing.Size(643, 200)
+        Me.dp_detail.Size = New System.Drawing.Size(1046, 200)
         Me.dp_detail.Text = "Data Detail"
         '
         'DockPanel1_Container
         '
         Me.DockPanel1_Container.Controls.Add(Me.xtc_detail)
-        Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 25)
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(4, 23)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
-        Me.DockPanel1_Container.Size = New System.Drawing.Size(637, 172)
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(1038, 173)
         Me.DockPanel1_Container.TabIndex = 0
         '
         'xtc_detail
@@ -333,7 +336,7 @@ Partial Class FPurchaseOrderApproval
         Me.xtc_detail.PaintStyleName = "PropertyView"
         Me.xtc_detail.SelectedTabPage = Me.xtp_next_process
         Me.xtc_detail.ShowTabHeader = DevExpress.Utils.DefaultBoolean.[False]
-        Me.xtc_detail.Size = New System.Drawing.Size(637, 172)
+        Me.xtc_detail.Size = New System.Drawing.Size(1038, 173)
         Me.xtc_detail.TabIndex = 2
         Me.xtc_detail.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.xtp_next_process, Me.xtp_data_detail, Me.xtp_user_approve, Me.xtp_email})
         '
@@ -341,7 +344,7 @@ Partial Class FPurchaseOrderApproval
         '
         Me.xtp_next_process.Controls.Add(Me.XtraTabControl1)
         Me.xtp_next_process.Name = "xtp_next_process"
-        Me.xtp_next_process.Size = New System.Drawing.Size(635, 171)
+        Me.xtp_next_process.Size = New System.Drawing.Size(1036, 172)
         Me.xtp_next_process.Text = "Approval"
         '
         'XtraTabControl1
@@ -352,7 +355,7 @@ Partial Class FPurchaseOrderApproval
         Me.XtraTabControl1.Name = "XtraTabControl1"
         Me.XtraTabControl1.PaintStyleName = "PropertyView"
         Me.XtraTabControl1.SelectedTabPage = Me.XtraTabPage1
-        Me.XtraTabControl1.Size = New System.Drawing.Size(635, 171)
+        Me.XtraTabControl1.Size = New System.Drawing.Size(1036, 172)
         Me.XtraTabControl1.TabIndex = 3
         Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2, Me.xtp_work_flow, Me.xtp_mail})
         '
@@ -360,7 +363,7 @@ Partial Class FPurchaseOrderApproval
         '
         Me.XtraTabPage1.Controls.Add(Me.layout_approval)
         Me.XtraTabPage1.Name = "XtraTabPage1"
-        Me.XtraTabPage1.Size = New System.Drawing.Size(633, 150)
+        Me.XtraTabPage1.Size = New System.Drawing.Size(1034, 151)
         Me.XtraTabPage1.Text = "Approval"
         '
         'layout_approval
@@ -374,35 +377,35 @@ Partial Class FPurchaseOrderApproval
         Me.layout_approval.Name = "layout_approval"
         Me.layout_approval.OptionsView.HighlightFocusedItem = True
         Me.layout_approval.Root = Me.LayoutControlGroup1
-        Me.layout_approval.Size = New System.Drawing.Size(633, 150)
+        Me.layout_approval.Size = New System.Drawing.Size(1034, 151)
         Me.layout_approval.StyleController = Me.StyleController1
         Me.layout_approval.TabIndex = 4
         Me.layout_approval.Text = "LayoutControl1"
         '
         'nud_hold_day
         '
-        Me.nud_hold_day.Location = New System.Drawing.Point(59, 36)
+        Me.nud_hold_day.Location = New System.Drawing.Point(58, 36)
         Me.nud_hold_day.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nud_hold_day.Name = "nud_hold_day"
-        Me.nud_hold_day.Size = New System.Drawing.Size(259, 20)
+        Me.nud_hold_day.Size = New System.Drawing.Size(461, 20)
         Me.nud_hold_day.TabIndex = 7
         Me.nud_hold_day.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.nud_hold_day.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'te_remark
         '
-        Me.te_remark.Location = New System.Drawing.Point(59, 60)
+        Me.te_remark.Location = New System.Drawing.Point(58, 60)
         Me.te_remark.Name = "te_remark"
-        Me.te_remark.Size = New System.Drawing.Size(259, 20)
+        Me.te_remark.Size = New System.Drawing.Size(461, 20)
         Me.te_remark.StyleController = Me.layout_approval
         Me.te_remark.TabIndex = 5
         '
         'le_wfs_status
         '
-        Me.le_wfs_status.Location = New System.Drawing.Point(59, 12)
+        Me.le_wfs_status.Location = New System.Drawing.Point(58, 12)
         Me.le_wfs_status.Name = "le_wfs_status"
         Me.le_wfs_status.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.le_wfs_status.Size = New System.Drawing.Size(259, 20)
+        Me.le_wfs_status.Size = New System.Drawing.Size(461, 20)
         Me.le_wfs_status.StyleController = Me.layout_approval
         Me.le_wfs_status.TabIndex = 4
         '
@@ -423,7 +426,7 @@ Partial Class FPurchaseOrderApproval
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.EmptySpaceItem1, Me.EmptySpaceItem2, Me.LayoutControlItem3, Me.EmptySpaceItem3, Me.lci_hold_day, Me.EmptySpaceItem4, Me.EmptySpaceItem5})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(635, 149)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(1034, 151)
         Me.LayoutControlGroup1.Text = "Root"
         Me.LayoutControlGroup1.TextVisible = False
         '
@@ -433,7 +436,7 @@ Partial Class FPurchaseOrderApproval
         Me.LayoutControlItem1.CustomizationFormText = "Status"
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(310, 24)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(511, 24)
         Me.LayoutControlItem1.Text = "Status"
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(43, 13)
         '
@@ -443,25 +446,27 @@ Partial Class FPurchaseOrderApproval
         Me.LayoutControlItem2.CustomizationFormText = "Remark"
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(310, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(511, 24)
         Me.LayoutControlItem2.Text = "Remark"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(43, 13)
         '
         'EmptySpaceItem1
         '
+        Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.CustomizationFormText = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(310, 0)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(511, 0)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(305, 24)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(503, 24)
         Me.EmptySpaceItem1.Text = "EmptySpaceItem1"
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem2
         '
+        Me.EmptySpaceItem2.AllowHotTrack = False
         Me.EmptySpaceItem2.CustomizationFormText = "EmptySpaceItem2"
         Me.EmptySpaceItem2.Location = New System.Drawing.Point(133, 90)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(482, 39)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(881, 41)
         Me.EmptySpaceItem2.Text = "EmptySpaceItem2"
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -482,10 +487,11 @@ Partial Class FPurchaseOrderApproval
         '
         'EmptySpaceItem3
         '
+        Me.EmptySpaceItem3.AllowHotTrack = False
         Me.EmptySpaceItem3.CustomizationFormText = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Location = New System.Drawing.Point(310, 24)
+        Me.EmptySpaceItem3.Location = New System.Drawing.Point(511, 24)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(305, 48)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(503, 48)
         Me.EmptySpaceItem3.Text = "EmptySpaceItem3"
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
@@ -495,27 +501,29 @@ Partial Class FPurchaseOrderApproval
         Me.lci_hold_day.CustomizationFormText = "Hold Day"
         Me.lci_hold_day.Location = New System.Drawing.Point(0, 24)
         Me.lci_hold_day.Name = "lci_hold_day"
-        Me.lci_hold_day.Size = New System.Drawing.Size(310, 24)
+        Me.lci_hold_day.Size = New System.Drawing.Size(511, 24)
         Me.lci_hold_day.Text = "Hold Day"
         Me.lci_hold_day.TextSize = New System.Drawing.Size(43, 13)
         '
         'EmptySpaceItem4
         '
+        Me.EmptySpaceItem4.AllowHotTrack = False
         Me.EmptySpaceItem4.CustomizationFormText = "EmptySpaceItem4"
         Me.EmptySpaceItem4.Location = New System.Drawing.Point(0, 119)
         Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
-        Me.EmptySpaceItem4.Size = New System.Drawing.Size(133, 10)
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(133, 12)
         Me.EmptySpaceItem4.Text = "EmptySpaceItem4"
         Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem5
         '
+        Me.EmptySpaceItem5.AllowHotTrack = False
         Me.EmptySpaceItem5.CustomizationFormText = "EmptySpaceItem5"
         Me.EmptySpaceItem5.Location = New System.Drawing.Point(0, 72)
         Me.EmptySpaceItem5.MaxSize = New System.Drawing.Size(615, 18)
         Me.EmptySpaceItem5.MinSize = New System.Drawing.Size(615, 18)
         Me.EmptySpaceItem5.Name = "EmptySpaceItem5"
-        Me.EmptySpaceItem5.Size = New System.Drawing.Size(615, 18)
+        Me.EmptySpaceItem5.Size = New System.Drawing.Size(1014, 18)
         Me.EmptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.EmptySpaceItem5.Text = "EmptySpaceItem5"
         Me.EmptySpaceItem5.TextSize = New System.Drawing.Size(0, 0)
@@ -762,10 +770,18 @@ Partial Class FPurchaseOrderApproval
         Me.GridView4.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never
         Me.GridView4.OptionsView.ShowGroupPanel = False
         '
+        'CeAll
+        '
+        Me.CeAll.Location = New System.Drawing.Point(597, 4)
+        Me.CeAll.Name = "CeAll"
+        Me.CeAll.Properties.Caption = "Check All"
+        Me.CeAll.Size = New System.Drawing.Size(75, 19)
+        Me.CeAll.TabIndex = 18
+        '
         'FPurchaseOrderApproval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(643, 433)
+        Me.ClientSize = New System.Drawing.Size(1046, 433)
         Me.Controls.Add(Me.dp_detail)
         Me.Name = "FPurchaseOrderApproval"
         Me.Text = "Purchase Order Approval"
@@ -845,6 +861,7 @@ Partial Class FPurchaseOrderApproval
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CeAll.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -914,5 +931,6 @@ Partial Class FPurchaseOrderApproval
     Friend WithEvents gc_wf1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents gv_wf1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridView4 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents CeAll As DevExpress.XtraEditors.CheckEdit
 
 End Class

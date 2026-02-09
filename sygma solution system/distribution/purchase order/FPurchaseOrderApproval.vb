@@ -994,4 +994,16 @@ Public Class FPurchaseOrderApproval
 
   
 
+    Private Sub CeAll_CheckedChanged(sender As Object, e As EventArgs) Handles CeAll.CheckedChanged
+        Try
+            For Each dr As DataRow In ds.Tables("os").Rows
+                dr("status") = CeAll.Checked
+            Next
+            ds.AcceptChanges()
+            gv_os.BestFitColumns()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

@@ -5,6 +5,7 @@ Imports DevExpress.XtraTreeList.Nodes.Operations
 Imports DevExpress.XtraTreeList
 Imports DevExpress.XtraTreeList.Nodes
 Imports System.Collections.Generic
+Imports System.IO
 
 
 Public Class FMainMenu
@@ -2115,6 +2116,10 @@ Public Class FMainMenu
         End Try
     End Sub
 
+    Public Overrides Sub Update_syspro()
+        'MyBase.Update_syspro()
+        generateBat()
+    End Sub
     Public Overrides Sub Load_Form()
         'Dim sSQL As String
         'Dim _user_name As String
@@ -2165,21 +2170,23 @@ Public Class FMainMenu
             'frm.MdiParent = Me
             'frm.Show()
 
-            'Box("Please update application")
+            Box("Please update application")
+            generateBat()
 
-            Dim myprocess As System.Diagnostics.Process = New System.Diagnostics.Process()
+            'Dim myprocess As System.Diagnostics.Process = New System.Diagnostics.Process()
 
-            With myprocess
-                .StartInfo.FileName = GetCurrentPath() & "UpdateProgram.exe"
-                If System.IO.File.Exists(.StartInfo.FileName) Then
-                    .StartInfo.RedirectStandardOutput = True
-                    .StartInfo.UseShellExecute = False
-                    .Start()
-                Else
-                    Box("File " & .StartInfo.FileName & " tidak ada")
-                End If
+            'With myprocess
+            '    .StartInfo.FileName = GetCurrentPath() & "UpdateProgram.exe"
+            '    If System.IO.File.Exists(.StartInfo.FileName) Then
+            '        .StartInfo.RedirectStandardOutput = True
+            '        .StartInfo.UseShellExecute = False
+            '        .Start()
+            '    Else
+            '        Box("File " & .StartInfo.FileName & " tidak ada")
+            '    End If
 
-            End With
+            'End With
+
 
         End If
 
@@ -2200,6 +2207,186 @@ Public Class FMainMenu
 
         'End If
 
+    End Sub
+
+    'Private Sub generateBat()
+    '    Try
+    '        Dim exeName As String = Path.GetFileName(Application.ExecutablePath)
+    '        Dim batPath As String = Path.Combine(Application.StartupPath, "update.bat")
+    '        Dim downloadUrl As String = "http://103.148.192.168:8080/update_syspro/mediaqu/update.zip" 'func_coll.get_conf_file("http_update") '"https://example.com/program.zip" ' GANTI DENGAN URL ANDA
+
+    '       ' Escape karakter khusus untuk batch file
+    '        Dim exeNameEscaped As String = exeName.Replace("&", "^&").Replace(">", "^>").Replace("<", "^<")
+    '        Dim downloadUrlEscaped As String = downloadUrl.Replace("&", "^&")
+    '        Dim temp_zip As String = "update_" & DateTime.Now.ToString("yyyyMMddHHmmss") & ".zip"
+
+    '        Dim batContent As String = "@echo off" & vbCrLf &
+    '            "setlocal" & vbCrLf &
+    '            "" & vbCrLf &
+    '            "set ""EXENAME=" & exeNameEscaped & """" & vbCrLf &
+    '            "set ""ZIPFILE=" & temp_zip & """" & vbCrLf &
+    '            "set ""DESTDIR=%~dp0""" & vbCrLf &
+    '            "set ""DOWNLOADURL=" & downloadUrlEscaped & """" & vbCrLf &
+    '            "" & vbCrLf &
+    '            "echo ==========================================" & vbCrLf &
+    '            "echo   UPDATE APLIKASI - DOWNLOAD ^& EKSTRAKSI" & vbCrLf &
+    '            "echo ==========================================" & vbCrLf &
+    '            "echo." & vbCrLf &
+    '            "echo ^> Target: %EXENAME%" & vbCrLf &
+    '            "echo ^> URL   : %DOWNLOADURL%" & vbCrLf &
+    '            "echo ^> Folder: %DESTDIR%" & vbCrLf &
+    '            "echo." & vbCrLf &
+    '            "" & vbCrLf &
+    '            ":: Hentikan aplikasi" & vbCrLf &
+    '            "echo [1/3] Mematikan proses %EXENAME% ..." & vbCrLf &
+    '            "taskkill /im ""%EXENAME%"" /f >nul 2>&1" & vbCrLf &
+    '            "timeout /t 0 /nobreak >nul" & vbCrLf &
+    '            "" & vbCrLf &
+    '            ":: Download file" & vbCrLf &
+    '            "echo [2/3] Mendownload %ZIPFILE% ..." & vbCrLf &
+    '            "powershell -Command ""try { $wc = New-Object System.Net.WebClient; $wc.Headers.Add('User-Agent', 'AppUpdater/1.0'); $wc.DownloadFile('%DOWNLOADURL%', '%DESTDIR%%ZIPFILE%'); Write-Host '[OK] Download berhasil.' -ForegroundColor Green } catch { Write-Host ('[ERROR] Gagal download: ' + $_.Exception.Message) -ForegroundColor Red; exit 1 }""" & vbCrLf &
+    '            "" & vbCrLf &
+    '            ":: Cek keberhasilan download" & vbCrLf &
+    '            "if errorlevel 1 (" & vbCrLf &
+    '            "    echo [ERROR] File %ZIPFILE% tidak ditemukan atau gagal didownload." & vbCrLf &
+    '            "    pause" & vbCrLf &
+    '            "    exit /b 1" & vbCrLf &
+    '            ")" & vbCrLf &
+    '            "" & vbCrLf &
+    '            ":: Ekstrak file" & vbCrLf &
+    '            "echo [3/3] Mengekstrak %ZIPFILE% ..." & vbCrLf &
+    '            "powershell -Command ""try { Expand-Archive -Path '%DESTDIR%%ZIPFILE%' -DestinationPath '%DESTDIR%' -Force; Write-Host '[OK] Ekstraksi berhasil.' -ForegroundColor Green } catch { Write-Host ('[ERROR] Gagal ekstrak: ' + $_.Exception.Message) -ForegroundColor Red; exit 1 }""" & vbCrLf &
+    '            "" & vbCrLf &
+    '            ":: Cek keberhasilan ekstrak" & vbCrLf &
+    '            "if errorlevel 1 (" & vbCrLf &
+    '            "    echo [ERROR] Proses ekstrak gagal." & vbCrLf &
+    '            "    pause" & vbCrLf &
+    '            "    exit /b 1" & vbCrLf &
+    '            ")" & vbCrLf &
+    '            "" & vbCrLf &
+    '            ":: Jalankan ulang aplikasi" & vbCrLf &
+    '            "echo." & vbCrLf &
+    '            "echo ==========================================" & vbCrLf &
+    '            "echo   Menjalankan ulang %EXENAME% ..." & vbCrLf &
+    '            "echo ==========================================" & vbCrLf &
+    '            "start """" ""%DESTDIR%%EXENAME%""" & vbCrLf &
+    '            "timeout /t 3 /nobreak >nul" & vbCrLf &
+    '            "" & vbCrLf &
+    '            "echo." & vbCrLf &
+    '            "echo [SELESAI] Update berhasil." & vbCrLf &
+    '            "endlocal" & vbCrLf &
+    '            "exit /b 0"
+
+    '        ' Tulis file batch
+    '        System.IO.File.WriteAllText(batPath, batContent)
+
+    '        ' Jalankan batch file
+    '        Dim psi As New ProcessStartInfo()
+    '        psi.FileName = batPath
+    '        psi.UseShellExecute = True
+    '        Process.Start(psi)
+
+    '        ' Tutup aplikasi
+    '        Application.Exit()
+    '        Environment.Exit(0)
+
+
+    '    Catch ex As Exception
+    '        MessageBox.Show("Gagal membuat file update: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End Try
+    'End Sub
+
+    Private Sub generateBat()
+        Try
+            Dim exeName As String = System.IO.Path.GetFileName(Application.ExecutablePath)
+            Dim batPath As String = System.IO.Path.Combine(Application.StartupPath, "update.bat")
+            Dim downloadUrl As String = func_coll.get_conf_file("http_update")
+
+            ' Escape karakter khusus untuk batch file
+            Dim exeNameEscaped As String = exeName.Replace("&", "^&").Replace(">", "^>").Replace("<", "^<")
+            Dim downloadUrlEscaped As String = downloadUrl.Replace("&", "^&")
+            Dim tempZip As String = "update_" & DateTime.Now.ToString("yyyyMMddHHmmss") & ".zip"
+
+            Dim batContent As String = "@echo off" & vbCrLf &
+                "setlocal" & vbCrLf &
+                "" & vbCrLf &
+                "set ""EXENAME=" & exeNameEscaped & """" & vbCrLf &
+                "set ""ZIPFILE=" & tempZip & """" & vbCrLf &
+                "set ""DESTDIR=%~dp0""" & vbCrLf &
+                "set ""DOWNLOADURL=" & downloadUrlEscaped & """" & vbCrLf &
+                "" & vbCrLf &
+                "echo ==========================================" & vbCrLf &
+                "echo   UPDATE APLIKASI - DOWNLOAD ^& EKSTRAKSI" & vbCrLf &
+                "echo ==========================================" & vbCrLf &
+                "echo." & vbCrLf &
+                "echo ^> Target: %EXENAME%" & vbCrLf &
+                "echo ^> URL   : %DOWNLOADURL%" & vbCrLf &
+                "echo ^> File  : %ZIPFILE%" & vbCrLf &
+                "echo ^> Folder: %DESTDIR%" & vbCrLf &
+                "echo." & vbCrLf &
+                "" & vbCrLf &
+                ":: Hentikan aplikasi" & vbCrLf &
+                "echo [1/4] Mematikan proses %EXENAME% ..." & vbCrLf &
+                "taskkill /im ""%EXENAME%"" /f >nul 2>&1" & vbCrLf &
+                "timeout /t 1 /nobreak >nul" & vbCrLf &
+                "" & vbCrLf &
+                ":: Download file" & vbCrLf &
+                "echo [2/4] Mendownload %ZIPFILE% ..." & vbCrLf &
+                "powershell -Command ""try { $wc = New-Object System.Net.WebClient; $wc.Headers.Add('User-Agent', 'AppUpdater/1.0'); $wc.DownloadFile('%DOWNLOADURL%', '%DESTDIR%%ZIPFILE%'); Write-Host '[OK] Download berhasil.' -ForegroundColor Green } catch { Write-Host ('[ERROR] Gagal download: ' + $_.Exception.Message) -ForegroundColor Red; exit 1 }""" & vbCrLf &
+                "" & vbCrLf &
+                ":: Cek keberhasilan download" & vbCrLf &
+                "if errorlevel 1 (" & vbCrLf &
+                "    echo [GAGAL] Download error!" & vbCrLf &
+                "    pause" & vbCrLf &
+                "    exit /b 1" & vbCrLf &
+                ")" & vbCrLf &
+                "" & vbCrLf &
+                ":: Ekstrak file" & vbCrLf &
+                "echo [3/4] Mengekstrak %ZIPFILE% ..." & vbCrLf &
+                "powershell -Command ""try { Expand-Archive -Path '%DESTDIR%%ZIPFILE%' -DestinationPath '%DESTDIR%' -Force; Write-Host '[OK] Ekstraksi berhasil.' -ForegroundColor Green } catch { Write-Host ('[ERROR] Gagal ekstrak: ' + $_.Exception.Message) -ForegroundColor Red; exit 1 }""" & vbCrLf &
+                "" & vbCrLf &
+                ":: Cek keberhasilan ekstrak" & vbCrLf &
+                "if errorlevel 1 (" & vbCrLf &
+                "    echo [GAGAL] Ekstrak error!" & vbCrLf &
+                "    echo File ZIP sementara tetap disimpan untuk debugging: %ZIPFILE%" & vbCrLf &
+                "    pause" & vbCrLf &
+                "    exit /b 1" & vbCrLf &
+                ")" & vbCrLf &
+                "" & vbCrLf &
+                ":: HAPUS file ZIP sementara (bersihkan)" & vbCrLf &
+                "del ""%DESTDIR%%ZIPFILE%"" >nul 2>&1" & vbCrLf &
+                "if exist ""%DESTDIR%%ZIPFILE%"" (" & vbCrLf &
+                "    echo [PERINGATAN] Gagal menghapus %ZIPFILE% (mungkin sedang digunakan)" & vbCrLf &
+                ") else (" & vbCrLf &
+                "    echo [OK] File sementara %ZIPFILE% telah dihapus." & vbCrLf &
+                ")" & vbCrLf &
+                "" & vbCrLf &
+                ":: Jalankan ulang aplikasi" & vbCrLf &
+                "echo [4/4] Menjalankan ulang %EXENAME% ..." & vbCrLf &
+                "start """" ""%DESTDIR%%EXENAME%""" & vbCrLf &
+                "timeout /t 2 /nobreak >nul" & vbCrLf &
+                "" & vbCrLf &
+                "echo." & vbCrLf &
+                "echo [SELESAI] Update berhasil!" & vbCrLf &
+                "endlocal" & vbCrLf &
+                "exit /b 0"
+
+            ' Tulis file batch
+            System.IO.File.WriteAllText(batPath, batContent)
+
+            ' Jalankan batch file
+            Dim psi As New ProcessStartInfo()
+            psi.FileName = batPath
+            psi.UseShellExecute = True
+            Process.Start(psi)
+
+            ' Tutup aplikasi
+            Application.Exit()
+            Environment.Exit(0)
+
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuat updater: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Public Overrides Sub show_user_history()
@@ -2718,9 +2905,10 @@ Public Class FMainMenu
 
     Private Sub BarLargeButtonItem1_ItemClick(ByVal sender As System.Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarLargeButtonItem1.ItemClick
         Try
-            Dim frm As New frmUpdate
-            frm.MdiParent = Me
-            frm.Show()
+            'Dim frm As New frmUpdate
+            'frm.MdiParent = Me
+            'frm.Show()
+            generateBat()
         Catch ex As Exception
 
         End Try
