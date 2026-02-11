@@ -3632,14 +3632,14 @@ Public Class FPurchaseOrder
                             .Command.Transaction = sqlTran
 
                             For i = 0 To ds.Tables("detail").Rows.Count - 1
-                                If ds.Tables("detail").Rows(i).Item("pod_po_oid").ToString = ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("po_oid") Then
+                                If ds.Tables("detail").Rows(i).Item("pod_po_oid").ToString = ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("po_oid").ToString Then
 
-                                    If SetString(ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("po_parent_oid")) <> "" Then
+                                    If SetString(ds.Tables(0).Rows(BindingContext(ds.Tables(0)).Position).Item("po_parent_oid").ToString) <> "" Then
                                         .Command.CommandType = CommandType.Text
                                         .Command.CommandText = "update  " _
                                                             & "  pod_det " _
                                                             & "set pod_qty_child= coalesce(pod_qty_child,0) - " & SetDbl(ds.Tables("detail").Rows(i).Item("pod_qty")) _
-                                                            & " where pod_oid=" & SetSetring(ds.Tables("detail").Rows(i).Item("pod_pod_parent_oid"))
+                                                            & " where pod_oid=" & SetSetring(ds.Tables("detail").Rows(i).Item("pod_pod_parent_oid").ToString)
 
                                         ssqls.Add(.Command.CommandText)
                                         .Command.ExecuteNonQuery()
@@ -3647,7 +3647,7 @@ Public Class FPurchaseOrder
                                     End If
 
 
-                                    If IsDBNull(ds.Tables("detail").Rows(i).Item("pod_reqd_oid")) = False Then
+                                    If IsDBNull(ds.Tables("detail").Rows(i).Item("pod_reqd_oid").ToString) = False Then
                                         .Command.CommandType = CommandType.Text
                                         .Command.CommandText = "update reqd_det set reqd_qty_processed = reqd_qty_processed - " + SetDec(ds.Tables("detail").Rows(i).Item("pod_qty").ToString) + ", " + _
                                                                " reqd_status = null" _
@@ -3663,7 +3663,7 @@ Public Class FPurchaseOrder
                                         .Command.Parameters.Clear()
                                     End If
 
-                                    If IsDBNull(ds.Tables("detail").Rows(i).Item("pod_reqd_oid")) = False Then
+                                    If IsDBNull(ds.Tables("detail").Rows(i).Item("pod_reqd_oid").ToString) = False Then
                                         'update boqs================================================
                                         'krn kemungkinan bisa dobel maka update dr seq paling atas
                                         'har 20110608
